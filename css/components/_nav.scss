@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: var.$gutter-base * 0.5 0;
+    font-weight: var.$font-weight-bold;
+
+    img {
+        width: 80px;
+    }
+
+    ul {
+        padding-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        list-style: none;
+
+        li:not(:last-child) {
+            margin-right: var.$gutter-base;
+        }
+
+        li a {
+            color: var.$text-color-base;
+        }
+    }
+
+    .button {
+        @extend %button
+    }
+}
