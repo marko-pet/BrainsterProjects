@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1d1d1d;
+  background-color: #fcd232;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.9375rem;
+  font-weight: 700;
+}
+
+nav {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+}
+
+nav .button {
+  background-color: #ff1300;
+  padding: 0.5625rem 0.9375rem;
+  border-radius: 5px;
+  font-weight: 700;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 0.5625rem;
+  padding-bottom: 0.5625rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: space-between !important;
+  }
+}
+nav img {
+  width: 80px;
+}
+nav ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  list-style: none;
+}
+nav ul li:not(:last-child) {
+  margin-right: 1.875rem;
+}
+nav ul li a {
+  color: #1d1d1d;
+}
+nav .hamburger {
+  display: none;
+  cursor: pointer;
+}
+nav .bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 7px auto;
+  transition: all 0.3s ease;
+  background-color: #302f38;
+}
+nav .lg-hidden {
+  display: none;
+}
+@media (max-width: 768px) {
+  nav .lg-hidden {
+    display: inline-block;
+  }
+  nav .md-hidden {
+    display: none;
+  }
+  nav .hamburger {
+    display: block;
+  }
+  nav .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  nav .hamburger.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  nav .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  nav .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    transition: 0.3s;
+    padding-top: 3.75rem;
+    padding-left: 1.875rem;
+  }
+  nav .nav-item {
+    margin: 16px 0;
+  }
+  nav .nav-item a {
+    color: #fff;
+  }
+  nav .nav-menu.active {
+    right: 0;
+  }
+}/*# sourceMappingURL=main.css.map */
