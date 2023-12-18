@@ -2,32 +2,106 @@
 @use "../abstracts/mixins" as mix;
 
 nav {
+  @extend %wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: var.$gutter-base * 0.3;
+  padding-bottom: var.$gutter-base * 0.3;
+  font-weight: var.$font-weight-bold;
+
+  @media screen and (max-width: 768px) {
+    justify-content: space-between !important;
+  }
+
+  img {
+    width: 80px;
+  }
+
+  ul {
+    padding-left: 0;
+    margin-bottom: 0;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: var.$gutter-base * 0.5 0;
-    font-weight: var.$font-weight-bold;
+    list-style: none;
 
-    img {
-        width: 80px;
+    li:not(:last-child) {
+      margin-right: var.$gutter-base;
     }
 
-    ul {
-        padding-left: 0;
-        margin-bottom: 0;
-        display: flex;
-        list-style: none;
+    li a {
+      color: var.$text-color-base;
+    }
+  }
 
-        li:not(:last-child) {
-            margin-right: var.$gutter-base;
-        }
+  .button {
+    @extend %button;
+  }
 
-        li a {
-            color: var.$text-color-base;
-        }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 7px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: var.$background-color-primary;
+  }
+
+  .lg-hidden {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .lg-hidden {
+      display: inline-block;
     }
 
-    .button {
-        @extend %button
+    .md-hidden {
+      display: none;
     }
+
+    .hamburger {
+      display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(10px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .nav-menu {
+      position: fixed;
+      right: -100%;
+      top: 0;
+      gap: 0;
+      flex-direction: column;
+      background-color: #262626;
+      width: 100%;
+      transition: 0.3s;
+      padding-top: var.$gutter-base * 2;
+      padding-left: var.$gutter-base;
+    }
+
+    .nav-item {
+      margin: 16px 0;
+
+      a {
+        color: var.$text-color-primary;
+      }
+    }
+
+    .nav-menu.active {
+      right: 0;
+    }
+  }
 }
