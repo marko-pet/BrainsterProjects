@@ -70,7 +70,9 @@ nav {
 }
 @media screen and (max-width: 768px) {
   nav {
-    justify-content: space-between !important;
+    justify-content: space-between;
+    padding-top: 0.1875rem;
+    padding-bottom: 0.1875rem;
   }
 }
 nav img {
