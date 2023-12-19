@@ -11,7 +11,9 @@ nav {
   font-weight: var.$font-weight-bold;
 
   @media screen and (max-width: 768px) {
-    justify-content: space-between !important;
+    justify-content: space-between;
+    padding-top: var.$gutter-base * 0.1;
+    padding-bottom: var.$gutter-base * 0.1;
   }
 
   img {
@@ -83,6 +85,7 @@ nav {
       position: fixed;
       right: -100%;
       top: 0;
+      bottom: 0;
       gap: 0;
       flex-direction: column;
       background-color: #262626;
