@@ -65,3 +65,24 @@ function filterDesign() {
     designCards.style.display = "block";
   });
 }
+
+const filter1 = document.querySelector("#filter-marketing");
+
+filter1.addEventListener("click", function onClick() {
+  filter1.style.backgroundColor = "#eb3b3b";
+  filter1.style.color = "#302f38";
+});
+
+const filter2 = document.querySelector("#filter-programming");
+
+filter2.addEventListener("click", function onClick() {
+  filter2.style.backgroundColor = "#eb3b3b";
+  filter2.style.color = "#302f38";
+});
+
+const filter3 = document.querySelector("#filter-design");
+
+filter3.addEventListener("click", function onClick() {
+  filter3.style.backgroundColor = "#eb3b3b";
+  filter3.style.color = "#302f38";
+});

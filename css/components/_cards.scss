@@ -8,6 +8,10 @@
     flex-direction: column;
   }
 
+  input[type="checkbox"] {
+    display: none;
+  }
+
   .filter {
     display: flex;
     flex-basis: 33.333%;
@@ -16,6 +20,10 @@
     padding: var.$gutter-base;
     border: none;
     background-color: var.$background-color-primary;
+    color: var.$text-color-primary;
+    font-size: var.$font-size-medium;
+    text-align: left;
+    transition: all 0.2s;
 
     @media screen and (max-width: 768px) {
       padding: var.$gutter-base * 0.5;
@@ -33,11 +41,8 @@
       cursor: pointer;
     }
 
-    p {
-      color: var.$text-color-primary;
-      font-size: var.$font-size-medium;
-      text-align: left;
-      margin: 0;
+    i {
+      color: var.$background-color-primary;
     }
   }
 }
