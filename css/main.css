@@ -272,6 +272,10 @@ h2 {
   overflow: hidden;
   flex-basis: 30%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.2s;
+}
+.cards .card:hover {
+  transform: scale(1.05);
 }
 @media screen and (max-width: 768px) {
   .cards .card {

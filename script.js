@@ -1,3 +1,4 @@
+// Navbar
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -12,7 +13,7 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
-
+// Filters
 document
   .querySelector("#filter-marketing")
   .addEventListener("click", filterMarketing);
