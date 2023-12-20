@@ -137,9 +137,11 @@ nav .lg-hidden {
   }
   nav .hamburger.active .bar:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
+    background-color: #fff;
   }
   nav .hamburger.active .bar:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
+    background-color: #fff;
   }
   nav .nav-menu {
     position: fixed;
@@ -255,6 +257,11 @@ h2 {
 }
 @media screen and (max-width: 768px) {
   .cards {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .cards {
     flex-direction: column;
     width: 90%;
   }
@@ -263,7 +270,13 @@ h2 {
   background-color: #fff;
   border-radius: 5px;
   overflow: hidden;
-  flex-basis: 31%;
+  flex-basis: 30%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media screen and (max-width: 768px) {
+  .cards .card {
+    flex-basis: 45%;
+  }
 }
 .cards .card .card-inner {
   padding: 0.9375rem;
@@ -293,4 +306,17 @@ h2 {
 }
 .cards .card .card-inner a {
   margin-top: 1.875rem;
+}
+
+footer {
+  padding: 0.9375rem 0;
+  background-color: #302f38;
+  text-align: center;
+}
+footer i {
+  color: #ff1300;
+}
+footer p {
+  margin-bottom: 0;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */
