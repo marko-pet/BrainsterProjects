@@ -15,12 +15,26 @@
     align-items: center;
     padding: var.$gutter-base;
     border: none;
+    background-color: var.$background-color-primary;
+
+    @media screen and (max-width: 768px) {
+      padding: var.$gutter-base * 0.5;
+    }
 
     &:not(:last-child) {
-      border-right: 1px solid var.$background-color-primary;
+      border-right: 1px solid var.$background-color-quaternary;
+
+      @media screen and (max-width: 768px) {
+        border-bottom: 1px solid var.$background-color-quaternary;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
     }
 
     p {
+      color: var.$text-color-primary;
       font-size: var.$font-size-medium;
       text-align: left;
       margin: 0;
@@ -33,6 +47,10 @@ h2 {
   font-size: var.$heading-size-big;
   padding-top: var.$gutter-base;
   margin: 0;
+
+  @media screen and (max-width: 768px) {
+    padding-top: var.$gutter-base * 0.5;
+  }
 }
 
 .cards {
@@ -47,6 +65,7 @@ h2 {
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    width: 90%;
   }
 
   .card {
@@ -63,6 +82,10 @@ h2 {
         padding: var.$gutter-base * 0.2 var.$gutter-base * 0.7;
         border-radius: 5px;
         margin-bottom: 5px;
+      }
+
+      .button-left {
+        text-align: right;
       }
 
       p {
