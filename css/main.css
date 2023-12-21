@@ -221,6 +221,9 @@ nav .lg-hidden {
 .filters input[type=checkbox] {
   display: none;
 }
+.filters input[type=checkbox]:checked + label {
+  background-color: #eb3b3b;
+}
 .filters .filter {
   display: flex;
   flex-basis: 33.333%;

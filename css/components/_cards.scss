@@ -12,6 +12,10 @@
     display: none;
   }
 
+  input[type="checkbox"]:checked + label {
+    background-color: #eb3b3b;
+  }
+
   .filter {
     display: flex;
     flex-basis: 33.333%;
