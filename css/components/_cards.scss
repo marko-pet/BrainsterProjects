@@ -14,6 +14,7 @@
 
   input[type="checkbox"]:checked + label {
     background-color: #eb3b3b;
+    color: var.$text-color-base;
   }
 
   .filter {
