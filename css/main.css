@@ -39,24 +39,24 @@ h3 {
   font-weight: 700;
 }
 
-.cards {
+.countdown-container, .cards {
   padding-top: 1.875rem;
   padding-bottom: 1.875rem;
 }
 @media (max-width: 768px) {
-  .cards {
+  .countdown-container, .cards {
     padding-top: 0.9375rem;
     padding-bottom: 0.9375rem;
   }
 }
 
-nav {
+.countdown-container, nav {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 @media (max-width: 768px) {
-  nav {
+  .countdown-container, nav {
     width: 100%;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -257,14 +257,14 @@ nav .lg-hidden {
   color: #302f38;
 }
 
-h2 {
+.card-heading {
   text-align: center;
   font-size: 2.75rem;
   padding-top: 1.875rem;
   margin: 0;
 }
 @media screen and (max-width: 768px) {
-  h2 {
+  .card-heading {
     padding-top: 0.9375rem;
   }
 }
@@ -346,4 +346,63 @@ footer i {
 footer p {
   margin-bottom: 0;
   color: #fff;
+}
+
+.countdown-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/felipe-correia-Z3r7p3DqXeM-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - 152px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .countdown-image {
+    height: calc(100vh - 120px);
+  }
+}
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+.countdown-container h1 {
+  font-size: 4.6875rem;
+  text-transform: capitalize;
+  padding: 1.875rem 0;
+}
+@media (max-width: 768px) {
+  .countdown-container h1 {
+    font-size: 3.75rem;
+  }
+}
+@media (max-width: 425px) {
+  .countdown-container h1 {
+    font-size: 2.75rem;
+  }
+}
+.countdown-container .countdown {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .countdown-container .countdown {
+    flex-direction: column;
+  }
+}
+.countdown-container .countdown .time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+.countdown-container .countdown .time h2 {
+  font-size: 3.75rem;
+  margin: 0 0 5px;
 }/*# sourceMappingURL=main.css.map */
