@@ -1,0 +1,136 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.filters {
+  display: flex;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked + label {
+    background-color: #eb3b3b;
+  }
+
+  .filter {
+    display: flex;
+    flex-basis: 33.333%;
+    justify-content: space-around;
+    align-items: center;
+    padding: var.$gutter-base;
+    border: none;
+    background-color: var.$background-color-primary;
+    color: var.$text-color-primary;
+    font-size: var.$font-size-medium;
+    text-align: left;
+    transition: all 0.2s;
+
+    @media screen and (max-width: 768px) {
+      padding: var.$gutter-base * 0.5;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid var.$background-color-quaternary;
+
+      @media screen and (max-width: 768px) {
+        border-bottom: 1px solid var.$background-color-quaternary;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    i {
+      color: var.$background-color-primary;
+    }
+  }
+}
+
+h2 {
+  text-align: center;
+  font-size: var.$heading-size-big;
+  padding-top: var.$gutter-base;
+  margin: 0;
+
+  @media screen and (max-width: 768px) {
+    padding-top: var.$gutter-base * 0.5;
+  }
+}
+
+.cards {
+  @extend %section;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .card {
+    background-color: var.$background-color-tertiary;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-basis: 30%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-basis: 45%;
+    }
+
+    .card-inner {
+      padding: var.$gutter-base * 0.5;
+      span {
+        display: inline-block;
+        background-color: var.$background-color-base;
+        padding: var.$gutter-base * 0.2 var.$gutter-base * 0.7;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+
+      .button-left {
+        text-align: right;
+      }
+
+      p {
+        font-weight: var.$font-weight-bold;
+        font-size: var.$font-size-medium;
+        margin-bottom: 5px;
+      }
+
+      p.normal {
+        font-weight: normal;
+        margin-bottom: 10px;
+      }
+
+      small {
+        font-weight: var.$font-weight-bold;
+        display: block;
+      }
+
+      a {
+        @extend %button;
+        margin-top: var.$gutter-base;
+      }
+    }
+  }
+}
