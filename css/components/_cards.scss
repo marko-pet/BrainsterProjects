@@ -33,6 +33,10 @@
       padding: var.$gutter-base * 0.5;
     }
 
+    @media screen and (max-width: 425px) {
+      font-size: var.$font-size-medium * 0.9;
+    }
+
     &:not(:last-child) {
       border-right: 1px solid var.$background-color-quaternary;
 

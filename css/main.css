@@ -242,6 +242,11 @@ nav .lg-hidden {
     padding: 0.9375rem;
   }
 }
+@media screen and (max-width: 425px) {
+  .filters .filter {
+    font-size: 1.125rem;
+  }
+}
 .filters .filter:not(:last-child) {
   border-right: 1px solid #47464e;
 }
