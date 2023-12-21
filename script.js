@@ -16,73 +16,98 @@ document.querySelectorAll(".nav-link").forEach((n) =>
 // Filters
 document
   .querySelector("#filter-marketing")
-  .addEventListener("click", filterMarketing);
+  .addEventListener("change", filterMarketing);
 document
   .querySelector("#filter-programming")
-  .addEventListener("click", filterProgramming);
+  .addEventListener("change", filterProgramming);
 document
   .querySelector("#filter-design")
-  .addEventListener("click", filterDesign);
+  .addEventListener("change", filterDesign);
 
 function filterMarketing() {
-  var allCards = document.querySelectorAll(".card");
+  hideAllCards();
 
-  allCards.forEach((card) => {
-    card.style.display = "none";
-  });
+  if (document.querySelector("#filter-marketing").checked) {
+    var marketingCards = document.querySelectorAll(".marketing");
 
-  var marketingCards = document.querySelectorAll(".marketing");
+    marketingCards.forEach((marketingCards) => {
+      marketingCards.style.display = "block";
+    });
 
-  marketingCards.forEach((marketingCards) => {
-    marketingCards.style.display = "block";
-  });
+    document.querySelector("#filter-programming").checked = false;
+    document.querySelector("#filter-design").checked = false;
+  } else {
+    showAllCards();
+  }
 }
 
 function filterProgramming() {
-  var allCards = document.querySelectorAll(".card");
+  hideAllCards();
 
-  allCards.forEach((card) => {
-    card.style.display = "none";
-  });
+  if (document.querySelector("#filter-programming").checked) {
+    var programmingCards = document.querySelectorAll(".programming");
 
-  var programmingCards = document.querySelectorAll(".programming");
+    programmingCards.forEach((programmingCards) => {
+      programmingCards.style.display = "block";
+    });
 
-  programmingCards.forEach((programmingCards) => {
-    programmingCards.style.display = "block";
-  });
+    document.querySelector("#filter-marketing").checked = false;
+    document.querySelector("#filter-design").checked = false;
+  } else {
+    showAllCards();
+  }
 }
 
 function filterDesign() {
+  hideAllCards();
+
+  if (document.querySelector("#filter-design").checked) {
+    var designCards = document.querySelectorAll(".design");
+
+    designCards.forEach((designCards) => {
+      designCards.style.display = "block";
+    });
+
+    document.querySelector("#filter-programming").checked = false;
+    document.querySelector("#filter-marketing").checked = false;
+  } else {
+    showAllCards();
+  }
+}
+
+function hideAllCards() {
   var allCards = document.querySelectorAll(".card");
 
   allCards.forEach((card) => {
     card.style.display = "none";
   });
+}
 
-  var designCards = document.querySelectorAll(".design");
+function showAllCards() {
+  var allCards = document.querySelectorAll(".card");
 
-  designCards.forEach((designCards) => {
-    designCards.style.display = "block";
+  allCards.forEach((card) => {
+    card.style.display = "block";
   });
 }
 
-const filter1 = document.querySelector("#filter-marketing");
+// const filter1 = document.querySelector("#filter-marketing");
 
-filter1.addEventListener("click", function onClick() {
-  filter1.style.backgroundColor = "#eb3b3b";
-  filter1.style.color = "#302f38";
-});
+// filter1.addEventListener("click", function onClick() {
+//   filter1.style.backgroundColor = "#eb3b3b";
+//   filter1.style.color = "#302f38";
+// });
 
-const filter2 = document.querySelector("#filter-programming");
+// const filter2 = document.querySelector("#filter-programming");
 
-filter2.addEventListener("click", function onClick() {
-  filter2.style.backgroundColor = "#eb3b3b";
-  filter2.style.color = "#302f38";
-});
+// filter2.addEventListener("click", function onClick() {
+//   filter2.style.backgroundColor = "#eb3b3b";
+//   filter2.style.color = "#302f38";
+// });
 
-const filter3 = document.querySelector("#filter-design");
+// const filter3 = document.querySelector("#filter-design");
 
-filter3.addEventListener("click", function onClick() {
-  filter3.style.backgroundColor = "#eb3b3b";
-  filter3.style.color = "#302f38";
-});
+// filter3.addEventListener("click", function onClick() {
+//   filter3.style.backgroundColor = "#eb3b3b";
+//   filter3.style.color = "#302f38";
+// });
