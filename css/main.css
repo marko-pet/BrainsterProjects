@@ -40,13 +40,13 @@ h3 {
 }
 
 .countdown-container, .cards {
-  padding-top: 1.875rem;
-  padding-bottom: 1.875rem;
+  padding-top: 2.8125rem;
+  padding-bottom: 2.8125rem;
 }
 @media (max-width: 768px) {
   .countdown-container, .cards {
-    padding-top: 0.9375rem;
-    padding-bottom: 0.9375rem;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
   }
 }
 
@@ -260,12 +260,12 @@ nav .lg-hidden {
 .card-heading {
   text-align: center;
   font-size: 2.75rem;
-  padding-top: 1.875rem;
+  padding-top: 2.8125rem;
   margin: 0;
 }
 @media screen and (max-width: 768px) {
   .card-heading {
-    padding-top: 0.9375rem;
+    padding-top: 1.875rem;
   }
 }
 

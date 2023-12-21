@@ -54,11 +54,11 @@
 .card-heading {
   text-align: center;
   font-size: var.$heading-size-big;
-  padding-top: var.$gutter-base;
+  padding-top: var.$gutter-base * 1.5;
   margin: 0;
 
   @media screen and (max-width: 768px) {
-    padding-top: var.$gutter-base * 0.5;
+    padding-top: var.$gutter-base;
   }
 }
 
