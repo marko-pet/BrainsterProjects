@@ -73,7 +73,7 @@ nav {
   transition-duration: 125ms;
 }
 .cards .card .card-inner a:hover, nav .button:hover {
-  background-color: #d20e00;
+  background-color: #e80f00;
   transform: scale(1.05);
 }
 
