@@ -43,4 +43,10 @@
   font-weight: var.$font-weight-bold;
   color: var.$text-color-primary;
   display: inline-block;
+  transition-duration: 125ms;
+
+  &:hover {
+    background-color: #d20e00;
+    transform: scale(1.05);
+  }
 }
