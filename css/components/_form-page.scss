@@ -1,0 +1,62 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.student-form {
+  label {
+    font-weight: var.$font-weight-bold;
+    font-size: var.$font-size-medium;
+  }
+
+  input {
+    padding: var.$gutter-base * 0.5 var.$gutter-base * 0.75;
+    border-radius: 5px;
+    width: 400px;
+    border: none;
+  }
+}
+
+.select-menu {
+  width: 400px;
+  font-weight: var.$font-weight-bold;
+
+  .select-btn {
+    display: flex;
+    padding: var.$gutter-base * 0.5 var.$gutter-base * 0.75;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: var.$background-color-tertiary;
+
+    i {
+      transition: all 250ms;
+    }
+  }
+
+  .options {
+    position: relative;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: var.$background-color-tertiary;
+    list-style: none;
+    padding: 0;
+    display: none;
+
+    .option {
+      padding: var.$gutter-base * 0.5 var.$gutter-base * 0.75;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var.$background-color-quaternary;
+      }
+    }
+  }
+}
+
+.select-menu.active .options {
+  display: block;
+}
+
+.select-menu.active i {
+  transform: rotate(-180deg);
+}

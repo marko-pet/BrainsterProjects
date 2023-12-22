@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coming soon</title>
+    <title>Вработи наш студент</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -55,29 +55,62 @@
         <span class="bar"></span>
       </div>
     </nav>
-    <!-- Countdown -->
-    <div class="countdown-image">
-      <div class="countdown-container">
-        <h1>this page will be ready in:</h1>
-        <div id="countdown" class="countdown">
-          <div class="time">
-            <h2 id="days">00</h2>
-            <small>Days</small>
+    <!-- Form -->
+    <div class="container">
+      <h1>Вработи студенти</h1>
+      <form class="student-form">
+        <label for="full-name">Име и презиме</label>
+        <input
+          type="text"
+          name="full-name"
+          id="full-name"
+          placeholder="Вашето име и презиме"
+        />
+        <label for="company-name">Име на компанија</label>
+        <input
+          type="text"
+          name="company-name"
+          id="company-name"
+          placeholder="Име на вашата компанија"
+        />
+        <label for="e-mail">Контакт e-mail</label>
+        <input
+          type="email"
+          name="e-mail"
+          id="e-mail"
+          placeholder="Контакт e-mail на вашата компанија"
+        />
+        <label for="phone-number">Контакт телефон</label>
+        <input
+          type="number"
+          name="phone-number"
+          id="phone-number"
+          placeholder="Контакт телефон на вашата компанија"
+        />
+
+        <div class="select-menu">
+          <div class="select-btn">
+            <span class="sBtn-text">Изберете тип на студент</span>
+            <i class="fa-solid fa-angle-down fa-lg"></i>
           </div>
-          <div class="time">
-            <h2 id="hours">00</h2>
-            <small>Hours</small>
-          </div>
-          <div class="time">
-            <h2 id="minutes">00</h2>
-            <small>Minutes</small>
-          </div>
-          <div class="time">
-            <h2 id="seconds">00</h2>
-            <small>Seconds</small>
-          </div>
+          <ul class="options">
+            <li class="option">
+              <span class="option-text">Студенти од маркетинг</span>
+            </li>
+            <li class="option">
+              <span class="option-text">Студенти од програмирање</span>
+            </li>
+            <li class="option">
+              <span class="option-text">Студенти од data science</span>
+            </li>
+            <li class="option">
+              <span class="option-text">Студенти од design</span>
+            </li>
+          </ul>
         </div>
-      </div>
+
+        <input type="submit" value="испрати" />
+      </form>
     </div>
     <!-- Footer -->
     <footer>
@@ -86,6 +119,6 @@
         Brainster
       </p>
     </footer>
-    <script src="./coming-soon.js"></script>
+    <script src="./form-page.js"></script>
   </body>
 </html>

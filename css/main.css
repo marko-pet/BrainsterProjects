@@ -411,4 +411,56 @@ footer p {
 .countdown-container .countdown .time h2 {
   font-size: 3.75rem;
   margin: 0 0 5px;
+}
+
+.student-form label {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.student-form input {
+  padding: 0.9375rem 1.40625rem;
+  border-radius: 5px;
+  width: 400px;
+  border: none;
+}
+
+.select-menu {
+  width: 400px;
+  font-weight: 700;
+}
+.select-menu .select-btn {
+  display: flex;
+  padding: 0.9375rem 1.40625rem;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #fff;
+}
+.select-menu .select-btn i {
+  transition: all 250ms;
+}
+.select-menu .options {
+  position: relative;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  display: none;
+}
+.select-menu .options .option {
+  padding: 0.9375rem 1.40625rem;
+  cursor: pointer;
+}
+.select-menu .options .option:not(:last-child) {
+  border-bottom: 1px solid #47464e;
+}
+
+.select-menu.active .options {
+  display: block;
+}
+
+.select-menu.active i {
+  transform: rotate(-180deg);
 }/*# sourceMappingURL=main.css.map */
