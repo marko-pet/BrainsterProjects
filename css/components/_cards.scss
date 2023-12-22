@@ -14,6 +14,7 @@
 
   input[type="checkbox"]:checked + label {
     background-color: #eb3b3b;
+    color: var.$text-color-base;
   }
 
   .filter {
@@ -31,6 +32,10 @@
 
     @media screen and (max-width: 768px) {
       padding: var.$gutter-base * 0.5;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: var.$font-size-medium * 0.9;
     }
 
     &:not(:last-child) {
@@ -51,14 +56,14 @@
   }
 }
 
-h2 {
+.card-heading {
   text-align: center;
   font-size: var.$heading-size-big;
-  padding-top: var.$gutter-base;
+  padding-top: var.$gutter-base * 1.5;
   margin: 0;
 
   @media screen and (max-width: 768px) {
-    padding-top: var.$gutter-base * 0.5;
+    padding-top: var.$gutter-base;
   }
 }
 
