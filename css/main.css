@@ -77,6 +77,10 @@ h3 {
   transform: scale(1.05);
 }
 
+.nav-container {
+  background-color: #fcd232;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -91,6 +95,23 @@ nav {
     justify-content: space-between;
     padding-top: 0.1875rem;
     padding-bottom: 0.1875rem;
+  }
+  nav .md-flex {
+    display: flex;
+    align-items: center;
+  }
+  nav .md-marl {
+    margin-left: 20px;
+  }
+  nav .md-text-center {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 425px) {
+  nav .md-text-center {
+    text-align: left;
+    font-size: 1rem;
   }
 }
 nav img {
@@ -144,6 +165,56 @@ nav .lg-hidden {
     display: inline-block;
   }
   nav .md-hidden {
+    display: none;
+  }
+  nav .sm-hidden {
+    display: inline-block;
+  }
+  nav .hamburger {
+    display: block;
+  }
+  nav .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  nav .hamburger.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+    background-color: #fff;
+  }
+  nav .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+    background-color: #fff;
+  }
+  nav .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    transition: 0.3s;
+    padding-top: 3.75rem;
+    padding-left: 1.875rem;
+  }
+  nav .nav-item {
+    margin: 16px 0;
+  }
+  nav .nav-item a {
+    color: #fff;
+  }
+  nav .nav-menu.active {
+    right: 0;
+  }
+}
+@media (max-width: 425px) {
+  nav .lg-hidden {
+    display: inline-block;
+  }
+  nav .md-hidden {
+    display: inline-block;
+  }
+  nav .sm-hidden {
     display: none;
   }
   nav .hamburger {
@@ -366,7 +437,7 @@ footer p {
 }
 @media (max-width: 768px) {
   .countdown-image {
-    height: calc(100vh - 120px);
+    height: auto;
   }
 }
 

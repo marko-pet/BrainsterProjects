@@ -1,6 +1,10 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
 
+.nav-container {
+  background-color: #fcd232;
+}
+
 nav {
   @extend %wrap;
   display: flex;
@@ -15,6 +19,25 @@ nav {
     justify-content: space-between;
     padding-top: var.$gutter-base * 0.1;
     padding-bottom: var.$gutter-base * 0.1;
+
+    .md-flex {
+      display: flex;
+      align-items: center;
+    }
+
+    .md-marl {
+      margin-left: 20px;
+    }
+
+    .md-text-center {
+      text-align: center;
+      font-size: var.$font-size-medium;
+
+      @media screen and (max-width: 425px) {
+        text-align: left;
+        font-size: var.$font-size-base;
+      }
+    }
   }
 
   img {
@@ -83,6 +106,66 @@ nav {
     }
 
     .md-hidden {
+      display: none;
+    }
+
+    .sm-hidden {
+      display: inline-block;
+    }
+
+    .hamburger {
+      display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(10px) rotate(45deg);
+      background-color: var.$background-color-tertiary;
+    }
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-10px) rotate(-45deg);
+      background-color: var.$background-color-tertiary;
+    }
+
+    .nav-menu {
+      position: fixed;
+      right: -100%;
+      top: 0;
+      bottom: 0;
+      gap: 0;
+      flex-direction: column;
+      background-color: #262626;
+      width: 100%;
+      transition: 0.3s;
+      padding-top: var.$gutter-base * 2;
+      padding-left: var.$gutter-base;
+    }
+
+    .nav-item {
+      margin: 16px 0;
+
+      a {
+        color: var.$text-color-primary;
+      }
+    }
+
+    .nav-menu.active {
+      right: 0;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .lg-hidden {
+      display: inline-block;
+    }
+
+    .md-hidden {
+      display: inline-block;
+    }
+
+    .sm-hidden {
       display: none;
     }
 
