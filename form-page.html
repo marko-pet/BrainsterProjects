@@ -56,37 +56,47 @@
       </div>
     </nav>
     <!-- Form -->
-    <div class="container">
+    <div class="form-container">
       <h1>Вработи студенти</h1>
       <form class="student-form">
-        <label for="full-name">Име и презиме</label>
-        <input
-          type="text"
-          name="full-name"
-          id="full-name"
-          placeholder="Вашето име и презиме"
-        />
-        <label for="company-name">Име на компанија</label>
-        <input
-          type="text"
-          name="company-name"
-          id="company-name"
-          placeholder="Име на вашата компанија"
-        />
-        <label for="e-mail">Контакт e-mail</label>
-        <input
-          type="email"
-          name="e-mail"
-          id="e-mail"
-          placeholder="Контакт e-mail на вашата компанија"
-        />
-        <label for="phone-number">Контакт телефон</label>
-        <input
-          type="number"
-          name="phone-number"
-          id="phone-number"
-          placeholder="Контакт телефон на вашата компанија"
-        />
+        <div class="input-container">
+          <label for="full-name">Име и презиме</label>
+          <input
+            type="text"
+            name="full-name"
+            id="full-name"
+            placeholder="Вашето име и презиме"
+          />
+        </div>
+        <div class="input-container">
+          <label for="company-name">Име на компанија</label>
+          <input
+            type="text"
+            name="company-name"
+            id="company-name"
+            placeholder="Име на вашата компанија"
+          />
+        </div>
+
+        <div class="input-container">
+          <label for="e-mail">Контакт e-mail</label>
+          <input
+            type="email"
+            name="e-mail"
+            id="e-mail"
+            placeholder="Контакт e-mail на вашата компанија"
+          />
+        </div>
+
+        <div class="input-container">
+          <label for="phone-number">Контакт телефон</label>
+          <input
+            type="number"
+            name="phone-number"
+            id="phone-number"
+            placeholder="Контакт телефон на вашата компанија"
+          />
+        </div>
 
         <div class="select-menu">
           <div class="select-btn">
@@ -108,8 +118,9 @@
             </li>
           </ul>
         </div>
-
-        <input type="submit" value="испрати" />
+        <div class="input-container">
+          <input type="submit" value="испрати" />
+        </div>
       </form>
     </div>
     <!-- Footer -->

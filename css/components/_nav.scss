@@ -9,6 +9,7 @@ nav {
   padding-top: var.$gutter-base * 0.3;
   padding-bottom: var.$gutter-base * 0.3;
   font-weight: var.$font-weight-bold;
+  background-color: #fcd232;
 
   @media screen and (max-width: 768px) {
     justify-content: space-between;
