@@ -15,78 +15,98 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo nav-branding">
-        <a href="./index.html"
-          ><img src="./images/Logo-Brainster.png" alt="..."
-        /></a>
-      </div>
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="./coming-soon.html" class="nav-link"
-            >Академија за маркетинг</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="./coming-soon.html" class="nav-link"
-            >Академија за програмирање</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="./coming-soon.html" class="nav-link"
-            >Академија за data science</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="./coming-soon.html" class="nav-link">Академија за design</a>
-        </li>
-        <li class="nav-item lg-hidden">
-          <a href="./form-page.html" class="nav-link button"
+    <div class="nav-container">
+      <nav class="navbar">
+        <div class="logo nav-branding">
+          <a href="./index.html"
+            ><img src="./images/Logo-Brainster.png" alt="..."
+          /></a>
+        </div>
+        <ul class="nav-menu md-text-center">
+          <li class="nav-item">
+            <a href="./coming-soon.html" class="nav-link"
+              >Академија за маркетинг</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="./coming-soon.html" class="nav-link"
+              >Академија за програмирање</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="./coming-soon.html" class="nav-link"
+              >Академија за data science</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="./coming-soon.html" class="nav-link"
+              >Академија за design</a
+            >
+          </li>
+          <li class="nav-item lg-hidden md-hidden">
+            <a href="./form-page.html" class="nav-link button"
+              >Вработи наш студент</a
+            >
+          </li>
+        </ul>
+        <div class="md-flex">
+          <a href="./form-page.html" class="nav-link button sm-hidden"
             >Вработи наш студент</a
           >
-        </li>
-      </ul>
-      <a href="./form-page.html" class="nav-link button md-hidden"
-        >Вработи наш студент</a
-      >
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </nav>
+          <div class="hamburger md-marl">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    </div>
     <!-- Form -->
-    <div class="container">
+    <div class="form-container">
       <h1>Вработи студенти</h1>
       <form class="student-form">
-        <label for="full-name">Име и презиме</label>
-        <input
-          type="text"
-          name="full-name"
-          id="full-name"
-          placeholder="Вашето име и презиме"
-        />
-        <label for="company-name">Име на компанија</label>
-        <input
-          type="text"
-          name="company-name"
-          id="company-name"
-          placeholder="Име на вашата компанија"
-        />
-        <label for="e-mail">Контакт e-mail</label>
-        <input
-          type="email"
-          name="e-mail"
-          id="e-mail"
-          placeholder="Контакт e-mail на вашата компанија"
-        />
-        <label for="phone-number">Контакт телефон</label>
-        <input
-          type="number"
-          name="phone-number"
-          id="phone-number"
-          placeholder="Контакт телефон на вашата компанија"
-        />
+        <div class="input-container">
+          <label for="full-name">Име и презиме</label>
+          <input
+            type="text"
+            name="full-name"
+            id="full-name"
+            required
+            placeholder="Вашето име и презиме"
+          />
+        </div>
+        <div class="input-container">
+          <label for="company-name">Име на компанија</label>
+          <input
+            type="text"
+            name="company-name"
+            id="company-name"
+            required
+            placeholder="Име на вашата компанија"
+          />
+        </div>
+
+        <div class="input-container">
+          <label for="e-mail">Контакт e-mail</label>
+          <input
+            type="email"
+            name="e-mail"
+            id="e-mail"
+            required
+            placeholder="Контакт e-mail на вашата компанија"
+          />
+        </div>
+
+        <div class="input-container">
+          <label for="phone-number">Контакт телефон</label>
+          <input
+            type="number"
+            name="phone-number"
+            id="phone-number"
+            required
+            placeholder="Контакт телефон на вашата компанија"
+          />
+        </div>
 
         <div class="select-menu">
           <div class="select-btn">
@@ -108,8 +128,9 @@
             </li>
           </ul>
         </div>
-
-        <input type="submit" value="испрати" />
+        <div class="input-container">
+          <input type="submit" value="испрати" />
+        </div>
       </form>
     </div>
     <!-- Footer -->
