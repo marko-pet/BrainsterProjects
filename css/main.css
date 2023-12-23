@@ -282,6 +282,16 @@ nav .lg-hidden {
   }
 }
 
+[data-animate] {
+  opacity: 0;
+  will-change: auto;
+}
+
+.animated {
+  transition: all 1s cubic-bezier(0.57, 0.08, 0.9, 0.36);
+  opacity: 1;
+}
+
 .filters {
   display: flex;
 }
