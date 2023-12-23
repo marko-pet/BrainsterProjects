@@ -12,6 +12,6 @@ body {
 h1,
 h2,
 h3 {
-  margin-bottom: math.div(var.$gutter-base, 2);
+  margin-bottom: 0;
   font-weight: var.$font-weight-bold;
 }
