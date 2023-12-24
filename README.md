@@ -1,6 +1,6 @@
-# Brainster Projects
+# Brainster Project-01
 
-Here you can find all of my Brainster Projects.
+Here is my first project.
 
 ## Made with:
 
