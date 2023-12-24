@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/nastuh-abootalebi-rSpMla5RItA-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+
+  h1 {
+    font-size: var.$heading-size-bigger * 1.5;
+    text-transform: capitalize;
+    color: var.$text-color-primary;
+    text-align: center;
+    padding: var.$gutter-base * 5 0;
+
+    @media (max-width: 768px) {
+      font-size: var.$heading-size-bigger;
+    }
+
+    @media (max-width: 425px) {
+      font-size: var.$heading-size-big;
+    }
+  }
+}
+
+[data-animate] {
+  opacity: 0;
+  will-change: auto;
+}
+
+.animated {
+  transition: all 1s cubic-bezier(0.57, 0.08, 0.9, 0.36);
+  opacity: 1;
+}
