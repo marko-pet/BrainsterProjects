@@ -1,0 +1,58 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.sec-info {
+  @extend %section;
+  @extend %wrap;
+
+  h1 {
+    font-size: var.$heading-size-big;
+    font-weight: 900;
+    color: hsla(0, 0%, 100%, 0.6);
+    text-align: center;
+  }
+
+  .sec-info-cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+
+    .sec-info-card {
+      padding: var.$gutter-base;
+      border-radius: 16px;
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        height: 100px;
+      }
+
+      .sec-info-title {
+        font-size: var.$heading-size-medium;
+        font-weight: var.$font-weight-bold;
+      }
+
+      .details {
+        padding: var.$gutter-base * 1.5 0;
+        line-height: 32px;
+      }
+
+      button {
+        @extend %sec-button;
+      }
+    }
+
+    .purple {
+      background: rgba(153, 70, 243, 0.4);
+    }
+    .blue {
+      background: rgba(75, 124, 243, 0.4);
+    }
+    .green {
+      background: rgba(131, 234, 177, 0.4);
+    }
+  }
+}

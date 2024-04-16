@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+body {
+  font-family: var.$font-family-base;
+  font-weight: var.$font-weight-normal;
+  line-height: var.$line-height-base;
+  background: var.$background-color-base;
+  color: var.$text-color-base;
+}
