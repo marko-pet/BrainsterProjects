@@ -1,0 +1,79 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+footer {
+  background: linear-gradient(
+    180deg,
+    rgba(66, 53, 107, 0.8) 0%,
+    rgba(153, 70, 243, 0.16) 100%
+  );
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    @extend %wrap;
+    @extend %section;
+
+    color: var.$text-color-secondary;
+
+    .extra-links {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      a {
+        color: var.$text-color-secondary;
+      }
+    }
+
+    .localization {
+      text-transform: uppercase;
+      font-weight: var.$font-weight-bold;
+    }
+
+    .outer {
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    .last {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .inner {
+        a {
+          &:not(:last-child) {
+            margin-right: var.$gutter-base;
+          }
+        }
+      }
+    }
+
+    .font-awesome-icons-outer {
+      display: flex;
+
+      .font-awesome-icons-inner {
+        display: flex;
+        align-items: center;
+
+        i {
+          margin-right: var.$gutter-base * 0.7;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .margin-left {
+        margin-left: var.$gutter-base * 2;
+      }
+    }
+
+    .margin-top {
+      margin-top: 16px;
+    }
+  }
+}
