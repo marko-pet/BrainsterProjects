@@ -24,24 +24,24 @@ a {
   text-decoration: none;
 }
 
-footer .footer-inner, .sec-info {
+.log-in-page, footer .footer-inner, .sec-info {
   padding-top: 2.8125rem;
   padding-bottom: 2.8125rem;
 }
 @media (max-width: 768px) {
-  footer .footer-inner, .sec-info {
+  .log-in-page, footer .footer-inner, .sec-info {
     padding-top: 1.875rem;
     padding-bottom: 1.875rem;
   }
 }
 
-footer .footer-inner, .sec-info {
+.log-in-page, footer .footer-inner, .sec-info {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 @media (max-width: 768px) {
-  footer .footer-inner, .sec-info {
+  .log-in-page, footer .footer-inner, .sec-info {
     width: 100%;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -52,14 +52,23 @@ footer .footer-inner, .sec-info {
   padding: 10px 0;
   width: 100%;
   font-size: 22px;
-  color: rgb(21, 35, 71);
   font-weight: 700;
   border: 2px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.4);
 }
+.sec-info .sec-info-cards .sec-info-card button a {
+  color: rgb(21, 35, 71);
+}
 .sec-info .sec-info-cards .sec-info-card button:hover {
   cursor: pointer;
+}
+
+.log-in-page h1, .sec-info h1 {
+  font-size: 80px;
+  font-weight: 900;
+  color: hsla(0, 0%, 100%, 0.6);
+  text-align: center;
 }
 
 body {
@@ -77,6 +86,7 @@ nav {
   align-items: center;
   color: rgb(66, 53, 107);
   padding: 10px 100px;
+  box-shadow: 0px 8px 24px 0px rgba(66, 53, 107, 0.08);
 }
 nav p {
   margin: 0;
@@ -126,12 +136,6 @@ nav .localization {
   font-weight: 700;
 }
 
-.sec-info h1 {
-  font-size: 80px;
-  font-weight: 900;
-  color: hsla(0, 0%, 100%, 0.6);
-  text-align: center;
-}
 .sec-info .sec-info-cards {
   display: grid;
   gap: 20px;
@@ -216,4 +220,81 @@ footer .footer-inner .font-awesome-icons-outer .margin-left {
 }
 footer .footer-inner .margin-top {
   margin-top: 16px;
+}
+
+.log-in-page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.log-in-page a {
+  display: block;
+  color: rgb(21, 35, 71);
+}
+.log-in-page a .continue-with {
+  background: rgb(255, 255, 255);
+  padding: 0 1.40625rem;
+  display: flex;
+  align-items: center;
+  height: 56.9px;
+}
+.log-in-page a .continue-with p {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-left: 1.875rem;
+}
+.log-in-page a:not(:first-child) {
+  margin-top: 1.875rem;
+}
+.log-in-page .log-in-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.log-in-page label {
+  color: rgb(255, 255, 255);
+}
+.log-in-page span {
+  color: rgb(255, 255, 255);
+}
+.log-in-page input.not-checkbox {
+  width: 100%;
+  padding: 0 1.40625rem;
+  border: none;
+  height: 56.9px;
+  margin-bottom: 0.9375rem;
+  margin-top: 0.375rem;
+}
+.log-in-page .log-in-help {
+  display: flex;
+  justify-content: space-between;
+}
+.log-in-page .or {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+.log-in-page .or span {
+  background-color: transparent;
+  padding: 0 10px;
+}
+.log-in-page button {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1.58px solid;
+  border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 29.17%);
+  box-shadow: 0px 6.32px 12.64px 0px rgba(66, 53, 107, 0.1);
+  padding: 0.5625rem 0;
+  width: 50%;
+  border-radius: 6.32px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(66, 53, 107);
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1.875rem;
+}
+.log-in-page button:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

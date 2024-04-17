@@ -8,6 +8,7 @@
 $font-family-base: "Montserrat", sans-serif;
 
 $font-size-base: 16px;
+$font-size-small: 18px;
 $font-size-medium: 20px;
 
 $heading-size-medium: 32px;
@@ -25,7 +26,6 @@ $gutter-base: rem-calc(30);
 $text-color-base: rgba(21, 35, 71, 1);
 $text-color-primary: rgba(66, 53, 107, 1);
 $text-color-secondary: rgba(255, 255, 255, 1);
-
 // $text-color-secondary: #000;
 
 $background-color-nav: linear-gradient(
@@ -37,6 +37,6 @@ $background-color-base: linear-gradient(
   rgba(131, 234, 177, 0.7),
   rgba(75, 124, 243, 0.7)
 );
-// $background-color-secondary: #ff1300;
+$background-color-secondary: rgba(255, 255, 255, 1);
 // $background-color-tertiary: #fff;
 // $background-color-quaternary: #47464e;
