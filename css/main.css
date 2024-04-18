@@ -24,24 +24,24 @@ a {
   text-decoration: none;
 }
 
-.log-in-page, footer .footer-inner, .sec-info {
+.content-page, .content-page .content-cards, .log-in-page, footer .footer-inner, .sec-info {
   padding-top: 2.8125rem;
   padding-bottom: 2.8125rem;
 }
 @media (max-width: 768px) {
-  .log-in-page, footer .footer-inner, .sec-info {
+  .content-page, .content-page .content-cards, .log-in-page, footer .footer-inner, .sec-info {
     padding-top: 1.875rem;
     padding-bottom: 1.875rem;
   }
 }
 
-.log-in-page, footer .footer-inner, .sec-info {
+.content-page, .log-in-page, footer .footer-inner, .sec-info {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 @media (max-width: 768px) {
-  .log-in-page, footer .footer-inner, .sec-info {
+  .content-page, .log-in-page, footer .footer-inner, .sec-info {
     width: 100%;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -64,11 +64,46 @@ a {
   cursor: pointer;
 }
 
-.log-in-page h1, .sec-info h1 {
+.content-page h1, .log-in-page h1, .sec-info h1 {
   font-size: 80px;
   font-weight: 900;
   color: hsla(0, 0%, 100%, 0.6);
   text-align: center;
+}
+
+.log-in-page .button-form, .sec-info-modal button {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1.58px solid;
+  border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 29.17%);
+  box-shadow: 0px 6.32px 12.64px 0px rgba(66, 53, 107, 0.1);
+  padding: 0.5625rem 0;
+  width: 50%;
+  border-radius: 6.32px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(66, 53, 107);
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.log-in-page .button-form:hover, .sec-info-modal button:hover {
+  cursor: pointer;
+}
+
+.content-page .content-filters .content-filter-active, .content-page .content-filters .content-filter {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px 8px 16px 0px rgba(66, 53, 107, 0.1);
+  padding: 0.46875rem 0.9375rem;
+  color: rgb(66, 53, 107);
+  font-weight: 500;
+}
+.content-page .content-filters .content-filter-active:not(:last-child), .content-page .content-filters .content-filter:not(:last-child) {
+  margin-right: 0.9375rem;
+}
+.content-page .content-filters .content-filter-active:hover, .content-page .content-filters .content-filter:hover {
+  cursor: pointer;
 }
 
 body {
@@ -136,6 +171,9 @@ nav .localization {
   font-weight: 700;
 }
 
+.sec-info {
+  display: none;
+}
 .sec-info .sec-info-cards {
   display: grid;
   gap: 20px;
@@ -222,9 +260,15 @@ footer .footer-inner .margin-top {
   margin-top: 16px;
 }
 
+.video {
+  display: none;
+}
+
 .log-in-page {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  display: none;
 }
 .log-in-page a {
   display: block;
@@ -235,6 +279,8 @@ footer .footer-inner .margin-top {
   padding: 0 1.40625rem;
   display: flex;
   align-items: center;
+  border: 1.58px solid rgb(153, 70, 243);
+  border-radius: 3.95px;
   height: 56.9px;
 }
 .log-in-page a .continue-with p {
@@ -253,13 +299,14 @@ footer .footer-inner .margin-top {
 .log-in-page label {
   color: rgb(255, 255, 255);
 }
-.log-in-page span {
+.log-in-page span a {
   color: rgb(255, 255, 255);
 }
 .log-in-page input.not-checkbox {
   width: 100%;
   padding: 0 1.40625rem;
-  border: none;
+  border: 1.58px solid rgb(153, 70, 243);
+  border-radius: 3.95px;
   height: 56.9px;
   margin-bottom: 0.9375rem;
   margin-top: 0.375rem;
@@ -279,22 +326,164 @@ footer .footer-inner .margin-top {
   background-color: transparent;
   padding: 0 10px;
 }
-.log-in-page button {
-  background: rgba(255, 255, 255, 0.4);
-  border: 1.58px solid;
-  border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 29.17%);
-  box-shadow: 0px 6.32px 12.64px 0px rgba(66, 53, 107, 0.1);
-  padding: 0.5625rem 0;
-  width: 50%;
-  border-radius: 6.32px;
-  font-size: 18px;
-  font-weight: 700;
-  color: rgb(66, 53, 107);
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+.log-in-page .button-form {
   margin-top: 1.875rem;
 }
-.log-in-page button:hover {
+
+.sec-info-modal {
+  padding: 15rem 0;
+  display: grid;
+  align-content: center;
+  background: linear-gradient(180deg, rgba(153, 70, 243, 0.8) 0%, rgba(66, 53, 107, 0.8) 100%);
+  box-shadow: 0px 8px 16px 0px rgba(66, 53, 107, 0.1);
+  border-radius: 32px;
+  height: 25%;
+  width: 60%;
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.sec-info-modal h2 {
+  font-size: 64px;
+  font-weight: 900;
+  margin-bottom: 0.9375rem;
+}
+.sec-info-modal h4 {
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: 3.75rem;
+}
+.content-page {
+  position: relative;
+}
+.content-page .type-of-content {
+  display: flex;
+  font-size: 36px;
+  font-weight: 900;
+  width: 70%;
+  justify-content: space-around;
+  margin-right: auto;
+  margin-left: auto;
+}
+.content-page .type-of-content div {
+  opacity: 0.4;
+}
+.content-page .type-of-content div:hover {
   cursor: pointer;
+}
+.content-page .type-of-content .type-of-content-active {
+  opacity: 1;
+}
+.content-page .content-filters {
+  display: flex;
+  padding-top: 2.8125rem;
+}
+.content-page .content-filters .content-filter {
+  opacity: 0.5;
+}
+.content-page .content-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.875rem;
+}
+.content-page .content-cards .content-card {
+  display: flex;
+  align-items: end;
+  height: 500px;
+  background-image: url("../img/placeholder-image.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 8px 16px 0px rgba(66, 53, 107, 0.3);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.content-page .content-cards .content-card .card-content {
+  padding: 1.40625rem;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
+}
+.content-page .content-cards .content-card .card-content .card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.content-page .content-cards .content-card .card-content .card-date {
+  opacity: 0.5;
+  margin-top: 0.75rem;
+}
+.content-page .content-page-modal {
+  position: absolute;
+  top: 1.875rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1.875rem;
+  border-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.content-page .content-page-modal .details-and-comments {
+  flex-basis: 67.5%;
+}
+.content-page .content-page-modal .details-and-comments .details {
+  margin-bottom: 2.8125rem;
+}
+.content-page .content-page-modal .details-and-comments .details h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.content-page .content-page-modal .details-and-comments .comments .new-comment {
+  border: 2px solid rgba(21, 35, 71, 0.5);
+  border-radius: 16px;
+  padding: 0.9375rem;
+  margin-bottom: 0.9375rem;
+}
+.content-page .content-page-modal .details-and-comments .comments .new-comment input {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 1px solid black;
+  padding: 0.46875rem 0;
+  font-size: 24px;
+}
+.content-page .content-page-modal .details-and-comments .comments .new-comment span {
+  font-weight: 500;
+  color: rgba(21, 35, 71, 0.5);
+}
+.content-page .content-page-modal .details-and-comments .comments .all-comments .comment {
+  border: 2px solid rgba(21, 35, 71, 0.5);
+  border-radius: 16px;
+  padding: 0.9375rem;
+}
+.content-page .content-page-modal .details-and-comments .comments .all-comments .comment:not(:last-child) {
+  margin-top: 0.9375rem;
+}
+.content-page .content-page-modal .details-and-comments .comments .all-comments .comment span {
+  font-weight: 500;
+}
+.content-page .content-page-modal .details-and-comments ::-moz-placeholder {
+  font-size: 24px;
+}
+.content-page .content-page-modal .details-and-comments ::placeholder {
+  font-size: 24px;
+}
+.content-page .content-page-modal .modal-video {
+  flex-basis: 30%;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=main.css.map */

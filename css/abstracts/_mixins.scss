@@ -60,3 +60,49 @@
   color: hsla(0, 0%, 100%, 0.6);
   text-align: center;
 }
+
+%button-log-in-page {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1.58px solid;
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0) 29.17%
+  );
+  box-shadow: 0px 6.32px 12.64px 0px rgba(66, 53, 107, 0.1);
+  padding: var.$gutter-base * 0.3 0;
+  width: 50%;
+  border-radius: 6.32px;
+  font-size: var.$font-size-small;
+  font-weight: var.$font-weight-bold;
+  color: var.$text-color-primary;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+%content-filter {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0px 8px 16px 0px rgba(66, 53, 107, 0.1);
+  padding: var.$gutter-base * 0.25 var.$gutter-base * 0.5;
+  color: var.$text-color-primary;
+  font-weight: 500;
+
+  &:not(:last-child) {
+    margin-right: var.$gutter-base * 0.5;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

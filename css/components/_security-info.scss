@@ -4,6 +4,7 @@
 .sec-info {
   @extend %section;
   @extend %wrap;
+  display: none;
 
   h1 {
     @extend %h1-main;
@@ -28,7 +29,7 @@
       }
 
       .sec-info-title {
-        font-size: var.$heading-size-medium;
+        font-size: var.$heading-size-small;
         font-weight: var.$font-weight-bold;
       }
 
