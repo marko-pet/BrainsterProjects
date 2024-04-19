@@ -4,6 +4,7 @@
 .discussion-page {
   @extend %wrap;
   @extend %section;
+  position: relative;
 
   h1 {
     @extend %h1-main;
@@ -74,5 +75,27 @@
 
   .purple {
     background: rgba(143, 57, 236, 0.4);
+  }
+
+  .blur {
+    position: absolute;
+    bottom: var.$gutter-base * 1.5;
+    width: 100%;
+    text-align: center;
+    color: var.$text-color-secondary;
+    padding: var.$gutter-base 0;
+    background: linear-gradient(rgb(135, 175, 239, 0), rgb(135, 175, 239, 1));
+
+    i {
+      margin-right: var.$gutter-base * 0.5;
+    }
+
+    .blur-inner {
+      display: inline-block;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }
