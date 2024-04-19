@@ -5,7 +5,7 @@
   @extend %wrap;
   @extend %section;
   position: relative;
-  display: none;
+  // display: none;
 
   h1 {
     @extend %h1-main;

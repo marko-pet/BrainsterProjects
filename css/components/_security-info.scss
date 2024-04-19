@@ -4,10 +4,11 @@
 .sec-info {
   @extend %section;
   @extend %wrap;
-  display: none;
+  // display: none;
 
   h1 {
     @extend %h1-main;
+    text-align: center;
   }
 
   .sec-info-cards {

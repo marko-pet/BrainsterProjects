@@ -126,19 +126,19 @@
         <div class="or"><span>или</span></div>
 
         <form>
-          <label for="username">Корисничко име</label>
+          <label for="username-log-in">Корисничко име</label>
           <input
             class="not-checkbox"
             type="text"
-            id="username"
+            id="username-log-in"
             placeholder="Username"
           />
 
-          <label for="password">Лозинка</label>
+          <label for="password-log-in">Лозинка</label>
           <input
             class="not-checkbox"
             type="password"
-            id="password"
+            id="password-log-in"
             placeholder="Password"
           />
 
@@ -660,6 +660,89 @@
         </div>
         <div class="contact-link">
           <a href="#">Линк</a>
+        </div>
+      </div>
+    </div>
+    <!-- PROFILE PAGE -->
+    <div class="profile-page">
+      <h1>Профил</h1>
+      <div class="profile-main">
+        <div class="profile-image">
+          <img src="./img/Rectangle 562.png" alt="Pfp" />
+        </div>
+        <div class="profile-settings">
+          <form>
+            <div class="settings-section">
+              <div class="settings-section-inner">
+                <label for="username-profile"
+                  >Име и презиме / Корисничко име</label
+                >
+                <input type="text" id="username-profile" />
+              </div>
+
+              <div class="settings-section-inner">
+                <label for="email-profile">Email адреса</label>
+                <input type="email" id="email-profile" />
+              </div>
+
+              <div class="settings-section-inner">
+                <label for="password-profile">Лозинка</label>
+                <input type="password" id="password-profile" />
+              </div>
+            </div>
+
+            <div class="settings-section">
+              <div class="settings-section-inner">
+                <label for="birth-date">Година на раѓање</label>
+                <input type="number" min="1900" max="2024" step="1" />
+              </div>
+
+              <div class="settings-section-inner">
+                <label for="gender">Пол</label>
+                <input type="text" id="gender" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="profile-progress">
+        <div class="progress-extra">
+          <p>Следи го својот Safeblink напредок!</p>
+          <p class="progress-extra-p">Моментално ниво: Лорем ипсум</p>
+        </div>
+        <div class="profile-progress-bar">
+          <div class="profile-progress-bar-inner"></div>
+        </div>
+      </div>
+
+      <div class="profile-achievements">
+        <div class="achievement">
+          <div class="achievement-img">
+            <img
+              src="./img/achievement-placeholder.png"
+              alt="achievement-image"
+            />
+          </div>
+          <span>placeholder text</span>
+        </div>
+        <div class="achievement">
+          <div class="achievement-img">
+            <img
+              src="./img/achievement-placeholder.png"
+              alt="achievement-image"
+            />
+          </div>
+          <span>placeholder text</span>
+        </div>
+        <div class="achievement">
+          <div class="achievement-img">
+            <img
+              src="./img/achievement-placeholder.png"
+              alt="achievement-image"
+            />
+          </div>
+          <span>placeholder text</span>
         </div>
       </div>
     </div>

@@ -24,24 +24,24 @@ a {
   text-decoration: none;
 }
 
-.contact-page, .discussion-page, .content-page, .content-page .content-cards, .log-in-page, footer .footer-inner, .sec-info {
+.profile-page, .profile-page .profile-progress, .contact-page, .discussion-page, .content-page, .content-page .content-cards, .log-in-page, footer .footer-inner, .sec-info {
   padding-top: 2.8125rem;
   padding-bottom: 2.8125rem;
 }
 @media (max-width: 768px) {
-  .contact-page, .discussion-page, .content-page, .content-page .content-cards, .log-in-page, footer .footer-inner, .sec-info {
+  .profile-page, .profile-page .profile-progress, .contact-page, .discussion-page, .content-page, .content-page .content-cards, .log-in-page, footer .footer-inner, .sec-info {
     padding-top: 1.875rem;
     padding-bottom: 1.875rem;
   }
 }
 
-.contact-page, .discussion-page, .content-page, .log-in-page, footer .footer-inner, .sec-info {
+.profile-page, .contact-page, .discussion-page, .content-page, .log-in-page, footer .footer-inner, .sec-info {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 @media (max-width: 768px) {
-  .contact-page, .discussion-page, .content-page, .log-in-page, footer .footer-inner, .sec-info {
+  .profile-page, .contact-page, .discussion-page, .content-page, .log-in-page, footer .footer-inner, .sec-info {
     width: 100%;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -64,7 +64,7 @@ a {
   cursor: pointer;
 }
 
-.contact-page h1, .discussion-page h1, .content-page h1, .log-in-page h1, .sec-info h1 {
+.profile-page h1, .contact-page h1, .discussion-page h1, .content-page h1, .log-in-page h1, .sec-info h1 {
   font-size: 80px;
   font-weight: 900;
   color: hsla(0, 0%, 100%, 0.6);
@@ -170,8 +170,8 @@ nav .localization {
   font-weight: 700;
 }
 
-.sec-info {
-  display: none;
+.sec-info h1 {
+  text-align: center;
 }
 .sec-info .sec-info-cards {
   display: grid;
@@ -267,7 +267,6 @@ footer .footer-inner .margin-top {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   position: relative;
-  display: none;
 }
 .log-in-page a {
   display: block;
@@ -361,7 +360,6 @@ footer .footer-inner .margin-top {
 }
 .content-page {
   position: relative;
-  display: none;
 }
 .content-page .type-of-content {
   display: flex;
@@ -490,7 +488,6 @@ footer .footer-inner .margin-top {
 
 .discussion-page {
   position: relative;
-  display: none;
 }
 .discussion-page .discussions {
   display: grid;
@@ -620,4 +617,86 @@ footer .footer-inner .margin-top {
 
 .marb-gutter-base {
   margin-bottom: 1.875rem;
+}
+
+.profile-page .profile-main {
+  display: flex;
+  justify-content: space-between;
+}
+.profile-page .profile-main .profile-settings {
+  flex-basis: 70%;
+}
+.profile-page .profile-main .profile-settings form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.875rem;
+  height: 100%;
+}
+.profile-page .profile-main .profile-settings form label {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  width: 100%;
+}
+.profile-page .profile-main .profile-settings form input {
+  font-size: 22px;
+  font-weight: 500;
+  width: 100%;
+  background: transparent;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 0.46875rem 0;
+  color: rgb(255, 255, 255);
+}
+.profile-page .profile-main .profile-settings .settings-section {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  height: 100%;
+}
+.profile-page .profile-progress .progress-extra {
+  display: flex;
+  justify-content: space-between;
+}
+.profile-page .profile-progress .progress-extra .progress-extra-p {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: normal;
+}
+.profile-page .profile-progress .progress-extra p {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+.profile-page .profile-progress .profile-progress-bar {
+  background: 218, 218, 218, 0.5;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  height: 1rem;
+  overflow: hidden;
+}
+.profile-page .profile-progress .profile-progress-bar .profile-progress-bar-inner {
+  background: rgb(131, 234, 177);
+  border: 3px solid;
+  border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 40.94%);
+  border-radius: 4px;
+  height: 1rem;
+  width: 33.333%;
+}
+.profile-page .profile-achievements {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.875rem;
+}
+.profile-page .profile-achievements .achievement {
+  height: 10rem;
+  display: grid;
+  align-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.36) 69.79%);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 16px 16px 0px rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+.profile-page .profile-achievements .achievement span {
+  font-weight: 500;
+  text-transform: capitalize;
 }/*# sourceMappingURL=main.css.map */

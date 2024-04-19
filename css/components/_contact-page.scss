@@ -4,6 +4,7 @@
 .contact-page {
   @extend %wrap;
   @extend %section;
+  // display: none;
 
   h1 {
     @extend %h1-main;
