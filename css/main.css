@@ -24,24 +24,24 @@ a {
   text-decoration: none;
 }
 
-.discussion-page, .content-page, .content-page .content-cards, .log-in-page, footer .footer-inner, .sec-info {
+.contact-page, .discussion-page, .content-page, .content-page .content-cards, .log-in-page, footer .footer-inner, .sec-info {
   padding-top: 2.8125rem;
   padding-bottom: 2.8125rem;
 }
 @media (max-width: 768px) {
-  .discussion-page, .content-page, .content-page .content-cards, .log-in-page, footer .footer-inner, .sec-info {
+  .contact-page, .discussion-page, .content-page, .content-page .content-cards, .log-in-page, footer .footer-inner, .sec-info {
     padding-top: 1.875rem;
     padding-bottom: 1.875rem;
   }
 }
 
-.discussion-page, .content-page, .log-in-page, footer .footer-inner, .sec-info {
+.contact-page, .discussion-page, .content-page, .log-in-page, footer .footer-inner, .sec-info {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 @media (max-width: 768px) {
-  .discussion-page, .content-page, .log-in-page, footer .footer-inner, .sec-info {
+  .contact-page, .discussion-page, .content-page, .log-in-page, footer .footer-inner, .sec-info {
     width: 100%;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -64,11 +64,10 @@ a {
   cursor: pointer;
 }
 
-.discussion-page h1, .content-page h1, .log-in-page h1, .sec-info h1 {
+.contact-page h1, .discussion-page h1, .content-page h1, .log-in-page h1, .sec-info h1 {
   font-size: 80px;
   font-weight: 900;
   color: hsla(0, 0%, 100%, 0.6);
-  text-align: center;
 }
 
 .log-in-page .button-form, .sec-info-modal button {
@@ -491,6 +490,7 @@ footer .footer-inner .margin-top {
 
 .discussion-page {
   position: relative;
+  display: none;
 }
 .discussion-page .discussions {
   display: grid;
@@ -570,4 +570,54 @@ footer .footer-inner .margin-top {
 }
 .discussion-page .blur .blur-inner:hover {
   cursor: pointer;
+}
+
+.contact-page h1 {
+  margin-top: 0;
+}
+.contact-page h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 0;
+}
+.contact-page h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(118, 79, 240);
+  margin-top: 0;
+}
+.contact-page .contact-container {
+  padding: 1.40625rem;
+  display: flex;
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid;
+  border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 16px;
+}
+.contact-page .contact-container .contact-details {
+  flex-basis: 70%;
+}
+.contact-page .contact-container .contact-link {
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-page .contact-container a {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 22px;
+  background: rgb(153, 70, 243);
+  padding: 0.46875rem 3.75rem;
+  border-radius: 8px;
+  border: 2px solid;
+  border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 29.17%);
+}
+
+.marb-gutter-base-3 {
+  margin-bottom: 5.625rem;
+}
+
+.marb-gutter-base {
+  margin-bottom: 1.875rem;
 }/*# sourceMappingURL=main.css.map */
