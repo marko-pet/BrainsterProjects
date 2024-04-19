@@ -24,24 +24,24 @@ a {
   text-decoration: none;
 }
 
-.content-page, .content-page .content-cards, .log-in-page, footer .footer-inner, .sec-info {
+.discussion-page, .content-page, .content-page .content-cards, .log-in-page, footer .footer-inner, .sec-info {
   padding-top: 2.8125rem;
   padding-bottom: 2.8125rem;
 }
 @media (max-width: 768px) {
-  .content-page, .content-page .content-cards, .log-in-page, footer .footer-inner, .sec-info {
+  .discussion-page, .content-page, .content-page .content-cards, .log-in-page, footer .footer-inner, .sec-info {
     padding-top: 1.875rem;
     padding-bottom: 1.875rem;
   }
 }
 
-.content-page, .log-in-page, footer .footer-inner, .sec-info {
+.discussion-page, .content-page, .log-in-page, footer .footer-inner, .sec-info {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 @media (max-width: 768px) {
-  .content-page, .log-in-page, footer .footer-inner, .sec-info {
+  .discussion-page, .content-page, .log-in-page, footer .footer-inner, .sec-info {
     width: 100%;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -64,7 +64,7 @@ a {
   cursor: pointer;
 }
 
-.content-page h1, .log-in-page h1, .sec-info h1 {
+.discussion-page h1, .content-page h1, .log-in-page h1, .sec-info h1 {
   font-size: 80px;
   font-weight: 900;
   color: hsla(0, 0%, 100%, 0.6);
@@ -362,6 +362,7 @@ footer .footer-inner .margin-top {
 }
 .content-page {
   position: relative;
+  display: none;
 }
 .content-page .type-of-content {
   display: flex;
@@ -486,4 +487,66 @@ footer .footer-inner .margin-top {
 .space-between {
   display: flex;
   justify-content: space-between;
+}
+
+.discussion-page .discussions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.40625rem;
+  height: 150vh;
+  overflow-y: hidden;
+}
+.discussion-page .discussions input {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 1px solid black;
+  padding: 0.46875rem 0;
+  font-size: 24px;
+}
+.discussion-page .discussions .new-discussion {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 8px 16px 0px rgba(66, 53, 107, 0.1);
+  padding: 1.875rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  height: -moz-min-content;
+  height: min-content;
+  margin-bottom: 1.40625rem;
+}
+.discussion-page .discussions .new-discussion span {
+  font-weight: 500;
+  color: rgba(21, 35, 71, 0.5);
+}
+.discussion-page .discussions ::-moz-placeholder {
+  font-size: 24px;
+}
+.discussion-page .discussions ::placeholder {
+  font-size: 24px;
+}
+.discussion-page .discussions .discussion {
+  box-shadow: 0px 8px 16px 0px rgba(66, 53, 107, 0.1);
+  padding: 1.875rem;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  height: -moz-min-content;
+  height: min-content;
+}
+.discussion-page .discussions .discussion:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+.discussion-page .discussions .discussion span {
+  font-weight: 500;
+}
+.discussion-page .blue {
+  background: rgba(75, 124, 243, 0.4);
+}
+.discussion-page .green {
+  background: rgba(131, 234, 177, 0.4);
+}
+.discussion-page .purple {
+  background: rgba(143, 57, 236, 0.4);
 }/*# sourceMappingURL=main.css.map */

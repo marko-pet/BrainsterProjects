@@ -1,0 +1,78 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.discussion-page {
+  @extend %wrap;
+  @extend %section;
+
+  h1 {
+    @extend %h1-main;
+  }
+
+  .discussions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var.$gutter-base * 0.75;
+    height: 150vh;
+    overflow-y: hidden;
+
+    input {
+      display: block;
+      width: 100%;
+      background: transparent;
+      border-top: transparent;
+      border-left: transparent;
+      border-right: transparent;
+      border-bottom: 1px solid black;
+      padding: var.$gutter-base * 0.25 0;
+      font-size: var.$font-size-big;
+    }
+
+    .new-discussion {
+      background: rgba(255, 255, 255, 0.4);
+      box-shadow: 0px 8px 16px 0px rgba(66, 53, 107, 0.1);
+      padding: var.$gutter-base;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 16px;
+      height: min-content;
+      margin-bottom: var.$gutter-base * 0.75;
+
+      span {
+        font-weight: 500;
+        color: rgba(21, 35, 71, 0.5);
+      }
+    }
+
+    ::placeholder {
+      font-size: var.$font-size-big;
+    }
+
+    .discussion {
+      box-shadow: 0px 8px 16px 0px rgba(66, 53, 107, 0.1);
+      padding: var.$gutter-base;
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      height: min-content;
+
+      &:not(:last-child) {
+        margin-bottom: var.$gutter-base * 0.5;
+      }
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .blue {
+    background: rgba(75, 124, 243, 0.4);
+  }
+
+  .green {
+    background: rgba(131, 234, 177, 0.4);
+  }
+
+  .purple {
+    background: rgba(143, 57, 236, 0.4);
+  }
+}
