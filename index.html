@@ -21,12 +21,14 @@
           <a href="#"><img src="./img/Logo.png" alt="Logo" /></a>
         </div>
 
-        <ul class="navigation">
-          <li><a href="#">информирај се</a></li>
-          <li><a href="#">дискусии</a></li>
-          <li><a href="#">контакт</a></li>
-          <li><a href="#">профил</a></li>
-        </ul>
+        <div class="navigation-container tablet-mobile-hidden">
+          <ul class="navigation">
+            <li><a href="#">информирај се</a></li>
+            <li><a href="#">дискусии</a></li>
+            <li><a href="#">контакт</a></li>
+            <li><a href="#">профил</a></li>
+          </ul>
+        </div>
       </div>
 
       <div>
@@ -35,18 +37,43 @@
           <p>Најави се</p>
         </div>
 
-        <div class="localization">
+        <div class="profile-nav">
+          <div class="profile-img">
+            <a href="#"><img src="./img/Rectangle 562.png" alt="Image" /></a>
+          </div>
+        </div>
+
+        <div class="localization mobile-hidden">
           <p>mk | al</p>
         </div>
 
-        <div class="search">
-          <img src="./img/Search-icon.png" alt="Search" />
+        <div class="search-container mobile-hidden">
+          <div class="search">
+            <img src="./img/Search-icon.png" alt="Search" />
+          </div>
+        </div>
+
+        <div class="burger pc-hidden">
+          <i class="fa-solid fa-bars fa-2xl"></i>
+          <div class="navigation-burger-container pc-hidden">
+            <ul class="navigation-burger">
+              <li><a href="#">информирај се</a></li>
+              <li><a href="#">дискусии</a></li>
+              <li><a href="#">контакт</a></li>
+              <li class="tablet-hidden"><a href="#">профил</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
     <!-- VIDEO -->
     <div class="video">
-      <img src="https://picsum.photos/1920/720" alt="Video" />
+      <iframe
+        width="100%"
+        height="480"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1"
+      >
+      </iframe>
     </div>
     <!-- SECURITY INFO -->
     <div class="sec-info">
@@ -206,6 +233,16 @@
             </p>
             <div class="details-date">Објавено на 05/28/23</div>
           </div>
+
+          <div class="modal-video pc-hidden">
+            <iframe
+              width="100%"
+              height="480"
+              src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1"
+            >
+            </iframe>
+          </div>
+
           <div class="comments">
             <div class="new-comment">
               <form>
@@ -231,7 +268,7 @@
           </div>
         </div>
 
-        <div class="modal-video">
+        <div class="modal-video tablet-mobile-hidden">
           <iframe
             width="100%"
             height="720"
@@ -311,86 +348,6 @@
               </div>
             </div>
           </div>
-          <div class="discussion green">
-            <div class="discussion-details">
-              <p>
-                Лорем ипсум е едноставен модел на текст кој се користел во
-                печатарската индустрија. Лорем ипсум бил индустриски стандард
-                кој се користел како модел уште пред 1500 години, кога непознат
-                печатар зел кутија со букви и ги сложил на таков начин за да
-                направи примерок на книга. И не само што овој модел опстанал пет
-                векови туку почнал да се користи и во електронските медиуми, кој
-                се уште не е променет.
-              </p>
-              <div class="space-between">
-                <span>John Doe</span><span>Date</span>
-              </div>
-              <form>
-                <input type="text" placeholder="Сподели искуство..." />
-                <span>John Doe</span>
-              </form>
-              <div>
-                <i class="fa-solid fa-plus"></i><span>5 Коментари</span
-                ><span>84 Реакции</span>
-              </div>
-            </div>
-          </div>
-          <div class="discussion blue">
-            <div class="discussion-details">
-              <p>
-                Лорем ипсум е едноставен модел на текст кој се користел во
-                печатарската индустрија. Лорем ипсум бил индустриски стандард
-                кој се користел како модел уште пред 1500 години, кога непознат
-                печатар зел кутија со букви и ги сложил на таков начин за да
-                направи примерок на книга. И не само што овој модел опстанал пет
-                векови туку почнал да се користи и во електронските медиуми, кој
-                се уште не е променет. Се популаризирал во 60-тите години на
-                дваесеттиот век со издавањето на збирка од страни во кои се
-                наоѓале Lorem Ipsum пасуси, а денес во софтверскиот пакет како
-                што е Aldus PageMaker во кој се наоѓа верзија на Lorem Ipsum.
-              </p>
-              <div class="space-between">
-                <span>John Doe</span><span>Date</span>
-              </div>
-              <form>
-                <input type="text" placeholder="Сподели искуство..." />
-                <span>John Doe</span>
-              </form>
-              <div>
-                <i class="fa-solid fa-plus"></i><span>5 Коментари</span
-                ><span>84 Реакции</span>
-              </div>
-            </div>
-          </div>
-          <div class="discussion blue">
-            <div class="discussion-details">
-              <p>
-                Лорем ипсум е едноставен модел на текст кој се користел во
-                печатарската индустрија. Лорем ипсум бил индустриски стандард
-                кој се користел како модел уште пред 1500 години, кога непознат
-                печатар зел кутија со букви и ги сложил на таков начин за да
-                направи примерок на книга. И не само што овој модел опстанал пет
-                векови туку почнал да се користи и во електронските медиуми, кој
-                се уште не е променет. Се популаризирал во 60-тите години на
-                дваесеттиот век со издавањето на збирка од страни во кои се
-                наоѓале Lorem Ipsum пасуси, а денес во софтверскиот пакет како
-                што е Aldus PageMaker во кој се наоѓа верзија на Lorem Ipsum.
-              </p>
-              <div class="space-between">
-                <span>John Doe</span><span>Date</span>
-              </div>
-              <form>
-                <input type="text" placeholder="Сподели искуство..." />
-                <span>John Doe</span>
-              </form>
-              <div>
-                <i class="fa-solid fa-plus"></i><span>5 Коментари</span
-                ><span>84 Реакции</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column2">
           <div class="discussion purple">
             <div class="discussion-details">
               <p>
@@ -420,12 +377,7 @@
                 печатарската индустрија. Лорем ипсум бил индустриски стандард
                 кој се користел како модел уште пред 1500 години, кога непознат
                 печатар зел кутија со букви и ги сложил на таков начин за да
-                направи примерок на книга. И не само што овој модел опстанал пет
-                векови туку почнал да се користи и во електронските медиуми, кој
-                се уште не е променет. Се популаризирал во 60-тите години на
-                дваесеттиот век со издавањето на збирка од страни во кои се
-                наоѓале Lorem Ipsum пасуси, а денес во софтверскиот пакет како
-                што е Aldus PageMaker во кој се наоѓа верзија на Lorem Ipsum.
+                направи примерок на книга.
               </p>
               <div class="space-between">
                 <span>John Doe</span><span>Date</span>
@@ -440,56 +392,6 @@
               </div>
             </div>
           </div>
-          <div class="discussion green">
-            <div class="discussion-details">
-              <p>
-                Лорем ипсум е едноставен модел на текст кој се користел во
-                печатарската индустрија. Лорем ипсум бил индустриски стандард
-                кој се користел како модел уште пред 1500 години, кога непознат
-                печатар зел кутија со букви и ги сложил на таков начин за да
-                направи примерок на книга. И не само што овој модел опстанал пет
-                векови туку почнал да се користи и во електронските медиуми, кој
-                се уште не е променет.
-              </p>
-              <div class="space-between">
-                <span>John Doe</span><span>Date</span>
-              </div>
-              <form>
-                <input type="text" placeholder="Сподели искуство..." />
-                <span>John Doe</span>
-              </form>
-              <div>
-                <i class="fa-solid fa-plus"></i><span>5 Коментари</span
-                ><span>84 Реакции</span>
-              </div>
-            </div>
-          </div>
-          <div class="discussion green">
-            <div class="discussion-details">
-              <p>
-                Лорем ипсум е едноставен модел на текст кој се користел во
-                печатарската индустрија. Лорем ипсум бил индустриски стандард
-                кој се користел како модел уште пред 1500 години, кога непознат
-                печатар зел кутија со букви и ги сложил на таков начин за да
-                направи примерок на книга. И не само што овој модел опстанал пет
-                векови туку почнал да се користи и во електронските медиуми, кој
-                се уште не е променет.
-              </p>
-              <div class="space-between">
-                <span>John Doe</span><span>Date</span>
-              </div>
-              <form>
-                <input type="text" placeholder="Сподели искуство..." />
-                <span>John Doe</span>
-              </form>
-              <div>
-                <i class="fa-solid fa-plus"></i><span>5 Коментари</span
-                ><span>84 Реакции</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column3">
           <div class="discussion purple">
             <div class="discussion-details">
               <p>
@@ -517,12 +419,40 @@
               </div>
             </div>
           </div>
-          <div class="discussion blue">
+        </div>
+        <div class="column2">
+          <div class="discussion green">
             <div class="discussion-details">
               <p>
                 Лорем ипсум е едноставен модел на текст кој се користел во
                 печатарската индустрија. Лорем ипсум бил индустриски стандард
-                кој се користел како модел уште пред 1500 години.
+                кој се користел како модел уште пред 1500 години, кога непознат
+                печатар зел кутија со букви и ги сложил на таков начин за да
+                направи примерок на книга. И не само што овој модел опстанал пет
+                векови туку почнал да се користи и во електронските медиуми, кој
+                се уште не е променет.
+              </p>
+              <div class="space-between">
+                <span>John Doe</span><span>Date</span>
+              </div>
+              <form>
+                <input type="text" placeholder="Сподели искуство..." />
+                <span>John Doe</span>
+              </form>
+              <div>
+                <i class="fa-solid fa-plus"></i><span>5 Коментари</span
+                ><span>84 Реакции</span>
+              </div>
+            </div>
+          </div>
+          <div class="discussion purple">
+            <div class="discussion-details">
+              <p>
+                Лорем ипсум е едноставен модел на текст кој се користел во
+                печатарската индустрија. Лорем ипсум бил индустриски стандард
+                кој се користел како модел уште пред 1500 години, кога непознат
+                печатар зел кутија со букви и ги сложил на таков начин за да
+                направи примерок на книга.
               </p>
               <div class="space-between">
                 <span>John Doe</span><span>Date</span>
@@ -544,12 +474,82 @@
                 печатарската индустрија. Лорем ипсум бил индустриски стандард
                 кој се користел како модел уште пред 1500 години, кога непознат
                 печатар зел кутија со букви и ги сложил на таков начин за да
+                направи примерок на книга. <br /><br />
+                И не само што овој модел опстанал пет векови туку почнал да се
+                користи и во електронските медиуми, кој се уште не е променет.
+                <br /><br />
+                Се популаризирал во 60-тите години на дваесеттиот век со
+                издавањето на збирка од страни во кои се наоѓале Lorem Ipsum
+                пасуси, а денес во софтверскиот пакет како што е Aldus PageMaker
+                во кој се наоѓа верзија на Lorem Ipsum.
+              </p>
+              <div class="space-between">
+                <span>John Doe</span><span>Date</span>
+              </div>
+              <form>
+                <input type="text" placeholder="Сподели искуство..." />
+                <span>John Doe</span>
+              </form>
+              <div>
+                <i class="fa-solid fa-plus"></i><span>5 Коментари</span
+                ><span>84 Реакции</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column3">
+          <div class="discussion purple">
+            <div class="discussion-details">
+              <p>
+                Лорем ипсум е едноставен модел на текст кој се користел во
+                печатарската индустрија. Лорем ипсум бил индустриски стандард
+                кој се користел како модел уште пред 1500 години, кога непознат
+                печатар зел кутија со букви и ги сложил на таков начин за да
+                направи примерок на книга.
+              </p>
+              <div class="space-between">
+                <span>John Doe</span><span>Date</span>
+              </div>
+              <form>
+                <input type="text" placeholder="Сподели искуство..." />
+                <span>John Doe</span>
+              </form>
+              <div>
+                <i class="fa-solid fa-plus"></i><span>5 Коментари</span
+                ><span>84 Реакции</span>
+              </div>
+            </div>
+          </div>
+          <div class="discussion green">
+            <div class="discussion-details">
+              <p>
+                Лорем ипсум е едноставен модел на текст кој се користел во
+                печатарската индустрија. Лорем ипсум бил индустриски стандард
+                кој се користел како модел уште пред 1500 години.
+              </p>
+              <div class="space-between">
+                <span>John Doe</span><span>Date</span>
+              </div>
+              <form>
+                <input type="text" placeholder="Сподели искуство..." />
+                <span>John Doe</span>
+              </form>
+              <div>
+                <i class="fa-solid fa-plus"></i><span>5 Коментари</span
+                ><span>84 Реакции</span>
+              </div>
+            </div>
+          </div>
+          <div class="discussion purple">
+            <div class="discussion-details">
+              <p>
+                Лорем ипсум е едноставен модел на текст кој се користел во
+                печатарската индустрија. Лорем ипсум бил индустриски стандард
+                кој се користел како модел уште пред 1500 години, кога непознат
+                печатар зел кутија со букви и ги сложил на таков начин за да
                 направи примерок на книга. И не само што овој модел опстанал пет
                 векови туку почнал да се користи и во електронските медиуми, кој
-                се уште не е променет. Се популаризирал во 60-тите години на
-                дваесеттиот век со издавањето на збирка од страни во кои се
-                наоѓале Lorem Ipsum пасуси, а денес во софтверскиот пакет како
-                што е Aldus PageMaker во кој се наоѓа верзија на Lorem Ipsum.
+                се уште не е променет.
               </p>
               <div class="space-between">
                 <span>John Doe</span><span>Date</span>
@@ -667,9 +667,12 @@
     <div class="profile-page">
       <h1>Профил</h1>
       <div class="profile-main">
-        <div class="profile-image">
-          <img src="./img/Rectangle 562.png" alt="Pfp" />
+        <div class="profile-image-container">
+          <div class="profile-image">
+            <img src="./img/Rectangle 562.png" alt="Pfp" />
+          </div>
         </div>
+
         <div class="profile-settings">
           <form>
             <div class="settings-section">
@@ -778,10 +781,10 @@
           </div>
         </div>
         <div class="outer last">
-          <div class="localization">
+          <div class="localization marb-1-5rem">
             <div>mk | al</div>
           </div>
-          <div class="inner">
+          <div class="inner marb-1-5rem">
             <a href="#"><img src="./img/facebook.png" alt="facebook" /></a>
             <a href="#"><img src="./img/Instagram.png" alt="instagram" /></a>
             <a href="#"><img src="./img/Youtube.png" alt="youtube" /></a>

@@ -5,7 +5,7 @@
   @extend %wrap;
   @extend %section;
   position: relative;
-  // display: none;
+  display: none;
 
   h1 {
     @extend %h1-main;
@@ -17,6 +17,14 @@
     gap: var.$gutter-base * 0.75;
     height: 150vh;
     overflow-y: hidden;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 425px) {
+      grid-template-columns: 1fr;
+    }
 
     input {
       display: block;
@@ -86,6 +94,12 @@
     color: var.$text-color-secondary;
     padding: var.$gutter-base 0;
     background: linear-gradient(rgb(135, 175, 239, 0), rgb(135, 175, 239, 1));
+
+    @media (max-width: 768px) {
+      bottom: 30px;
+      right: 0;
+      left: 0;
+    }
 
     i {
       margin-right: var.$gutter-base * 0.5;

@@ -7,4 +7,53 @@ body {
   line-height: var.$line-height-base;
   background: var.$background-color-base;
   color: var.$text-color-base;
+  font-size: var.$font-size-base;
+}
+
+.pc-hidden {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+
+  @media (max-width: 425px) {
+    display: block;
+  }
+}
+
+.tablet-hidden {
+  display: block;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  @media (max-width: 425px) {
+    display: block;
+  }
+}
+
+.mobile-hidden {
+  display: block;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+
+  @media (max-width: 425px) {
+    display: none;
+  }
+}
+
+.tablet-mobile-hidden {
+  display: block;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  @media (max-width: 425px) {
+    display: none;
+  }
 }

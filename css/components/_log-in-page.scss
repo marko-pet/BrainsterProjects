@@ -2,12 +2,21 @@
 @use "../abstracts/mixins" as mix;
 
 .log-in-page {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
   @extend %wrap;
   @extend %section;
   position: relative;
-  // display: none;
+  display: none;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+
+  .log-in-form {
+    flex-basis: 50%;
+  }
 
   h1 {
     @extend %h1-main;
@@ -43,10 +52,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-basis: 47.5%;
+    img {
+      width: 100%;
+    }
   }
 
   label {
     color: var.$text-color-secondary;
+
+    &:not(:last-child) {
+      font-weight: var.$font-weight-bold;
+    }
   }
 
   span {
@@ -63,6 +80,11 @@
     height: 56.9px;
     margin-bottom: var.$gutter-base * 0.5;
     margin-top: var.$gutter-base * 0.2;
+    font-size: var.$font-size-base;
+  }
+
+  ::placeholder {
+    font-size: var.$font-size-base;
   }
 
   .log-in-help {
@@ -112,6 +134,18 @@
   margin-right: auto;
   text-align: center;
   color: var.$text-color-secondary;
+  display: none;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    top: 1%;
+    transform: translateY(-0%);
+    padding: var.$gutter-base * 4 0;
+  }
+
+  @media (max-width: 425px) {
+    padding: var.$gutter-base * 8 0;
+  }
 
   h2 {
     font-size: var.$heading-size-medium;

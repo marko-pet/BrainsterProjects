@@ -7,14 +7,14 @@
 // Font settings
 $font-family-base: "Montserrat", sans-serif;
 
-$font-size-base: 16px;
-$font-size-small: 18px;
-$font-size-medium: 20px;
-$font-size-big: 24px;
+$font-size-base: clamp(1rem, 0.938vw, 1.25rem);
+$font-size-small: clamp(1.25rem, 1.042vw, 1.4rem);
+$font-size-medium: clamp(1.275rem, 1.146vw, 1.5rem);
+$font-size-big: clamp(1.375rem, 1.25vw, 1.75rem);
 
-$heading-size-small: 32px;
-$heading-size-medium: 64px;
-$heading-size-big: 80px;
+$heading-size-small: clamp(1.5rem, 1.667vw, 2.5rem);
+$heading-size-medium: clamp(1.875rem, 3.333vw, 4.375rem);
+$heading-size-big: clamp(2.5rem, 4.167vw, 6.25rem);
 
 $line-height-base: 1.5;
 
@@ -41,5 +41,3 @@ $background-color-base: linear-gradient(
   rgba(75, 124, 243, 0.7)
 );
 $background-color-secondary: rgba(255, 255, 255, 1);
-// $background-color-tertiary: #fff;
-// $background-color-quaternary: #47464e;

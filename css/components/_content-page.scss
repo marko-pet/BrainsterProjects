@@ -5,7 +5,7 @@
   @extend %wrap;
   @extend %section;
   position: relative;
-  // display: none;
+  display: none;
 
   h1 {
     @extend %h1-main;
@@ -52,6 +52,14 @@
     grid-template-columns: repeat(4, 1fr);
     gap: var.$gutter-base;
     @extend %section;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 425px) {
+      grid-template-columns: 1fr;
+    }
 
     .content-card {
       display: flex;
@@ -104,9 +112,14 @@
     border-radius: 32px;
     display: flex;
     justify-content: space-between;
+    display: none;
 
     .details-and-comments {
       flex-basis: 67.5%;
+
+      @media (max-width: 768px) {
+        flex-basis: 100%;
+      }
 
       .details {
         margin-bottom: var.$gutter-base * 1.5;

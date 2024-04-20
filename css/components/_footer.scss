@@ -12,8 +12,16 @@ footer {
     justify-content: space-between;
     @extend %wrap;
     @extend %section;
-
     color: var.$text-color-secondary;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    @media (max-width: 425px) {
+      text-align: left;
+    }
 
     .extra-links {
       height: 100%;
@@ -21,6 +29,11 @@ footer {
       flex-direction: column;
       justify-content: space-between;
 
+      div {
+        @media (max-width: 768px) {
+          margin-bottom: 1.5rem;
+        }
+      }
       a {
         color: var.$text-color-secondary;
       }
@@ -34,6 +47,10 @@ footer {
     .outer {
       &:last-child {
         text-align: right;
+
+        @media (max-width: 768px) {
+          text-align: center;
+        }
       }
     }
 
@@ -53,6 +70,11 @@ footer {
 
     .font-awesome-icons-outer {
       display: flex;
+
+      @media (max-width: 768px) {
+        margin-bottom: 1.5rem;
+        justify-content: center;
+      }
 
       .font-awesome-icons-inner {
         display: flex;
@@ -74,6 +96,12 @@ footer {
 
     .margin-top {
       margin-top: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .marb-1-5rem {
+      margin-bottom: 1.5rem;
     }
   }
 }
