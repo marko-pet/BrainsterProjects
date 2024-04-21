@@ -5,13 +5,13 @@
   @extend %wrap;
   @extend %section;
   position: relative;
-  display: none;
+  // display: none;
 
   h1 {
     @extend %h1-main;
   }
 
-  .type-of-content {
+  .type-of-content-container {
     display: flex;
     font-size: 36px;
     font-weight: 900;
@@ -27,8 +27,54 @@
         cursor: pointer;
       }
     }
+  }
 
-    .type-of-content-active {
+  .type-of-content.active {
+    opacity: 1;
+  }
+
+  .type-of-content-carousel {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+    .carousel-cycle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .type-of-content-carousel-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: 900;
+      display: none;
+    }
+
+    .type-of-content-carousel-item.active {
+      display: block;
+    }
+  }
+
+  .carousel-btns {
+    margin-top: var.$gutter-base * 0.5;
+    text-align: center;
+    .carousel-btn {
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      background: var.$text-color-base;
+      opacity: 0.25;
+
+      &:not(:last-child) {
+        margin-right: var.$gutter-base * 0.5;
+      }
+    }
+
+    .carousel-btn.active {
       opacity: 1;
     }
   }
@@ -37,8 +83,9 @@
     display: flex;
     padding-top: var.$gutter-base * 1.5;
 
-    .content-filter-active {
+    .content-filter.active {
       @extend %content-filter;
+      opacity: 1;
     }
 
     .content-filter {
