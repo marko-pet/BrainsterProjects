@@ -23,6 +23,14 @@ footer {
       text-align: left;
     }
 
+    .logo-footer {
+      img {
+        @media (max-width: 768px) {
+          width: 5rem;
+        }
+      }
+    }
+
     .extra-links {
       height: 100%;
       display: flex;
