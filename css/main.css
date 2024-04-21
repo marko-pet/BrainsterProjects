@@ -311,15 +311,14 @@ nav .navigation-burger-container {
   background: rgba(66, 53, 107, 0.9);
   position: absolute;
   top: 77.7167px;
-  right: -1000px;
   height: -moz-min-content;
   height: min-content;
   max-width: 50%;
   width: 100%;
   border-radius: 16px;
   padding: 1.40625rem 0;
-  transition: all 0.25s ease;
   z-index: 999;
+  display: none;
 }
 @media (max-width: 425px) {
   nav .navigation-burger-container {
@@ -350,6 +349,7 @@ nav .navigation-burger-container ul.navigation-burger a:hover {
   color: rgb(118, 79, 240);
 }
 nav .navigation-burger-container.active {
+  display: block;
   right: 0;
 }
 nav .search {
@@ -702,6 +702,7 @@ footer .footer-inner .margin-top {
 }
 .content-page .content-filters .content-filter {
   opacity: 0.5;
+  text-transform: capitalize;
 }
 .content-page .content-cards {
   display: grid;
@@ -722,16 +723,39 @@ footer .footer-inner .margin-top {
   display: flex;
   align-items: end;
   height: 500px;
-  background-image: url("../img/placeholder-image.jpg");
   background-position: center;
   background-size: cover;
   box-shadow: 0px 8px 16px 0px rgba(66, 53, 107, 0.3);
   border-radius: 16px;
   overflow: hidden;
+  position: relative;
+}
+.content-page .content-cards .content-card:hover {
+  cursor: pointer;
+}
+.content-page .content-cards .content-card:hover .play-button {
+  opacity: 1;
+}
+.content-page .content-cards .content-card .play-button {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  background: gray;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 7rem;
 }
 .content-page .content-cards .content-card .card-content {
   padding: 1.40625rem;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
 }
 .content-page .content-cards .content-card .card-content .card-title {
   font-size: 20px;
@@ -749,8 +773,8 @@ footer .footer-inner .margin-top {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  z-index: 999;
-  background: rgba(255, 255, 255, 0.8);
+  z-index: 998;
+  background: rgba(255, 255, 255, 0.9);
   padding: 1.875rem;
   border-radius: 32px;
   display: flex;
@@ -788,10 +812,20 @@ footer .footer-inner .margin-top {
   border-bottom: 1px solid black;
   padding: 0.46875rem 0;
   font-size: clamp(1.375rem, 1.25vw, 1.75rem);
+  margin-bottom: 1rem;
 }
 .content-page .content-page-modal .details-and-comments .comments .new-comment span {
   font-weight: 500;
   color: rgba(21, 35, 71, 0.5);
+}
+.content-page .content-page-modal .details-and-comments .comments .all-comments {
+  height: 302px;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
+.content-page .content-page-modal .details-and-comments .comments .all-comments::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 .content-page .content-page-modal .details-and-comments .comments .all-comments .comment {
   border: 2px solid rgba(21, 35, 71, 0.5);
@@ -799,7 +833,7 @@ footer .footer-inner .margin-top {
   padding: 0.9375rem;
 }
 .content-page .content-page-modal .details-and-comments .comments .all-comments .comment:not(:last-child) {
-  margin-top: 0.9375rem;
+  margin-bottom: 0.9375rem;
 }
 .content-page .content-page-modal .details-and-comments .comments .all-comments .comment span {
   font-weight: 500;
@@ -813,10 +847,34 @@ footer .footer-inner .margin-top {
 .content-page .content-page-modal .modal-video {
   flex-basis: 30%;
 }
+.content-page .content-page-modal .profile-modal {
+  width: -moz-min-content;
+  width: min-content;
+}
+.content-page .content-page-modal .profile-modal .profile-img {
+  border: 1.6px solid rgb(66, 53, 107);
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.content-page .content-page-modal .profile-modal .profile-img a {
+  height: 100%;
+  width: 100%;
+}
 
 .space-between {
   display: flex;
   justify-content: space-between;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.aic {
+  align-items: center;
 }
 
 .discussion-page {

@@ -158,14 +158,13 @@ nav {
     background: rgba(66, 53, 107, 0.9);
     position: absolute;
     top: 77.7167px;
-    right: -1000px;
     height: min-content;
     max-width: 50%;
     width: 100%;
     border-radius: 16px;
     padding: var.$gutter-base * 0.75 0;
-    transition: all 0.25s ease;
     z-index: 999;
+    display: none;
 
     @media (max-width: 425px) {
       max-width: 100%;
@@ -202,6 +201,7 @@ nav {
   }
 
   .navigation-burger-container.active {
+    display: block;
     right: 0;
   }
 
