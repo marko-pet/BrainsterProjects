@@ -777,9 +777,8 @@ footer .footer-inner .margin-top {
   background: rgba(255, 255, 255, 0.9);
   padding: 1.875rem;
   border-radius: 32px;
-  display: flex;
-  justify-content: space-between;
   display: none;
+  justify-content: space-between;
 }
 .content-page .content-page-modal .details-and-comments {
   flex-basis: 67.5%;
@@ -795,6 +794,9 @@ footer .footer-inner .margin-top {
 .content-page .content-page-modal .details-and-comments .details h3 {
   font-size: clamp(1.375rem, 1.25vw, 1.75rem);
   font-weight: 700;
+}
+.content-page .content-page-modal .details-and-comments .details div {
+  color: rgba(21, 35, 71, 0.5);
 }
 .content-page .content-page-modal .details-and-comments .comments .new-comment {
   border: 2px solid rgba(21, 35, 71, 0.5);

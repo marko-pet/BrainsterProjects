@@ -9,17 +9,45 @@ const carouselPrev = document.querySelector(".carousel-cycle.prev");
 const contentCardsContainer = document.querySelector(".content-cards");
 const pcTypeFilters = document.querySelectorAll(".type-of-content");
 const pillFiltersContainer = document.querySelector(".content-filters");
+const contentPageModal = document.querySelector(".content-page-modal");
 
 const contentCardsArray = [
   {
     id: 1,
     title: "Наслов на видео",
+    titleModal: "Лоши навики при “Live streaming”",
     description:
       "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард...",
+    descriptionModal:
+      "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години, кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. И не само што овој модел опстанал пет векови туку почнал да се користи и во електронските медиуми, кој се уште не е променет.",
     date: "28 / 05 / 23",
     image: "./img/content-card1.jpg",
-    tags: ["relevant", "newest"],
+    tags: ["relevant", "most-watched"],
     type: "Видеа",
+    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    comments: [
+      {
+        id: 1,
+        author: "Име Презиме",
+        text: "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години, кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. ",
+        date: "00/00/00, 00:00",
+        pfp: "https://picsum.photos/200",
+      },
+      {
+        id: 2,
+        author: "Име Презиме",
+        text: "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел.",
+        date: "00/00/00, 00:00",
+        pfp: "https://picsum.photos/200",
+      },
+      {
+        id: 3,
+        author: "Име Презиме",
+        text: "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. ",
+        date: "00/00/00, 00:00",
+        pfp: "https://picsum.photos/200",
+      },
+    ],
   },
   {
     id: 2,
@@ -28,8 +56,32 @@ const contentCardsArray = [
       "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард...",
     date: "28 / 05 / 23",
     image: "./img/content-card2.jpg",
-    tags: ["most-watched", "relevant", "newest"],
+    tags: ["most-watched"],
     type: "Видеа",
+    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    comments: [
+      {
+        id: 1,
+        author: "Име Презиме",
+        text: "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години, кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. ",
+        date: "00/00/00, 00:00",
+        pfp: "https://picsum.photos/200",
+      },
+      {
+        id: 2,
+        author: "Име Презиме",
+        text: "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел.",
+        date: "00/00/00, 00:00",
+        pfp: "https://picsum.photos/200",
+      },
+      {
+        id: 3,
+        author: "Име Презиме",
+        text: "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. ",
+        date: "00/00/00, 00:00",
+        pfp: "https://picsum.photos/200",
+      },
+    ],
   },
   {
     id: 3,
@@ -38,8 +90,32 @@ const contentCardsArray = [
       "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард...",
     date: "28 / 05 / 23",
     image: "./img/content-card3.jpg",
-    tags: ["most-watched"],
+    tags: ["wacky"],
     type: "Видеа",
+    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    comments: [
+      {
+        id: 1,
+        author: "Име Презиме",
+        text: "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години, кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. ",
+        date: "00/00/00, 00:00",
+        pfp: "https://picsum.photos/200",
+      },
+      {
+        id: 2,
+        author: "Име Презиме",
+        text: "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел.",
+        date: "00/00/00, 00:00",
+        pfp: "https://picsum.photos/200",
+      },
+      {
+        id: 3,
+        author: "Име Презиме",
+        text: "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. ",
+        date: "00/00/00, 00:00",
+        pfp: "https://picsum.photos/200",
+      },
+    ],
   },
   {
     id: 4,
@@ -48,8 +124,32 @@ const contentCardsArray = [
       "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард...",
     date: "28 / 05 / 23",
     image: "./img/content-card4.jpg",
-    tags: ["most-watched", "newest"],
+    tags: ["relevant", "newest"],
     type: "Видеа",
+    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    comments: [
+      {
+        id: 1,
+        author: "Име Презиме",
+        text: "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години, кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. ",
+        date: "00/00/00, 00:00",
+        pfp: "https://picsum.photos/200",
+      },
+      {
+        id: 2,
+        author: "Име Презиме",
+        text: "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел.",
+        date: "00/00/00, 00:00",
+        pfp: "https://picsum.photos/200",
+      },
+      {
+        id: 3,
+        author: "Име Презиме",
+        text: "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. ",
+        date: "00/00/00, 00:00",
+        pfp: "https://picsum.photos/200",
+      },
+    ],
   },
 ];
 
@@ -170,11 +270,72 @@ function displayContentCards(array) {
         `;
     contentCard.style.backgroundImage = `url('${card.image}')`;
 
+    contentCard.addEventListener("click", () => {
+      openModal(card);
+    });
+
     contentCardsContainer.appendChild(contentCard);
   });
 }
 
 filterCardsByType("Видеа");
+
+// MODAL
+function openModal(card) {
+  const modalDetails = contentPageModal.querySelector(".details");
+  const modalVideoPC = contentPageModal.querySelector(
+    ".modal-video.tablet-mobile-hidden"
+  );
+  const modalVideoMobile = contentPageModal.querySelector(
+    ".modal-video.pc-hidden"
+  );
+  const modalComments = contentPageModal.querySelector(".all-comments");
+
+  modalDetails.innerHTML = `<h3>${card.titleModal}</h3><p>${card.descriptionModal}</p>
+            <div class="details-date">Објавено на ${card.date}</div>`;
+
+  modalVideoPC.innerHTML = `<iframe
+              width="100%"
+              height="720"
+              src="${card.video}"
+            >
+            </iframe>`;
+
+  modalVideoMobile.innerHTML = `<iframe
+              width="100%"
+              height="480"
+              src="${card.video}"
+            >
+            </iframe>`;
+
+  card.comments.forEach((comment) => {
+    modalComments.innerHTML += `<div class="comment">
+                <p>
+                  ${comment.text}
+                </p>
+
+                <div class="space-between">
+                  <span class="d-flex aic">
+                    <div class="profile-modal">
+                      <div class="profile-img">
+                        <a href="#"
+                          ><img src="${comment.pfp}"
+                        /></a>
+                      </div>
+                    </div>
+                    ${comment.author}</span
+                  ><span class="d-flex aic">Date</span>
+                </div>
+              </div>`;
+  });
+
+  contentPageModal.style.display = "flex";
+}
+
+// Close modal function (you can implement this if needed)
+function closeModal() {
+  contentPageModal.style.display = "none";
+}
 
 // FILTERS
 function filterCardsByType(type) {

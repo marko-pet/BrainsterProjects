@@ -184,9 +184,8 @@
     background: rgba(255, 255, 255, 0.9);
     padding: var.$gutter-base;
     border-radius: 32px;
-    display: flex;
-    justify-content: space-between;
     display: none;
+    justify-content: space-between;
 
     .details-and-comments {
       flex-basis: 67.5%;
@@ -201,6 +200,10 @@
         h3 {
           font-size: var.$font-size-big;
           font-weight: var.$font-weight-bold;
+        }
+
+        div {
+          color: rgba(21, 35, 71, 0.5);
         }
       }
 
