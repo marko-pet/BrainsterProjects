@@ -67,6 +67,10 @@ nav {
     font-weight: 500;
     transition: all 0.2s;
 
+    a {
+      display: flex;
+    }
+
     &:hover {
       background: white;
       cursor: pointer;

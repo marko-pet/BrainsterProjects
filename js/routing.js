@@ -11,7 +11,7 @@ function getHashRoute() {
 }
 
 function getCurrentLoggedInUsername() {
-  localStorage.getItem("variables.USERNAME_SESSION_KEY");
+  localStorage.getItem("currentUsername");
 }
 
 const handleLoggedInUserElements = () => {
@@ -36,6 +36,8 @@ const handleUserLogout = () => {
 const currentHashRoute = getHashRoute();
 const currentUsername = getCurrentLoggedInUsername();
 
+hideAllSections();
+
 if (currentUsername) {
   handleLoggedInUserElements();
 } else {
@@ -44,11 +46,15 @@ if (currentUsername) {
 
 if (!currentHashRoute) {
   location.hash = variables.HASH_ROUTES.infoPage;
+} else if (variables.ALLOWED_ROUTES.includes(currentHashRoute)) {
+  document.querySelector(`#${currentHashRoute}`).style.display = "block";
+} else {
+  document.querySelector(`#infoPage`).style.display = "block";
 }
 
 window.addEventListener("hashchange", () => {
   const hashRoute = getHashRoute();
-  const currentSection = document.querySelector("#${hashRoute}");
+  const currentSection = document.querySelector(`#${hashRoute}`);
 
   hideAllSections();
 
@@ -68,6 +74,8 @@ window.addEventListener("hashchange", () => {
 });
 
 document.getElementById("logInForm").addEventListener("submit", (event) => {
+  event.preventDefault();
+
   const username = document.getElementById("usernameLogIn").value;
   const password = document.getElementById("passwordLogIn").value;
 

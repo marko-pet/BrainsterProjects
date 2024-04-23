@@ -236,6 +236,9 @@ nav .log-in-btn {
   font-weight: 500;
   transition: all 0.2s;
 }
+nav .log-in-btn a {
+  display: flex;
+}
 nav .log-in-btn:hover {
   background: white;
   cursor: pointer;
