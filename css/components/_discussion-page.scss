@@ -5,7 +5,7 @@
   @extend %wrap;
   @extend %section;
   position: relative;
-  display: none;
+  // display: none;
 
   h1 {
     @extend %h1-main;
@@ -72,18 +72,6 @@
         font-weight: 500;
       }
     }
-  }
-
-  .blue {
-    background: rgba(75, 124, 243, 0.4);
-  }
-
-  .green {
-    background: rgba(131, 234, 177, 0.4);
-  }
-
-  .purple {
-    background: rgba(143, 57, 236, 0.4);
   }
 
   .blur {

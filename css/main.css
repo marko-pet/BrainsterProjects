@@ -235,7 +235,6 @@ nav .log-in-btn {
   margin-right: 30px;
   font-weight: 500;
   transition: all 0.2s;
-  display: none;
 }
 nav .log-in-btn:hover {
   background: white;
@@ -248,9 +247,6 @@ nav .log-in-btn img {
   nav .log-in-btn img {
     width: 15%;
   }
-}
-nav .profile-nav {
-  display: none;
 }
 nav .profile-nav .profile-img {
   border: 1.6px solid rgb(66, 53, 107);
@@ -357,9 +353,6 @@ nav .search {
   align-content: center;
 }
 
-.sec-info {
-  display: none;
-}
 .sec-info h1 {
   text-align: center;
 }
@@ -397,13 +390,15 @@ nav .search {
   padding: 2.8125rem 0;
   line-height: 32px;
 }
-.sec-info .sec-info-cards .purple {
+.purple {
   background: rgba(153, 70, 243, 0.4);
 }
-.sec-info .sec-info-cards .blue {
+
+.blue {
   background: rgba(75, 124, 243, 0.4);
 }
-.sec-info .sec-info-cards .green {
+
+.green {
   background: rgba(131, 234, 177, 0.4);
 }
 
@@ -496,16 +491,11 @@ footer .footer-inner .margin-top {
   }
 }
 
-.video {
-  display: none;
-}
-
 .log-in-page {
   display: flex;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
   position: relative;
-  display: none;
 }
 @media (max-width: 768px) {
   .log-in-page {
@@ -881,7 +871,6 @@ footer .footer-inner .margin-top {
 
 .discussion-page {
   position: relative;
-  display: none;
 }
 .discussion-page .discussions {
   display: grid;
@@ -945,15 +934,6 @@ footer .footer-inner .margin-top {
 .discussion-page .discussions .discussion span {
   font-weight: 500;
 }
-.discussion-page .blue {
-  background: rgba(75, 124, 243, 0.4);
-}
-.discussion-page .green {
-  background: rgba(131, 234, 177, 0.4);
-}
-.discussion-page .purple {
-  background: rgba(143, 57, 236, 0.4);
-}
 .discussion-page .blur {
   position: absolute;
   bottom: 2.8125rem;
@@ -980,9 +960,6 @@ footer .footer-inner .margin-top {
   cursor: pointer;
 }
 
-.contact-page {
-  display: none;
-}
 .contact-page h1 {
   margin-top: 0;
 }
@@ -1038,9 +1015,6 @@ footer .footer-inner .margin-top {
   margin-bottom: 1.875rem;
 }
 
-.profile-page {
-  display: none;
-}
 .profile-page .profile-main {
   display: flex;
   justify-content: space-between;

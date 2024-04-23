@@ -4,7 +4,7 @@
 .sec-info {
   @extend %section;
   @extend %wrap;
-  display: none;
+  // display: none;
 
   h1 {
     @extend %h1-main;
@@ -51,15 +51,15 @@
         @extend %sec-button;
       }
     }
-
-    .purple {
-      background: rgba(153, 70, 243, 0.4);
-    }
-    .blue {
-      background: rgba(75, 124, 243, 0.4);
-    }
-    .green {
-      background: rgba(131, 234, 177, 0.4);
-    }
   }
+}
+
+.purple {
+  background: rgba(153, 70, 243, 0.4);
+}
+.blue {
+  background: rgba(75, 124, 243, 0.4);
+}
+.green {
+  background: rgba(131, 234, 177, 0.4);
 }
