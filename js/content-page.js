@@ -133,7 +133,7 @@ function openModal(card) {
   const modalComments =
     variables.contentPageModal.querySelector(".all-comments");
 
-  modalDetails.innerHTML = `<h3>${card.titleModal}</h3><p>${card.descriptionModal}</p>
+  modalDetails.innerHTML = `<div class="modal-title"><h3>${card.titleModal}</h3><button id="modalClose"><i class="fa-solid fa-x"></i></button></div><p>${card.descriptionModal}</p>
             <div class="details-date">Објавено на ${card.date}</div>`;
 
   modalVideoPC.innerHTML = `<iframe
@@ -150,6 +150,7 @@ function openModal(card) {
             >
             </iframe>`;
 
+  modalComments.innerHTML = "";
   card.comments.forEach((comment) => {
     modalComments.innerHTML += `<div class="comment">
                 <p>
@@ -172,6 +173,10 @@ function openModal(card) {
   });
 
   variables.contentPageModal.style.display = "flex";
+
+  document.getElementById("modalClose").addEventListener("click", () => {
+    variables.contentPageModal.style.display = "none";
+  });
 }
 
 // FILTERS

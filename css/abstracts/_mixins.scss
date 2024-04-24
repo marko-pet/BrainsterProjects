@@ -103,6 +103,8 @@
   &:not(:last-child) {
     margin-right: var.$gutter-base * 0.5;
   }
+  display: grid;
+  align-content: center;
 
   &:hover {
     cursor: pointer;
