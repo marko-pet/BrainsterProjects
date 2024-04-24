@@ -59,17 +59,20 @@ nav {
     }
   }
 
+  .log-in-btn-a {
+    margin-right: 30px;
+  }
+
   .log-in-btn {
     border: 1.6px solid var.$text-color-primary;
     padding: 5px 10px;
     border-radius: 10px;
-    margin-right: 30px;
     font-weight: 500;
     transition: all 0.2s;
 
-    a {
-      display: flex;
-    }
+    // a {
+    //   display: flex;
+    // }
 
     &:hover {
       background: white;
