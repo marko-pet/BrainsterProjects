@@ -228,8 +228,25 @@ nav ul.navigation li a:hover {
 nav ul.navigation li:not(:last-child) {
   margin-right: 30px;
 }
+nav .nav-profile-link {
+  display: none;
+}
+nav .nav-profile-link.visible {
+  display: flex;
+}
+@media (max-width: 768px) {
+  nav .nav-profile-link.visible {
+    display: none;
+  }
+}
+@media (max-width: 425px) {
+  nav .nav-profile-link.visible {
+    display: none;
+  }
+}
 nav .log-in-btn-a {
   margin-right: 30px;
+  display: none;
 }
 nav .log-in-btn {
   border: 1.6px solid rgb(66, 53, 107);
@@ -250,6 +267,22 @@ nav .log-in-btn img {
     width: 15%;
   }
 }
+nav .log-in-btn-a.visible {
+  display: flex;
+}
+@media (max-width: 768px) {
+  nav .log-in-btn-a.visible {
+    display: flex;
+  }
+}
+@media (max-width: 425px) {
+  nav .log-in-btn-a.visible {
+    display: none;
+  }
+}
+nav .profile-nav {
+  display: none;
+}
 nav .profile-nav .profile-img {
   border: 1.6px solid rgb(66, 53, 107);
   width: 50px;
@@ -261,6 +294,19 @@ nav .profile-nav .profile-img {
 nav .profile-nav .profile-img a {
   height: 100%;
   width: 100%;
+}
+nav .profile-nav.visible {
+  display: flex;
+}
+@media (max-width: 768px) {
+  nav .profile-nav.visible {
+    display: flex;
+  }
+}
+@media (max-width: 425px) {
+  nav .profile-nav.visible {
+    display: none;
+  }
 }
 nav .localization {
   text-transform: uppercase;

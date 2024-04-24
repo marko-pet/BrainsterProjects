@@ -59,8 +59,25 @@ nav {
     }
   }
 
+  .nav-profile-link {
+    display: none;
+  }
+
+  .nav-profile-link.visible {
+    display: flex;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    @media (max-width: 425px) {
+      display: none;
+    }
+  }
+
   .log-in-btn-a {
     margin-right: 30px;
+    display: none;
   }
 
   .log-in-btn {
@@ -69,10 +86,6 @@ nav {
     border-radius: 10px;
     font-weight: 500;
     transition: all 0.2s;
-
-    // a {
-    //   display: flex;
-    // }
 
     &:hover {
       background: white;
@@ -87,7 +100,20 @@ nav {
     }
   }
 
+  .log-in-btn-a.visible {
+    display: flex;
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+
+    @media (max-width: 425px) {
+      display: none;
+    }
+  }
+
   .profile-nav {
+    display: none;
     .profile-img {
       border: 1.6px solid rgba(66, 53, 107, 1);
       width: 50px;
@@ -100,6 +126,18 @@ nav {
         height: 100%;
         width: 100%;
       }
+    }
+  }
+
+  .profile-nav.visible {
+    display: flex;
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+
+    @media (max-width: 425px) {
+      display: none;
     }
   }
 

@@ -15,17 +15,17 @@ function getCurrentLoggedInUsername() {
 }
 
 const handleLoggedInUserElements = () => {
-  document.getElementById("loginLink").style.display = "none";
-  document.getElementById("profileImageLink").style.display = "flex";
-  document.getElementById("profileLink").style.display = "flex";
+  document.querySelector(".log-in-btn-a").classList.remove("visible");
+  document.getElementById("profileImageLink").classList.add("visible");
+  document.getElementById("profileLink").classList.add("visible");
   document.getElementById("profileLinkBurger").style.display = "flex";
   //   getElementById("logout").style.display = "inline";
 };
 
 const handleLoggedOutUserElements = () => {
-  document.getElementById("loginLink").style.display = "flex";
-  document.getElementById("profileImageLink").style.display = "none";
-  document.getElementById("profileLink").style.display = "none";
+  document.querySelector(".log-in-btn-a").classList.add("visible");
+  document.getElementById("profileImageLink").classList.remove("visible");
+  document.getElementById("profileLink").classList.remove("visible");
   document.getElementById("profileLinkBurger").style.display = "none";
   //   getElementById("logout").style.display = "none";
 };
