@@ -247,6 +247,12 @@ nav .nav-profile-link.visible {
 nav .log-in-btn-a {
   margin-right: 30px;
   display: none;
+  color: rgb(66, 53, 107);
+}
+nav .log-out-btn-a {
+  margin-right: 30px;
+  display: none;
+  color: rgb(66, 53, 107);
 }
 nav .log-in-btn {
   border: 1.6px solid rgb(66, 53, 107);
@@ -267,6 +273,9 @@ nav .log-in-btn img {
     width: 15%;
   }
 }
+nav .log-in-btn i {
+  margin-right: 10px;
+}
 nav .log-in-btn-a.visible {
   display: flex;
 }
@@ -277,6 +286,19 @@ nav .log-in-btn-a.visible {
 }
 @media (max-width: 425px) {
   nav .log-in-btn-a.visible {
+    display: none;
+  }
+}
+nav .log-out-btn-a.visible {
+  display: flex;
+}
+@media (max-width: 768px) {
+  nav .log-out-btn-a.visible {
+    display: flex;
+  }
+}
+@media (max-width: 425px) {
+  nav .log-out-btn-a.visible {
     display: none;
   }
 }

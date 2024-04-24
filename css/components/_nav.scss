@@ -78,6 +78,13 @@ nav {
   .log-in-btn-a {
     margin-right: 30px;
     display: none;
+    color: var.$text-color-primary;
+  }
+
+  .log-out-btn-a {
+    margin-right: 30px;
+    display: none;
+    color: var.$text-color-primary;
   }
 
   .log-in-btn {
@@ -98,9 +105,25 @@ nav {
         width: 15%;
       }
     }
+
+    i {
+      margin-right: 10px;
+    }
   }
 
   .log-in-btn-a.visible {
+    display: flex;
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+
+    @media (max-width: 425px) {
+      display: none;
+    }
+  }
+
+  .log-out-btn-a.visible {
     display: flex;
 
     @media (max-width: 768px) {

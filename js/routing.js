@@ -16,6 +16,7 @@ function getCurrentLoggedInUsername() {
 
 const handleLoggedInUserElements = () => {
   document.querySelector(".log-in-btn-a").classList.remove("visible");
+  document.querySelector(".log-out-btn-a").classList.add("visible");
   document.getElementById("profileImageLink").classList.add("visible");
   document.getElementById("profileLink").classList.add("visible");
   document.getElementById("profileLinkBurger").style.display = "flex";
@@ -24,6 +25,7 @@ const handleLoggedInUserElements = () => {
 
 const handleLoggedOutUserElements = () => {
   document.querySelector(".log-in-btn-a").classList.add("visible");
+  document.querySelector(".log-out-btn-a").classList.remove("visible");
   document.getElementById("profileImageLink").classList.remove("visible");
   document.getElementById("profileLink").classList.remove("visible");
   document.getElementById("profileLinkBurger").style.display = "none";
@@ -32,8 +34,8 @@ const handleLoggedOutUserElements = () => {
 
 const handleUserLogout = () => {
   localStorage.removeItem("currentUsername");
-  document.getElementById("loginLink").style.display = "flex";
-  document.getElementById("profileLink").style.display = "none";
+  localStorage.removeItem("currentPassword");
+  handleLoggedOutUserElements();
   location.hash = variables.HASH_ROUTES.logInPage;
 };
 
@@ -76,6 +78,10 @@ window.addEventListener("hashchange", () => {
   } else {
     handleLoggedOutUserElements();
   }
+});
+
+document.querySelector(".log-out-btn-a").addEventListener("click", () => {
+  handleUserLogout();
 });
 
 document.getElementById("logInForm").addEventListener("submit", (event) => {
