@@ -130,8 +130,6 @@ function openModal(card) {
   const modalVideoMobile = variables.contentPageModal.querySelector(
     ".modal-video.pc-hidden"
   );
-  const modalComments =
-    variables.contentPageModal.querySelector(".all-comments");
 
   modalDetails.innerHTML = `<div class="modal-title"><h3>${card.titleModal}</h3><button id="modalClose"><i class="fa-solid fa-x"></i></button></div><p>${card.descriptionModal}</p>
             <div class="details-date">Објавено на ${card.date}</div>`;
@@ -150,6 +148,19 @@ function openModal(card) {
             >
             </iframe>`;
 
+  renderModalComments(card);
+
+  variables.contentPageModal.style.display = "flex";
+
+  document.getElementById("modalClose").addEventListener("click", () => {
+    variables.contentPageModal.style.display = "none";
+  });
+}
+
+function renderModalComments(card) {
+  const modalComments =
+    variables.contentPageModal.querySelector(".all-comments");
+
   modalComments.innerHTML = "";
   card.comments.forEach((comment) => {
     modalComments.innerHTML += `<div class="comment">
@@ -167,15 +178,9 @@ function openModal(card) {
                       </div>
                     </div>
                     ${comment.author}</span
-                  ><span class="d-flex aic">Date</span>
+                  ><span class="d-flex aic">${comment.date}</span>
                 </div>
               </div>`;
-  });
-
-  variables.contentPageModal.style.display = "flex";
-
-  document.getElementById("modalClose").addEventListener("click", () => {
-    variables.contentPageModal.style.display = "none";
   });
 }
 
