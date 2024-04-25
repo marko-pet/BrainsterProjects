@@ -95,7 +95,6 @@ function pillsFilter() {
 }
 
 pillsFilter();
-
 // CONTENT CARDS
 function displayContentCards(array) {
   array.forEach((card) => {
@@ -121,7 +120,7 @@ function displayContentCards(array) {
 }
 
 filterCardsByType("Видеа");
-
+let clickedCard = null;
 // MODAL
 function openModal(card) {
   const modalDetails = variables.contentPageModal.querySelector(".details");
@@ -157,11 +156,13 @@ function openModal(card) {
     variables.contentPageModal.style.display = "none";
   });
 
-  document.getElementById("modalComment").addEventListener("submit", (e) => {
-    e.preventDefault();
-    createModalComment(card);
-  });
+  clickedCard = card;
 }
+
+document.getElementById("modalComment").addEventListener("submit", (e) => {
+  e.preventDefault();
+  createModalComment(clickedCard);
+});
 
 function renderModalComments(card) {
   const modalComments =
@@ -206,7 +207,6 @@ function filterCardsByTags(tag) {
   });
   displayContentCards(filteredCardsByTags);
 }
-
 function createModalComment(card) {
   const newModalComment = document.getElementById("newModalComment");
   class AddComment {
@@ -220,7 +220,7 @@ function createModalComment(card) {
   }
 
   const comment = new AddComment(
-    4,
+    Math.random(),
     "John Doe",
     newModalComment.value,
     helpers.formattedDateTime,
