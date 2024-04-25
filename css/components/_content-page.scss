@@ -214,6 +214,11 @@
       .details {
         margin-bottom: var.$gutter-base * 1.5;
 
+        p {
+          overflow-y: scroll;
+          height: 110px;
+        }
+
         h3 {
           font-size: var.$font-size-big;
           font-weight: var.$font-weight-bold;

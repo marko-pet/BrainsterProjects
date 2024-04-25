@@ -870,6 +870,10 @@ footer .footer-inner .margin-top {
 .content-page .content-page-modal .details-and-comments .details {
   margin-bottom: 2.8125rem;
 }
+.content-page .content-page-modal .details-and-comments .details p {
+  overflow-y: scroll;
+  height: 110px;
+}
 .content-page .content-page-modal .details-and-comments .details h3 {
   font-size: clamp(1.375rem, 1.25vw, 1.75rem);
   font-weight: 700;

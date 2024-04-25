@@ -173,3 +173,6 @@ export const HASH_ROUTES = {
 
 export const ALLOWED_ROUTES = Object.values(HASH_ROUTES);
 export const USERNAME_SESSION_KEY = "currentUsername";
+
+export const newDiscForm = document.getElementById("newDiscForm");
+export const discSection1 = document.getElementById("discSection1");

@@ -3,7 +3,7 @@ import * as helpers from "./helpers.js";
 
 variables.newDiscForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const discDetails = document.getElementById("newDiscussionValue");
+  const discDetails = document.getElementById("discDetails");
 
   variables.discSection1.innerHTML += `<div class="discussion blue">
               <div class="discussion-details">
@@ -23,4 +23,6 @@ variables.newDiscForm.addEventListener("submit", (e) => {
                 </div>
               </div>
             </div>`;
+
+  discDetails.value = "bruh";
 });

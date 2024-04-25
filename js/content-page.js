@@ -1,4 +1,5 @@
 import * as variables from "./variables.js";
+import * as helpers from "./helpers.js";
 
 // TYPE FILTERS
 variables.pcTypeFilters.forEach((filter, index) => {
@@ -155,6 +156,11 @@ function openModal(card) {
   document.getElementById("modalClose").addEventListener("click", () => {
     variables.contentPageModal.style.display = "none";
   });
+
+  document.getElementById("modalComment").addEventListener("submit", (e) => {
+    e.preventDefault();
+    createModalComment(card);
+  });
 }
 
 function renderModalComments(card) {
@@ -199,4 +205,31 @@ function filterCardsByTags(tag) {
     return card.tags.includes(tag);
   });
   displayContentCards(filteredCardsByTags);
+}
+
+function createModalComment(card) {
+  const newModalComment = document.getElementById("newModalComment");
+  class AddComment {
+    constructor(id, author, text, date, pfp) {
+      this.id = id;
+      this.author = author;
+      this.text = text;
+      this.date = date;
+      this.pfp = pfp;
+    }
+  }
+
+  const comment = new AddComment(
+    4,
+    "John Doe",
+    newModalComment.value,
+    helpers.formattedDateTime,
+    "https://picsum.photos/200"
+  );
+
+  console.log(comment);
+
+  card.comments.push(comment);
+  renderModalComments(card);
+  newModalComment.value = "";
 }

@@ -216,7 +216,7 @@
     </section>
 
     <section id="contentPage">
-      <div class="content-page" id="">
+      <div class="content-page">
         <h1>Сè што треба да знаеш</h1>
 
         <div class="tablet-mobile-hidden">
@@ -262,6 +262,7 @@
           </div>
         </div> -->
         </div>
+
         <!-- MODAL -->
         <div class="content-page-modal">
           <div class="details-and-comments">
@@ -271,8 +272,12 @@
 
             <div class="comments">
               <div class="new-comment">
-                <form>
-                  <input type="text" placeholder="Остави коментар..." />
+                <form id="modalComment">
+                  <input
+                    id="newModalComment"
+                    type="text"
+                    placeholder="Остави коментар..."
+                  />
                   <span class="d-flex aic"
                     ><div class="profile-modal">
                       <div class="profile-img">
@@ -360,7 +365,7 @@
     </section>
 
     <section id="discussionsPage">
-      <div class="discussion-page" id="">
+      <div class="discussion-page">
         <h1>Табла за дискусии</h1>
         <div class="discussions">
           <!-- <div class="new-discussion">
@@ -395,10 +400,14 @@
             </div>
           </div> -->
 
-          <div class="column1">
+          <div id="discSection1" class="column1">
             <div class="new-discussion">
-              <form>
-                <input type="text" placeholder="Сподели искуство..." />
+              <form id="newDiscForm">
+                <input
+                  id="discDetails"
+                  type="text"
+                  placeholder="Сподели искуство..."
+                />
                 <span>John Doe</span>
               </form>
             </div>
@@ -889,8 +898,10 @@
     </footer>
     <!-- JAVASCRIPT -->
     <script type="module" src="./js/variables.js"></script>
+    <script type="module" src="./js/helpers.js"></script>
     <script type="module" src="./js/misc.js"></script>
     <script type="module" src="./js/content-page.js"></script>
+    <script type="module" src="./js/discussion-page.js"></script>
     <script type="module" src="./js/routing.js"></script>
   </body>
 </html>
