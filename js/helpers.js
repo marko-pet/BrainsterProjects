@@ -7,3 +7,7 @@ export const hours = String(currentDate.getHours()).padStart(2, "0");
 export const minutes = String(currentDate.getMinutes()).padStart(2, "0");
 
 export const formattedDateTime = `${day}/${month}/${year}, ${hours}:${minutes}`;
+
+export function getCurrentLoggedInUsername() {
+  return localStorage.getItem("currentUsername");
+}

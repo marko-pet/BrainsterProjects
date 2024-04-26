@@ -1,4 +1,5 @@
 import * as variables from "./variables.js";
+import * as helpers from "./helpers.js";
 
 function hideAllSections() {
   document.querySelectorAll("section").forEach((section) => {
@@ -8,10 +9,6 @@ function hideAllSections() {
 
 function getHashRoute() {
   return location.hash.slice(1);
-}
-
-function getCurrentLoggedInUsername() {
-  return localStorage.getItem("currentUsername");
 }
 
 const handleLoggedInUserElements = () => {
@@ -40,7 +37,7 @@ const handleUserLogout = () => {
 };
 
 const currentHashRoute = getHashRoute();
-const currentUsername = getCurrentLoggedInUsername();
+const currentUsername = helpers.getCurrentLoggedInUsername();
 
 hideAllSections();
 
@@ -72,7 +69,7 @@ window.addEventListener("hashchange", () => {
       "block";
   }
 
-  const currentUsername = getCurrentLoggedInUsername();
+  const currentUsername = helpers.getCurrentLoggedInUsername();
   if (currentUsername) {
     handleLoggedInUserElements();
   } else {

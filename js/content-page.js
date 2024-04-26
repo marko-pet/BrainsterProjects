@@ -112,6 +112,10 @@ function displayContentCards(array) {
     contentCard.style.backgroundImage = `url('${card.image}')`;
 
     contentCard.addEventListener("click", () => {
+      if (!helpers.getCurrentLoggedInUsername()) {
+        alert("Морате да се логирате за да коментирате");
+        return;
+      }
       openModal(card);
     });
 
@@ -147,6 +151,12 @@ function openModal(card) {
               src="${card.video}"
             >
             </iframe>`;
+
+  const storedCard = JSON.parse(localStorage.getItem("card_" + card.id));
+  if (storedCard && storedCard.comments) {
+    card.comments = storedCard.comments;
+    renderModalComments(card);
+  }
 
   renderModalComments(card);
 
@@ -191,6 +201,35 @@ function renderModalComments(card) {
   });
 }
 
+function createModalComment(card) {
+  const newModalComment = document.getElementById("newModalComment");
+  class AddComment {
+    constructor(id, author, text, date, pfp) {
+      this.id = id;
+      this.author = author;
+      this.text = text;
+      this.date = date;
+      this.pfp = pfp;
+    }
+  }
+
+  const comment = new AddComment(
+    Math.random(),
+    `${helpers.getCurrentLoggedInUsername()}`,
+    newModalComment.value,
+    helpers.formattedDateTime,
+    "https://picsum.photos/200"
+  );
+
+  console.log(comment);
+
+  card.comments.push(comment);
+  renderModalComments(card);
+  newModalComment.value = "";
+
+  localStorage.setItem("card_" + card.id, JSON.stringify(card));
+}
+
 // FILTERS
 function filterCardsByType(type) {
   variables.contentCardsContainer.innerHTML = "";
@@ -206,30 +245,4 @@ function filterCardsByTags(tag) {
     return card.tags.includes(tag);
   });
   displayContentCards(filteredCardsByTags);
-}
-function createModalComment(card) {
-  const newModalComment = document.getElementById("newModalComment");
-  class AddComment {
-    constructor(id, author, text, date, pfp) {
-      this.id = id;
-      this.author = author;
-      this.text = text;
-      this.date = date;
-      this.pfp = pfp;
-    }
-  }
-
-  const comment = new AddComment(
-    Math.random(),
-    "John Doe",
-    newModalComment.value,
-    helpers.formattedDateTime,
-    "https://picsum.photos/200"
-  );
-
-  console.log(comment);
-
-  card.comments.push(comment);
-  renderModalComments(card);
-  newModalComment.value = "";
 }

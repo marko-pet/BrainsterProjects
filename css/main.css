@@ -952,18 +952,6 @@ footer .footer-inner .margin-top {
   width: -moz-min-content;
   width: min-content;
 }
-.content-page .content-page-modal .profile-modal .profile-img {
-  border: 1.6px solid rgb(66, 53, 107);
-  width: 50px;
-  height: 50px;
-  margin-right: 1rem;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.content-page .content-page-modal .profile-modal .profile-img a {
-  height: 100%;
-  width: 100%;
-}
 
 .space-between {
   display: flex;
@@ -976,6 +964,19 @@ footer .footer-inner .margin-top {
 
 .aic {
   align-items: center;
+}
+
+.profile-img {
+  border: 1.6px solid rgb(66, 53, 107);
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-img a {
+  height: 100%;
+  width: 100%;
 }
 
 .discussion-page {
@@ -1042,6 +1043,15 @@ footer .footer-inner .margin-top {
 }
 .discussion-page .discussions .discussion span {
   font-weight: 500;
+}
+.discussion-page .discussions .disc-extra {
+  margin-top: 1rem;
+}
+.discussion-page .discussions .disc-extra i {
+  margin-right: 1rem;
+}
+.discussion-page .discussions .disc-extra span {
+  margin-right: 1rem;
 }
 .discussion-page .blur {
   position: absolute;
