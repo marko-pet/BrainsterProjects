@@ -155,7 +155,6 @@ function openModal(card) {
   const storedCard = JSON.parse(localStorage.getItem("card_" + card.id));
   if (storedCard && storedCard.comments) {
     card.comments = storedCard.comments;
-    renderModalComments(card);
   }
 
   renderModalComments(card);

@@ -783,45 +783,56 @@
     </section>
 
     <section id="profilePage">
-      <div class="profile-page" id="">
+      <div class="profile-page">
         <h1>Профил</h1>
         <div class="profile-main">
           <div class="profile-image-container">
             <div class="profile-image">
-              <img src="./img/Rectangle 562.png" alt="Pfp" />
+              <img
+                id="profilePicture"
+                src="./img/Rectangle 562.png"
+                alt="Pfp"
+              />
             </div>
           </div>
 
           <div class="profile-settings">
-            <form>
+            <form id="profileSettings">
               <div class="settings-section">
                 <div class="settings-section-inner">
                   <label for="username-profile"
                     >Име и презиме / Корисничко име</label
                   >
-                  <input type="text" id="username-profile" />
+                  <input type="text" id="username-profile" disabled />
                 </div>
 
                 <div class="settings-section-inner">
                   <label for="email-profile">Email адреса</label>
-                  <input type="email" id="email-profile" />
+                  <input type="email" id="email-profile" disabled />
                 </div>
 
                 <div class="settings-section-inner">
                   <label for="password-profile">Лозинка</label>
-                  <input type="password" id="password-profile" />
+                  <input type="password" id="password-profile" disabled />
                 </div>
               </div>
 
               <div class="settings-section">
                 <div class="settings-section-inner">
                   <label for="birth-date">Година на раѓање</label>
-                  <input type="number" min="1900" max="2024" step="1" />
+                  <input
+                    type="number"
+                    id="birth-date"
+                    min="1900"
+                    max="2024"
+                    step="1"
+                    disabled
+                  />
                 </div>
 
                 <div class="settings-section-inner">
                   <label for="gender">Пол</label>
-                  <input type="text" id="gender" />
+                  <input type="text" id="gender" disabled />
                 </div>
               </div>
             </form>

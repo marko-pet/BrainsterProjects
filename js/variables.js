@@ -176,3 +176,30 @@ export const USERNAME_SESSION_KEY = "currentUsername";
 
 export const newDiscForm = document.getElementById("newDiscForm");
 export const discSection1 = document.getElementById("discSection1");
+
+export const users = [
+  {
+    username: "User123",
+    password: "Pass123",
+    email: "user123@mail.com",
+    birthDate: 2000,
+    pfp: "https://picsum.photos/200",
+    gender: "Male",
+  },
+  {
+    username: "User456",
+    password: "Pass456",
+    email: "user456@mail.com",
+    birthDate: 2000,
+    pfp: "https://picsum.photos/200",
+    gender: "Female",
+  },
+  {
+    username: "User789",
+    password: "Pass789",
+    email: "user789@mail.com",
+    birthDate: 2000,
+    pfp: "https://picsum.photos/200",
+    gender: "Male",
+  },
+];
