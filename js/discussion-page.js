@@ -5,7 +5,7 @@ variables.newDiscForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const discDetails = document.getElementById("discDetails");
 
-  variables.discSection1.innerHTML += `<div class="discussion blue">
+  variables.discussions.innerHTML += `<div class="discussion blue">
               <div class="discussion-details">
                 <p>
                   ${discDetails.value}
@@ -23,6 +23,4 @@ variables.newDiscForm.addEventListener("submit", (e) => {
                 </div>
               </div>
             </div>`;
-
-  discDetails.value = "bruh";
 });

@@ -981,22 +981,23 @@ footer .footer-inner .margin-top {
 
 .discussion-page {
   position: relative;
-}
-.discussion-page .discussions {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.40625rem;
   height: 150vh;
   overflow-y: hidden;
 }
+.discussion-page .discussions {
+  -moz-columns: 3;
+       columns: 3;
+}
 @media (max-width: 768px) {
   .discussion-page .discussions {
-    grid-template-columns: repeat(2, 1fr);
+    -moz-columns: 2;
+         columns: 2;
   }
 }
 @media (max-width: 425px) {
   .discussion-page .discussions {
-    grid-template-columns: 1fr;
+    -moz-columns: 1;
+         columns: 1;
   }
 }
 .discussion-page .discussions input {
@@ -1019,6 +1020,8 @@ footer .footer-inner .margin-top {
   height: -moz-min-content;
   height: min-content;
   margin-bottom: 1.40625rem;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
 }
 .discussion-page .discussions .new-discussion span {
   font-weight: 500;
@@ -1037,6 +1040,8 @@ footer .footer-inner .margin-top {
   border-radius: 16px;
   height: -moz-min-content;
   height: min-content;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
 }
 .discussion-page .discussions .discussion:not(:last-child) {
   margin-bottom: 0.9375rem;
@@ -1055,7 +1060,7 @@ footer .footer-inner .margin-top {
 }
 .discussion-page .blur {
   position: absolute;
-  bottom: 2.8125rem;
+  bottom: 0;
   width: 100%;
   text-align: center;
   color: rgb(255, 255, 255);
@@ -1064,7 +1069,6 @@ footer .footer-inner .margin-top {
 }
 @media (max-width: 768px) {
   .discussion-page .blur {
-    bottom: 30px;
     right: 0;
     left: 0;
   }
