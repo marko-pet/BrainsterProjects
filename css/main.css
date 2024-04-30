@@ -981,6 +981,8 @@ footer .footer-inner .margin-top {
 
 .discussion-page {
   position: relative;
+}
+.discussion-page .discussions-container {
   height: 150vh;
   overflow-y: hidden;
 }
@@ -1064,8 +1066,8 @@ footer .footer-inner .margin-top {
   width: 100%;
   text-align: center;
   color: rgb(255, 255, 255);
-  padding: 1.875rem 0;
-  background: linear-gradient(rgba(135, 175, 239, 0), rgb(135, 175, 239));
+  padding: 3.75rem 0;
+  background: linear-gradient(0deg, rgb(135, 176, 239) 60%, rgba(255, 255, 255, 0) 100%);
 }
 @media (max-width: 768px) {
   .discussion-page .blur {

@@ -175,7 +175,6 @@ export const ALLOWED_ROUTES = Object.values(HASH_ROUTES);
 export const USERNAME_SESSION_KEY = "currentUsername";
 
 export const newDiscForm = document.getElementById("newDiscForm");
-export const discussions = document.querySelector(".discussions");
 
 export const users = [
   {

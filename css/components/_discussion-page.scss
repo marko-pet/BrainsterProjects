@@ -6,11 +6,14 @@
   @extend %section;
   position: relative;
   // display: none;
-  height: 150vh;
-  overflow-y: hidden;
 
   h1 {
     @extend %h1-main;
+  }
+
+  .discussions-container {
+    height: 150vh;
+    overflow-y: hidden;
   }
 
   .discussions {
@@ -91,8 +94,12 @@
     width: 100%;
     text-align: center;
     color: var.$text-color-secondary;
-    padding: var.$gutter-base 0;
-    background: linear-gradient(rgb(135, 175, 239, 0), rgb(135, 175, 239, 1));
+    padding: var.$gutter-base * 2 0;
+    background: linear-gradient(
+      0deg,
+      rgba(135, 176, 239, 1) 60%,
+      rgba(255, 255, 255, 0) 100%
+    );
 
     @media (max-width: 768px) {
       right: 0;

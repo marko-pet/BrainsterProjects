@@ -11,3 +11,7 @@ export const formattedDateTime = `${day}/${month}/${year}, ${hours}:${minutes}`;
 export function getCurrentLoggedInUsername() {
   return localStorage.getItem("currentUsername");
 }
+
+export function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
