@@ -216,7 +216,7 @@ function createModalComment(card) {
     Math.random(),
     `${helpers.getCurrentLoggedInUsername()}`,
     newModalComment.value,
-    helpers.formattedDateTime,
+    helpers.getCurrentTime(),
     "https://picsum.photos/200"
   );
 

@@ -24,7 +24,7 @@ variables.newDiscForm.addEventListener("submit", (e) => {
                     /></a>
                   </div>
                   ${helpers.getCurrentLoggedInUsername()}</span
-                ><span class="d-flex aic">${helpers.formattedDateTime}</span>
+                ><span class="d-flex aic">${helpers.getCurrentTime()}</span>
               </div>
               <form>
                 <input type="text" placeholder="Напиши коментар..." />
