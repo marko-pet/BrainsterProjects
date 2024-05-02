@@ -6,6 +6,11 @@ let colors = ["blue", "purple", "green"];
 variables.newDiscForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  if (!helpers.getCurrentLoggedInUsername()) {
+    alert(`You must be logged in order to add discussions`);
+    return;
+  }
+
   const currentUser = variables.users.find(
     (user) => user.username === helpers.getCurrentLoggedInUsername()
   );

@@ -19,19 +19,55 @@
     }
 
     .profile-image-container {
-      flex-basis: 30%;
+      flex-basis: 25%;
 
       @media (max-width: 768px) {
         margin-bottom: var.$gutter-base;
       }
 
-      img {
-        @media (max-width: 768px) {
-          width: 25%;
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
+      .profile-image {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 32px;
+        overflow: hidden;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0px 16px 16px 0px rgba(255, 255, 255, 0.1);
+
+        &:hover {
+          button {
+            display: inline-block;
+          }
         }
+
+        button {
+          display: none;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          background: rgba(118, 79, 240, 0.8);
+          border: none;
+          padding: var.$gutter-base * 0.5 0;
+          color: var.$text-color-secondary;
+          font-size: var.$font-size-base;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+
+        // @media (max-width: 768px) {
+        //   width: 25%;
+        //   display: block;
+        //   margin-left: auto;
+        //   margin-right: auto;
+        // }
 
         @media (max-width: 425px) {
           width: 100%;
@@ -64,11 +100,11 @@
           font-weight: 500;
           width: 100%;
           background: transparent;
-          border-top: transparent;
-          border-left: transparent;
-          border-right: transparent;
+          border-top: 2px solid rgba(255, 255, 255, 0);
+          border-left: 2px solid rgba(255, 255, 255, 0);
+          border-right: 2px solid rgba(255, 255, 255, 0);
           border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-          padding: var.$gutter-base * 0.25 0;
+          padding: var.$gutter-base * 0.3;
           color: var.$text-color-secondary;
         }
       }
@@ -80,8 +116,39 @@
       }
 
       .settings-section-inner {
+        .relative {
+          position: relative;
+
+          &:hover {
+            input {
+              border: 2px solid rgba(255, 255, 255, 0.2);
+              border-radius: 8px;
+            }
+
+            button {
+              border: 2px solid rgba(255, 255, 255, 0.2);
+              display: inline-block;
+              cursor: pointer;
+            }
+          }
+        }
+
         @media (max-width: 768px) {
           margin-bottom: var.$gutter-base;
+        }
+
+        button {
+          color: var.$text-color-secondary;
+          height: 100%;
+          background: var.$text-color-tertiary;
+          padding: 0 var.$gutter-base;
+          border: none;
+          border-radius: 0 8px 8px 0;
+          // border: 2px solid rgba(255, 255, 255, 0.2);
+          position: absolute;
+          right: 0;
+          display: none;
+          font-size: var.$font-size-base;
         }
       }
     }

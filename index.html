@@ -793,9 +793,10 @@
             <div class="profile-image">
               <img
                 id="profilePicture"
-                src="./img/Rectangle 562.png"
+                src="./img/francesca-grima-GdWkmuDdzGg-unsplash.jpg"
                 alt="Pfp"
               />
+              <button class="profile-edit">Промени</button>
             </div>
           </div>
 
@@ -806,36 +807,55 @@
                   <label for="username-profile"
                     >Име и презиме / Корисничко име</label
                   >
-                  <input type="text" id="username-profile" disabled />
+                  <div class="relative">
+                    <input type="text" id="username-profile" disabled />
+                    <button class="profile-edit">Промени</button>
+                  </div>
                 </div>
 
                 <div class="settings-section-inner">
                   <label for="email-profile">Email адреса</label>
-                  <input type="email" id="email-profile" disabled />
+                  <div class="relative">
+                    <input type="email" id="email-profile" disabled />
+                    <button class="profile-edit" id="profileEdit">
+                      Промени
+                    </button>
+                  </div>
                 </div>
 
                 <div class="settings-section-inner">
                   <label for="password-profile">Лозинка</label>
-                  <input type="password" id="password-profile" disabled />
+                  <div class="relative">
+                    <input type="password" id="password-profile" disabled />
+                    <button class="profile-edit">Промени</button>
+                  </div>
                 </div>
               </div>
 
               <div class="settings-section">
                 <div class="settings-section-inner">
                   <label for="birth-date">Година на раѓање</label>
-                  <input
-                    type="number"
-                    id="birth-date"
-                    min="1900"
-                    max="2024"
-                    step="1"
-                    disabled
-                  />
+                  <div class="relative">
+                    <input
+                      type="number"
+                      id="birth-date"
+                      min="1900"
+                      max="2024"
+                      step="1"
+                      disabled
+                    />
+                    <button class="profile-edit" id="profileEdit">
+                      Промени
+                    </button>
+                  </div>
                 </div>
 
                 <div class="settings-section-inner">
                   <label for="gender">Пол</label>
-                  <input type="text" id="gender" disabled />
+                  <div class="relative">
+                    <input type="text" id="gender" disabled />
+                    <button class="profile-edit">Промени</button>
+                  </div>
                 </div>
               </div>
             </form>
@@ -910,9 +930,9 @@
         </div>
         <div class="outer">
           <div class="extra-links">
-            <div><a href="#">Информирај се</a></div>
-            <div><a href="#">Дискусии</a></div>
-            <div><a href="#">Контакт - корисни линкови</a></div>
+            <div><a href="#contentPage">Информирај се</a></div>
+            <div><a href="#discussionsPage">Дискусии</a></div>
+            <div><a href="#contactPage">Контакт - корисни линкови</a></div>
             <div><a href="#">Закон за заштита на личните податоци</a></div>
           </div>
         </div>

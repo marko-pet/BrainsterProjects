@@ -73,6 +73,10 @@ window.addEventListener("hashchange", () => {
       location.hash = variables.HASH_ROUTES.logInPage;
       return;
     }
+
+    if (hashRoute === variables.HASH_ROUTES.profilePage) {
+      location.reload();
+    }
   } else {
     document.querySelector(`#${variables.HASH_ROUTES.infoPage}`).style.display =
       "block";
@@ -82,7 +86,6 @@ window.addEventListener("hashchange", () => {
   const currentUsername = helpers.getCurrentLoggedInUsername();
   if (currentUsername) {
     handleLoggedInUserElements();
-    populateProfile();
   } else {
     handleLoggedOutUserElements();
   }
