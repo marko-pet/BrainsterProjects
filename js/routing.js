@@ -12,12 +12,16 @@ function getHashRoute() {
 }
 
 const handleLoggedInUserElements = () => {
+  const currentUser = variables.users.find(
+    (user) => user.username === helpers.getCurrentLoggedInUsername()
+  );
+
   document.querySelector(".log-in-btn-a").classList.remove("visible");
   document.querySelector(".log-out-btn-a").classList.add("visible");
   document.getElementById("profileImageLink").classList.add("visible");
+  document.getElementById("navUserImage").src = `${currentUser.pfp}`;
   document.getElementById("profileLink").classList.add("visible");
   document.getElementById("profileLinkBurger").style.display = "flex";
-  //   getElementById("logout").style.display = "inline";
 };
 
 const handleLoggedOutUserElements = () => {
@@ -26,7 +30,6 @@ const handleLoggedOutUserElements = () => {
   document.getElementById("profileImageLink").classList.remove("visible");
   document.getElementById("profileLink").classList.remove("visible");
   document.getElementById("profileLinkBurger").style.display = "none";
-  //   getElementById("logout").style.display = "none";
 };
 
 const handleUserLogout = () => {

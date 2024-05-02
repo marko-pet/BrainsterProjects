@@ -459,7 +459,7 @@ nav .search {
   font-weight: 700;
 }
 .sec-info .sec-info-cards .sec-info-card .details {
-  padding: 2.8125rem 0;
+  padding: 1.875rem 0;
   line-height: 32px;
 }
 .purple {
@@ -786,7 +786,7 @@ footer .footer-inner .margin-top {
 .content-page .content-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.875rem;
+  gap: 1.40625rem;
 }
 @media (max-width: 768px) {
   .content-page .content-cards {
@@ -846,18 +846,24 @@ footer .footer-inner .margin-top {
   margin-top: 0.75rem;
 }
 .content-page .content-page-modal {
-  position: absolute;
+  width: 75%;
+  position: fixed;
   top: 1.875rem;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 998;
   background: rgba(255, 255, 255, 0.9);
   padding: 1.875rem;
   border-radius: 32px;
   display: none;
   justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .content-page .content-page-modal {
+    width: 100%;
+    top: 0;
+  }
 }
 .content-page .content-page-modal .details-and-comments {
   flex-basis: 67.5%;

@@ -115,7 +115,7 @@
   .content-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: var.$gutter-base;
+    gap: var.$gutter-base * 0.75;
     @extend %section;
 
     @media (max-width: 768px) {
@@ -191,18 +191,23 @@
   }
 
   .content-page-modal {
-    position: absolute;
+    width: 75%;
+    position: fixed;
     top: var.$gutter-base;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 998;
     background: rgba(255, 255, 255, 0.9);
     padding: var.$gutter-base;
     border-radius: 32px;
     display: none;
     justify-content: space-between;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      top: 0;
+    }
 
     .details-and-comments {
       flex-basis: 67.5%;
