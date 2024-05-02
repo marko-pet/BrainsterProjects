@@ -141,6 +141,6 @@ function populateProfile() {
     document.getElementById("password-profile").value = currentUser.password;
     document.getElementById("birth-date").value = currentUser.birthDate;
     document.getElementById("gender").value = currentUser.gender;
-    // document.getElementById("profilePicture").src = currentUser.pfp;
+    document.getElementById("profilePicture").src = currentUser.pfp;
   }
 }
