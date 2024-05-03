@@ -1,10 +1,10 @@
 # Brainster Projects
 
-Here you can find all of my Brainster Projects.
+Here is my 2nd Brainster project.
 
 ## Made with:
 
-[![My Skills](https://skills.thijs.gg/icons?i=html,css,js)](https://skills.thijs.gg)
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,sass)](https://skillicons.dev)
 
 ## Author
 
