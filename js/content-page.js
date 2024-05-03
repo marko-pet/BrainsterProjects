@@ -134,13 +134,14 @@ function openModal(card) {
   const modalVideoMobile = variables.contentPageModal.querySelector(
     ".modal-video.pc-hidden"
   );
+  const modalUser = document.getElementById("modalUser");
 
   modalDetails.innerHTML = `<div class="modal-title"><h3>${card.titleModal}</h3><button id="modalClose"><i class="fa-solid fa-x"></i></button></div><p>${card.descriptionModal}</p>
             <div class="details-date">Објавено на ${card.date}</div>`;
 
   modalVideoPC.innerHTML = `<iframe
               width="100%"
-              height="720"
+              height="100%"
               src="${card.video}"
             >
             </iframe>`;
@@ -151,6 +152,19 @@ function openModal(card) {
               src="${card.video}"
             >
             </iframe>`;
+
+  const currentUser = variables.users.find(
+    (user) => user.username === helpers.getCurrentLoggedInUsername()
+  );
+
+  modalUser.innerHTML = `<div class="profile-modal">
+                      <div class="profile-img">
+                        <a href="#"
+                          ><img src="${currentUser.pfp}"
+                        /></a>
+                      </div>
+                    </div>
+                    ${helpers.getCurrentLoggedInUsername()}`;
 
   const storedCard = JSON.parse(localStorage.getItem("card_" + card.id));
   if (storedCard && storedCard.comments) {
@@ -212,12 +226,16 @@ function createModalComment(card) {
     }
   }
 
+  const currentUser = variables.users.find(
+    (user) => user.username === helpers.getCurrentLoggedInUsername()
+  );
+
   const comment = new AddComment(
     Math.random(),
     `${helpers.getCurrentLoggedInUsername()}`,
     newModalComment.value,
     helpers.getCurrentTime(),
-    "https://picsum.photos/200"
+    `${currentUser.pfp}`
   );
 
   console.log(comment);
