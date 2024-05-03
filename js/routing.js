@@ -134,16 +134,32 @@ document.getElementById("logInForm").addEventListener("submit", (event) => {
 });
 
 function populateProfile() {
-  const currentUser = variables.users.find(
-    (user) => user.username === currentUsername
-  );
+  let currentUserProfile;
 
-  if (currentUser) {
-    document.getElementById("username-profile").value = currentUser.username;
-    document.getElementById("email-profile").value = currentUser.email;
-    document.getElementById("password-profile").value = currentUser.password;
-    document.getElementById("birth-date").value = currentUser.birthDate;
-    document.getElementById("gender").value = currentUser.gender;
-    document.getElementById("profilePicture").src = currentUser.pfp;
+  if (localStorage.getItem("users")) {
+    const currentUserStorage = JSON.parse(localStorage.getItem("users")).find(
+      (user) => user.username === currentUsername
+    );
+
+    if (currentUserStorage) {
+      currentUserProfile = currentUserStorage;
+    }
+  }
+
+  if (!currentUserProfile) {
+    currentUserProfile = variables.users.find(
+      (user) => user.username === currentUsername
+    );
+  }
+
+  if (currentUserProfile) {
+    document.getElementById("username-profile").value =
+      currentUserProfile.username;
+    document.getElementById("email-profile").value = currentUserProfile.email;
+    document.getElementById("password-profile").value =
+      currentUserProfile.password;
+    document.getElementById("birth-date").value = currentUserProfile.birthDate;
+    document.getElementById("gender").value = currentUserProfile.gender;
+    document.getElementById("profilePicture").src = currentUserProfile.pfp;
   }
 }

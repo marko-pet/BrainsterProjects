@@ -731,7 +731,7 @@
                   >
                   <div class="relative">
                     <input
-                      class="input-profile"
+                      class="input-profile hover"
                       type="text"
                       id="username-profile"
                       disabled
@@ -749,17 +749,14 @@
                       id="email-profile"
                       disabled
                     />
-                    <button
-                      class="profile-edit special hover"
-                      data-target="profileEdit"
-                    >
+                    <button class="profile-edit special hover" id="editEmail">
                       Промени
                     </button>
                     <div class="editing">
-                      <button class="profile-editing" id="editConfirm">
+                      <button class="profile-editing" id="editEmailConfirm">
                         <i class="fa-solid fa-check fa-xl lime-green"></i>
                       </button>
-                      <button class="profile-editing" id="editCancel">
+                      <button class="profile-editing" id="editEmailCancel">
                         <i class="fa-solid fa-xmark fa-xl red"></i>
                       </button>
                     </div>
@@ -770,7 +767,7 @@
                   <label for="password-profile">Лозинка</label>
                   <div class="relative">
                     <input
-                      class="input-profile"
+                      class="input-profile hover"
                       type="password"
                       id="password-profile"
                       disabled
@@ -785,7 +782,7 @@
                   <label for="birth-date">Година на раѓање</label>
                   <div class="relative">
                     <input
-                      class="input-profile"
+                      class="input-profile hover"
                       type="number"
                       id="birth-date"
                       min="1900"
@@ -795,10 +792,18 @@
                     />
                     <button
                       class="profile-edit special hover"
-                      data-target="profileEdit"
+                      id="editBirthDate"
                     >
                       Промени
                     </button>
+                    <div class="editing">
+                      <button class="profile-editing" id="editBirthDateConfirm">
+                        <i class="fa-solid fa-check fa-xl lime-green"></i>
+                      </button>
+                      <button class="profile-editing" id="editBirthDateCancel">
+                        <i class="fa-solid fa-xmark fa-xl red"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
 
@@ -806,7 +811,7 @@
                   <label for="gender">Пол</label>
                   <div class="relative">
                     <input
-                      class="input-profile"
+                      class="input-profile hover"
                       type="text"
                       id="gender"
                       disabled
