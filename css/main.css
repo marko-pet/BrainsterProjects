@@ -1244,7 +1244,7 @@ footer .footer-inner .margin-top {
   font-weight: 700;
   width: 100%;
 }
-.profile-page .profile-main .profile-settings form input {
+.profile-page .profile-main .profile-settings form .input-profile {
   font-size: 22px;
   font-weight: 500;
   width: 100%;
@@ -1264,21 +1264,30 @@ footer .footer-inner .margin-top {
 .profile-page .profile-main .profile-settings .settings-section-inner .relative {
   position: relative;
 }
-.profile-page .profile-main .profile-settings .settings-section-inner .relative:hover input {
+.profile-page .profile-main .profile-settings .settings-section-inner .relative:hover .input-profile.hover {
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
 }
-.profile-page .profile-main .profile-settings .settings-section-inner .relative:hover button {
+.profile-page .profile-main .profile-settings .settings-section-inner .relative:hover .profile-edit.hover {
   border: 2px solid rgba(255, 255, 255, 0.2);
   display: inline-block;
   cursor: pointer;
+}
+.profile-page .profile-main .profile-settings .settings-section-inner .input-profile.white-background {
+  background: white;
+  border-radius: 8px;
+  color: rgb(66, 53, 107);
+  border: 2px solid rgb(118, 79, 240);
+}
+.profile-page .profile-main .profile-settings .settings-section-inner .input-profile.white-background:hover {
+  border: 2px solid rgb(118, 79, 240);
 }
 @media (max-width: 768px) {
   .profile-page .profile-main .profile-settings .settings-section-inner {
     margin-bottom: 1.875rem;
   }
 }
-.profile-page .profile-main .profile-settings .settings-section-inner button {
+.profile-page .profile-main .profile-settings .settings-section-inner .profile-edit {
   color: rgb(255, 255, 255);
   height: 100%;
   background: rgb(118, 79, 240);
@@ -1289,6 +1298,24 @@ footer .footer-inner .margin-top {
   right: 0;
   display: none;
   font-size: clamp(1rem, 0.938vw, 1.25rem);
+}
+.profile-page .profile-main .profile-settings .settings-section-inner .editing {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  height: 100%;
+}
+.profile-page .profile-main .profile-settings .settings-section-inner .profile-editing {
+  height: 100%;
+  background: transparent;
+  border: none;
+  padding: 0 0.46875rem;
+  cursor: pointer;
+  display: none;
+}
+.profile-page .profile-main .profile-settings .settings-section-inner .profile-editing.active {
+  display: inline-block;
 }
 .profile-page .profile-progress .progress-extra {
   display: flex;
@@ -1351,4 +1378,12 @@ footer .footer-inner .margin-top {
 .profile-page .profile-achievements .achievement span {
   font-weight: 500;
   text-transform: capitalize;
+}
+
+.lime-green {
+  color: limegreen;
+}
+
+.red {
+  color: red;
 }/*# sourceMappingURL=main.css.map */

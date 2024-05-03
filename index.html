@@ -718,7 +718,7 @@
           <div class="profile-image-container">
             <div class="profile-image">
               <img id="profilePicture" src="" alt="Pfp" />
-              <button class="profile-edit">Промени</button>
+              <button class="profile-edit hover">Промени</button>
             </div>
           </div>
 
@@ -730,26 +730,52 @@
                     >Име и презиме / Корисничко име</label
                   >
                   <div class="relative">
-                    <input type="text" id="username-profile" disabled />
-                    <button class="profile-edit">Промени</button>
+                    <input
+                      class="input-profile"
+                      type="text"
+                      id="username-profile"
+                      disabled
+                    />
+                    <button class="profile-edit hover">Промени</button>
                   </div>
                 </div>
 
                 <div class="settings-section-inner">
                   <label for="email-profile">Email адреса</label>
                   <div class="relative">
-                    <input type="email" id="email-profile" disabled />
-                    <button class="profile-edit" id="profileEdit">
+                    <input
+                      class="input-profile hover"
+                      type="email"
+                      id="email-profile"
+                      disabled
+                    />
+                    <button
+                      class="profile-edit special hover"
+                      data-target="profileEdit"
+                    >
                       Промени
                     </button>
+                    <div class="editing">
+                      <button class="profile-editing" id="editConfirm">
+                        <i class="fa-solid fa-check fa-xl lime-green"></i>
+                      </button>
+                      <button class="profile-editing" id="editCancel">
+                        <i class="fa-solid fa-xmark fa-xl red"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
 
                 <div class="settings-section-inner">
                   <label for="password-profile">Лозинка</label>
                   <div class="relative">
-                    <input type="password" id="password-profile" disabled />
-                    <button class="profile-edit">Промени</button>
+                    <input
+                      class="input-profile"
+                      type="password"
+                      id="password-profile"
+                      disabled
+                    />
+                    <button class="profile-edit hover">Промени</button>
                   </div>
                 </div>
               </div>
@@ -759,6 +785,7 @@
                   <label for="birth-date">Година на раѓање</label>
                   <div class="relative">
                     <input
+                      class="input-profile"
                       type="number"
                       id="birth-date"
                       min="1900"
@@ -766,7 +793,10 @@
                       step="1"
                       disabled
                     />
-                    <button class="profile-edit" id="profileEdit">
+                    <button
+                      class="profile-edit special hover"
+                      data-target="profileEdit"
+                    >
                       Промени
                     </button>
                   </div>
@@ -775,8 +805,13 @@
                 <div class="settings-section-inner">
                   <label for="gender">Пол</label>
                   <div class="relative">
-                    <input type="text" id="gender" disabled />
-                    <button class="profile-edit">Промени</button>
+                    <input
+                      class="input-profile"
+                      type="text"
+                      id="gender"
+                      disabled
+                    />
+                    <button class="profile-edit hover">Промени</button>
                   </div>
                 </div>
               </div>
@@ -878,6 +913,7 @@
     <script type="module" src="./js/misc.js"></script>
     <script type="module" src="./js/content-page.js"></script>
     <script type="module" src="./js/discussion-page.js"></script>
+    <script type="module" src="./js/profile-page.js"></script>
     <script type="module" src="./js/routing.js"></script>
   </body>
 </html>

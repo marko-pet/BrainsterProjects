@@ -98,7 +98,7 @@
           width: 100%;
         }
 
-        input {
+        .input-profile {
           font-size: 22px;
           font-weight: 500;
           width: 100%;
@@ -123,12 +123,12 @@
           position: relative;
 
           &:hover {
-            input {
+            .input-profile.hover {
               border: 2px solid rgba(255, 255, 255, 0.2);
               border-radius: 8px;
             }
 
-            button {
+            .profile-edit.hover {
               border: 2px solid rgba(255, 255, 255, 0.2);
               display: inline-block;
               cursor: pointer;
@@ -136,22 +136,53 @@
           }
         }
 
+        .input-profile.white-background {
+          background: white;
+          border-radius: 8px;
+          color: var.$text-color-primary;
+          border: 2px solid var.$text-color-tertiary;
+
+          &:hover {
+            border: 2px solid var.$text-color-tertiary;
+          }
+        }
+
         @media (max-width: 768px) {
           margin-bottom: var.$gutter-base;
         }
 
-        button {
+        .profile-edit {
           color: var.$text-color-secondary;
           height: 100%;
           background: var.$text-color-tertiary;
           padding: 0 var.$gutter-base;
           border: none;
           border-radius: 0 8px 8px 0;
-          // border: 2px solid rgba(255, 255, 255, 0.2);
           position: absolute;
           right: 0;
           display: none;
           font-size: var.$font-size-base;
+        }
+
+        .editing {
+          position: absolute;
+          right: 0;
+          top: 0;
+          display: inline-block;
+          height: 100%;
+        }
+
+        .profile-editing {
+          height: 100%;
+          background: transparent;
+          border: none;
+          padding: 0 var.$gutter-base * 0.25;
+          cursor: pointer;
+          display: none;
+        }
+
+        .profile-editing.active {
+          display: inline-block;
         }
       }
     }
@@ -235,4 +266,12 @@
       }
     }
   }
+}
+
+.lime-green {
+  color: limegreen;
+}
+
+.red {
+  color: red;
 }
