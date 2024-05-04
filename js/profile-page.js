@@ -45,7 +45,7 @@ confirmEmail.addEventListener("click", () => {
 });
 
 cancelEmail.addEventListener("click", () => {
-  cancelEdit(editEmail, confirmEmail, cancelEmail, inputEmail, "email");
+  cancelEdit(editEmail, confirmEmail, cancelEmail, inputEmail);
 });
 
 // BIRTHDATE
@@ -69,14 +69,10 @@ confirmDate.addEventListener("click", () => {
 });
 
 cancelDate.addEventListener("click", () => {
-  cancelEdit(
-    editBirthDate,
-    confirmDate,
-    cancelDate,
-    inputBirthDate,
-    "birthDate"
-  );
+  cancelEdit(editBirthDate, confirmDate, cancelDate, inputBirthDate);
 });
+
+let originalValue;
 
 function beginEditing(target, confirm, cancel, input) {
   target.classList.remove("hover");
@@ -86,6 +82,8 @@ function beginEditing(target, confirm, cancel, input) {
   input.classList.add("white-background");
   input.classList.remove("hover");
   input.disabled = false;
+
+  originalValue = input.value;
 }
 
 function confirmEdit(target, confirm, cancel, input, currentlyEditing) {
@@ -132,12 +130,8 @@ function confirmEdit(target, confirm, cancel, input, currentlyEditing) {
   console.log("Updated storageArray:", storageArray);
 }
 
-function cancelEdit(target, confirm, cancel, input, currentlyEditing) {
-  const currentUser = variables.users.find(
-    (user) => user.username === helpers.getCurrentLoggedInUsername()
-  );
-
-  input.value = currentUser[currentlyEditing];
+function cancelEdit(target, confirm, cancel, input) {
+  input.value = originalValue;
 
   target.classList.add("hover");
   confirm.classList.toggle("active");
