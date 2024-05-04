@@ -22,6 +22,7 @@ const handleLoggedInUserElements = () => {
   document.getElementById("navUserImage").src = `${currentUser.pfp}`;
   document.getElementById("profileLink").classList.add("visible");
   document.getElementById("profileLinkBurger").style.display = "flex";
+  document.getElementById("discUsername").textContent = currentUser.username;
 };
 
 const handleLoggedOutUserElements = () => {
@@ -30,6 +31,7 @@ const handleLoggedOutUserElements = () => {
   document.getElementById("profileImageLink").classList.remove("visible");
   document.getElementById("profileLink").classList.remove("visible");
   document.getElementById("profileLinkBurger").style.display = "none";
+  document.getElementById("discUsername").textContent = "John Doe";
 };
 
 const handleUserLogout = () => {

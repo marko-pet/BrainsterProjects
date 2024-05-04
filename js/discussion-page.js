@@ -3,6 +3,14 @@ import * as helpers from "./helpers.js";
 
 let colors = ["blue", "purple", "green"];
 
+document.addEventListener("DOMContentLoaded", function () {
+  const savedDiscussions = localStorage.getItem("allDiscussions");
+
+  if (savedDiscussions) {
+    document.querySelector(".all-discussions").innerHTML = savedDiscussions;
+  }
+});
+
 variables.newDiscForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -40,13 +48,10 @@ variables.newDiscForm.addEventListener("submit", (e) => {
               </div>
             </div>`;
 
-  const discussionsContainer =
-    document.querySelector(".new-discussion").parentNode;
-  const newDiscussionContainer = document.querySelector(".new-discussion");
+  const allDisc = document.querySelector(".all-discussions");
+  allDisc.prepend(newDisc);
 
-  discussionsContainer.insertBefore(
-    newDisc,
-    newDiscussionContainer.nextSibling
-  );
+  localStorage.setItem("allDiscussions", allDisc.innerHTML);
+
   discDetails.value = "";
 });

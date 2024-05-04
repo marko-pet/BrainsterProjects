@@ -24,14 +24,7 @@ export const contentCardsArray = [
       "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години, кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. И не само што овој модел опстанал пет векови туку почнал да се користи и во електронските медиуми, кој се уште не е променет.",
     date: "28 / 05 / 23",
     image: "./img/content-card1.jpg",
-    tags: [
-      "relevant",
-      "most watched",
-      "hi",
-      "low",
-      "asdf",
-      "comicallylargefilterfortesting",
-    ],
+    tags: ["relevant", "popular"],
     type: "Видеа",
     video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
     comments: [
@@ -65,7 +58,7 @@ export const contentCardsArray = [
       "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард...",
     date: "28 / 05 / 23",
     image: "./img/content-card2.jpg",
-    tags: ["most watched"],
+    tags: ["most watched", "popular"],
     type: "Видеа",
     video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
     comments: [
@@ -99,7 +92,7 @@ export const contentCardsArray = [
       "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард...",
     date: "28 / 05 / 23",
     image: "./img/content-card3.jpg",
-    tags: ["wacky"],
+    tags: ["most liked"],
     type: "Видеа",
     video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
     comments: [
@@ -170,14 +163,7 @@ export const contentCardsArray = [
       "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години, кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. И не само што овој модел опстанал пет векови туку почнал да се користи и во електронските медиуми, кој се уште не е променет.",
     date: "28 / 05 / 23",
     image: "./img/content-card4.jpg",
-    tags: [
-      "relevant",
-      "most watched",
-      "hi",
-      "low",
-      "asdf",
-      "comicallylargefilterfortesting",
-    ],
+    tags: ["relevant"],
     type: "Видеа",
     video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
     comments: [
@@ -245,7 +231,7 @@ export const contentCardsArray = [
       "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард...",
     date: "28 / 05 / 23",
     image: "./img/content-card2.jpg",
-    tags: ["wacky"],
+    tags: ["most liked"],
     type: "Видеа",
     video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
     comments: [
@@ -316,14 +302,7 @@ export const contentCardsArray = [
       "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години, кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. И не само што овој модел опстанал пет векови туку почнал да се користи и во електронските медиуми, кој се уште не е променет.",
     date: "28 / 05 / 23",
     image: "./img/content-card2.jpg",
-    tags: [
-      "relevant",
-      "most watched",
-      "hi",
-      "low",
-      "asdf",
-      "comicallylargefilterfortesting",
-    ],
+    tags: ["relevant"],
     type: "Видеа",
     video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
     comments: [
@@ -391,7 +370,7 @@ export const contentCardsArray = [
       "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард...",
     date: "28 / 05 / 23",
     image: "./img/content-card3.jpg",
-    tags: ["wacky"],
+    tags: ["most liked"],
     type: "Видеа",
     video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
     comments: [
@@ -462,14 +441,7 @@ export const contentCardsArray = [
       "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години, кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. И не само што овој модел опстанал пет векови туку почнал да се користи и во електронските медиуми, кој се уште не е променет.",
     date: "28 / 05 / 23",
     image: "./img/content-card3.jpg",
-    tags: [
-      "relevant",
-      "most watched",
-      "hi",
-      "low",
-      "asdf",
-      "comicallylargefilterfortesting",
-    ],
+    tags: ["relevant"],
     type: "Видеа",
     video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
     comments: [
@@ -537,7 +509,7 @@ export const contentCardsArray = [
       "Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард...",
     date: "28 / 05 / 23",
     image: "./img/content-card1.jpg",
-    tags: ["wacky"],
+    tags: ["most liked"],
     type: "Видеа",
     video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
     comments: [
