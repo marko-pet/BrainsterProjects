@@ -48,7 +48,7 @@ cancelEmail.addEventListener("click", () => {
   cancelEdit(editEmail, confirmEmail, cancelEmail, inputEmail);
 });
 
-// BIRTHDATE
+// BIRTH DATE
 editBirthDate.addEventListener("click", () => {
   beginEditing(editBirthDate, confirmDate, cancelDate, inputBirthDate);
 });

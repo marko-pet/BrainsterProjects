@@ -592,7 +592,7 @@ export const users = [
     password: "Pass123",
     email: "user123@mail.com",
     birthDate: 2000,
-    pfp: "https://picsum.photos/200",
+    pfp: "./img/pfp1.jpg",
     gender: "Male",
   },
   {
@@ -600,7 +600,7 @@ export const users = [
     password: "Pass456",
     email: "user456@mail.com",
     birthDate: 2000,
-    pfp: "https://picsum.photos/200",
+    pfp: "./img/pfp2.jpg",
     gender: "Female",
   },
   {
@@ -608,7 +608,7 @@ export const users = [
     password: "Pass789",
     email: "user789@mail.com",
     birthDate: 2000,
-    pfp: "https://picsum.photos/200",
+    pfp: "./img/pfp3.jpg",
     gender: "Male",
   },
 ];
