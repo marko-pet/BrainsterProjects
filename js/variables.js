@@ -594,6 +594,8 @@ export const users = [
     birthDate: 2000,
     pfp: "./img/pfp1.jpg",
     gender: "Male",
+    discussions_posted: 1,
+    videos_watched: 5,
   },
   {
     username: "User456",
@@ -602,6 +604,8 @@ export const users = [
     birthDate: 2000,
     pfp: "./img/pfp2.jpg",
     gender: "Female",
+    discussions_posted: 0,
+    videos_watched: 0,
   },
   {
     username: "User789",
@@ -610,6 +614,8 @@ export const users = [
     birthDate: 2000,
     pfp: "./img/pfp3.jpg",
     gender: "Male",
+    discussions_posted: 0,
+    videos_watched: 0,
   },
 ];
 

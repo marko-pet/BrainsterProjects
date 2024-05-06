@@ -1366,7 +1366,6 @@ footer .footer-inner .margin-top {
 }
 .profile-page .profile-achievements .achievement {
   height: 10rem;
-  display: grid;
   align-content: center;
   text-align: center;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.36) 69.79%);
@@ -1391,4 +1390,8 @@ footer .footer-inner .margin-top {
 
 .red {
   color: red;
+}
+
+.d-grid {
+  display: grid;
 }/*# sourceMappingURL=main.css.map */

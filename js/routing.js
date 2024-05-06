@@ -163,5 +163,21 @@ function populateProfile() {
     document.getElementById("birth-date").value = currentUserProfile.birthDate;
     document.getElementById("gender").value = currentUserProfile.gender;
     document.getElementById("profilePicture").src = currentUserProfile.pfp;
+
+    if (currentUserProfile.discussions_posted >= 1) {
+      const discussionAchievement = document.getElementById(
+        "discussionAchievement"
+      );
+      discussionAchievement.classList.remove("d-none");
+      discussionAchievement.classList.add("d-grid");
+      console.log(currentUserProfile.discussions_posted);
+    }
+
+    if (currentUserProfile.videos_watched >= 5) {
+      const videosAchievement = document.getElementById("videosAchievement");
+      videosAchievement.classList.remove("d-none");
+      videosAchievement.classList.add("d-grid");
+      console.log(currentUserProfile.videos_watched);
+    }
   }
 }
