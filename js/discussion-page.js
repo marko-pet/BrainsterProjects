@@ -14,16 +14,18 @@ document.addEventListener("DOMContentLoaded", function () {
 variables.newDiscForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  const discDetails = document.getElementById("discDetails");
+
   if (!helpers.getCurrentLoggedInUsername()) {
-    alert(`You must be logged in order to add discussions`);
+    alert(`Морате да се логирате за да додавате искуства`);
+    discDetails.value = "";
+
     return;
   }
 
   const currentUser = variables.users.find(
     (user) => user.username === helpers.getCurrentLoggedInUsername()
   );
-
-  const discDetails = document.getElementById("discDetails");
 
   const newDisc = document.createElement("div");
   newDisc.classList.add("discussion", colors[helpers.getRandomInt(3)]);

@@ -124,10 +124,20 @@ async function loginUser(username, password) {
       throw new Error("Failed to authenticate");
     }
 
+    const secInfoModal = document.getElementById("secInfoModal");
+    secInfoModal.classList.remove("d-none");
+    secInfoModal.classList.add("d-grid");
+
+    secInfoModal.addEventListener("click", () => {
+      location.hash = variables.HASH_ROUTES.contentPage;
+
+      secInfoModal.classList.remove("d-grid");
+      secInfoModal.classList.add("d-none");
+    });
+
     console.log(requestData);
     localStorage.setItem("currentUsername", username);
     localStorage.setItem("currentPassword", password);
-    location.hash = variables.HASH_ROUTES.contentPage;
   } catch (error) {
     console.error("Fetch Error:", error);
     alert(`Something went wrong`);
@@ -178,14 +188,12 @@ function populateProfile() {
       );
       discussionAchievement.classList.remove("d-none");
       discussionAchievement.classList.add("d-grid");
-      console.log(currentUserProfile.discussions_posted);
     }
 
     if (currentUserProfile.videos_watched >= 5) {
       const videosAchievement = document.getElementById("videosAchievement");
       videosAchievement.classList.remove("d-none");
       videosAchievement.classList.add("d-grid");
-      console.log(currentUserProfile.videos_watched);
     }
   }
 }

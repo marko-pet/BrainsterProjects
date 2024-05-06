@@ -125,9 +125,6 @@ function confirmEdit(target, confirm, cancel, input, currentlyEditing) {
   input.classList.remove("white-background");
   input.classList.add("hover");
   input.disabled = true;
-
-  console.log("Updated variables.users:", variables.users);
-  console.log("Updated storageArray:", storageArray);
 }
 
 function cancelEdit(target, confirm, cancel, input) {
