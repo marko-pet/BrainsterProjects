@@ -139,19 +139,19 @@ function openModal(card) {
   modalDetails.innerHTML = `<div class="modal-title"><h3>${card.titleModal}</h3><button id="modalClose"><i class="fa-solid fa-x"></i></button></div><p>${card.descriptionModal}</p>
             <div class="details-date">Објавено на ${card.date}</div>`;
 
-  modalVideoPC.innerHTML = `<iframe
-              width="100%"
-              height="100%"
-              src="${card.video}"
-            >
-            </iframe>`;
+  modalVideoPC.innerHTML = `<video class="modal-video-inner" width="100%" height="100%" controls>
+          <source
+            src="${card.video}"
+          />
+          Your browser does not support the video tag.
+        </video>`;
 
-  modalVideoMobile.innerHTML = `<iframe
-              width="100%"
-              height="480"
-              src="${card.video}"
-            >
-            </iframe>`;
+  modalVideoMobile.innerHTML = `<video class="modal-video-inner" width="100%" height="480px" controls>
+          <source
+            src="${card.video}"
+          />
+          Your browser does not support the video tag.
+        </video>`;
 
   const currentUser = variables.users.find(
     (user) => user.username === helpers.getCurrentLoggedInUsername()
@@ -177,6 +177,24 @@ function openModal(card) {
 
   document.getElementById("modalClose").addEventListener("click", () => {
     variables.contentPageModal.style.display = "none";
+  });
+
+  const modalVideos =
+    variables.contentPageModal.querySelectorAll(".modal-video-inner");
+  console.log(modalVideos);
+
+  modalVideos.forEach((video) => {
+    video.addEventListener("play", () => {
+      const usersStorage = JSON.parse(localStorage.getItem("users"));
+
+      const currentUserStorage = usersStorage.find(
+        (user) => user.username === currentUser.username
+      );
+
+      currentUserStorage.videos_watched++;
+
+      localStorage.setItem("users", JSON.stringify(usersStorage));
+    });
   });
 
   clickedCard = card;
@@ -237,8 +255,6 @@ function createModalComment(card) {
     helpers.getCurrentTime(),
     `${currentUser.pfp}`
   );
-
-  console.log(comment);
 
   card.comments.push(comment);
   renderModalComments(card);

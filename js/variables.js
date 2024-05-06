@@ -26,7 +26,7 @@ export const contentCardsArray = [
     image: "./img/content-card1.jpg",
     tags: ["relevant", "popular"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video1.mp4",
     comments: [
       {
         id: 1,
@@ -60,7 +60,7 @@ export const contentCardsArray = [
     image: "./img/content-card2.jpg",
     tags: ["most watched", "popular"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video2.mp4",
     comments: [
       {
         id: 1,
@@ -94,7 +94,7 @@ export const contentCardsArray = [
     image: "./img/content-card3.jpg",
     tags: ["most liked"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video3.mp4",
     comments: [
       {
         id: 1,
@@ -128,7 +128,7 @@ export const contentCardsArray = [
     image: "./img/content-card4.jpg",
     tags: ["relevant", "newest"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video4.mp4",
     comments: [
       {
         id: 1,
@@ -165,7 +165,7 @@ export const contentCardsArray = [
     image: "./img/content-card4.jpg",
     tags: ["relevant"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video1.mp4",
     comments: [
       {
         id: 1,
@@ -199,7 +199,7 @@ export const contentCardsArray = [
     image: "./img/content-card3.jpg",
     tags: ["most watched"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video2.mp4",
     comments: [
       {
         id: 1,
@@ -233,7 +233,7 @@ export const contentCardsArray = [
     image: "./img/content-card2.jpg",
     tags: ["most liked"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video3.mp4",
     comments: [
       {
         id: 1,
@@ -267,7 +267,7 @@ export const contentCardsArray = [
     image: "./img/content-card1.jpg",
     tags: ["relevant", "newest"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video4.mp4",
     comments: [
       {
         id: 1,
@@ -304,7 +304,7 @@ export const contentCardsArray = [
     image: "./img/content-card2.jpg",
     tags: ["relevant"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video1.mp4",
     comments: [
       {
         id: 1,
@@ -338,7 +338,7 @@ export const contentCardsArray = [
     image: "./img/content-card4.jpg",
     tags: ["most watched"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video1.mp4",
     comments: [
       {
         id: 1,
@@ -372,7 +372,7 @@ export const contentCardsArray = [
     image: "./img/content-card3.jpg",
     tags: ["most liked"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video1.mp4",
     comments: [
       {
         id: 1,
@@ -406,7 +406,7 @@ export const contentCardsArray = [
     image: "./img/content-card1.jpg",
     tags: ["relevant", "newest"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video1.mp4",
     comments: [
       {
         id: 1,
@@ -443,7 +443,7 @@ export const contentCardsArray = [
     image: "./img/content-card3.jpg",
     tags: ["relevant"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video1.mp4",
     comments: [
       {
         id: 1,
@@ -477,7 +477,7 @@ export const contentCardsArray = [
     image: "./img/content-card4.jpg",
     tags: ["most watched"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video1.mp4",
     comments: [
       {
         id: 1,
@@ -511,7 +511,7 @@ export const contentCardsArray = [
     image: "./img/content-card1.jpg",
     tags: ["most liked"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video1.mp4",
     comments: [
       {
         id: 1,
@@ -545,7 +545,7 @@ export const contentCardsArray = [
     image: "./img/content-card2.jpg",
     tags: ["relevant", "newest"],
     type: "Видеа",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY?mute=1",
+    video: "./videos/video1.mp4",
     comments: [
       {
         id: 1,
@@ -594,8 +594,8 @@ export const users = [
     birthDate: 2000,
     pfp: "./img/pfp1.jpg",
     gender: "Male",
-    discussions_posted: 1,
-    videos_watched: 5,
+    discussions_posted: 0,
+    videos_watched: 0,
   },
   {
     username: "User456",

@@ -53,18 +53,15 @@ variables.newDiscForm.addEventListener("submit", (e) => {
 
   localStorage.setItem("allDiscussions", allDisc.innerHTML);
 
+  const usersStorage = JSON.parse(localStorage.getItem("users"));
+
+  const currentUserStorage = usersStorage.find(
+    (user) => user.username === currentUser.username
+  );
+
+  currentUserStorage.discussions_posted++;
+
+  localStorage.setItem("users", JSON.stringify(usersStorage));
+
   discDetails.value = "";
-
-  if (localStorage.getItem("users")) {
-    const currentUserStorage = JSON.parse(localStorage.getItem("users")).find(
-      (user) => user.username === currentUsername
-    );
-
-    if (currentUserStorage) {
-      currentUserProfile = currentUserStorage;
-    }
-  }
-
-  currentUser.discussions_posted++;
-  console.log(variables.users);
 });

@@ -1,6 +1,14 @@
 import * as variables from "./variables.js";
 import * as helpers from "./helpers.js";
 
+function usersToLocalStorage() {
+  if (!localStorage.getItem("users")) {
+    localStorage.setItem("users", JSON.stringify(variables.users));
+  }
+}
+
+usersToLocalStorage();
+
 function hideAllSections() {
   document.querySelectorAll("section").forEach((section) => {
     section.style.display = "none";
