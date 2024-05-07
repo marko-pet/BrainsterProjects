@@ -86,10 +86,6 @@ window.addEventListener("hashchange", () => {
       location.hash = variables.HASH_ROUTES.logInPage;
       return;
     }
-
-    if (hashRoute === variables.HASH_ROUTES.profilePage) {
-      location.reload();
-    }
   } else {
     document.querySelector(`#${variables.HASH_ROUTES.infoPage}`).style.display =
       "block";
@@ -99,6 +95,7 @@ window.addEventListener("hashchange", () => {
   const currentUsername = helpers.getCurrentLoggedInUsername();
   if (currentUsername) {
     handleLoggedInUserElements();
+    populateProfile();
   } else {
     handleLoggedOutUserElements();
   }
@@ -133,6 +130,8 @@ async function loginUser(username, password) {
 
       secInfoModal.classList.remove("d-grid");
       secInfoModal.classList.add("d-none");
+
+      location.reload();
     });
 
     console.log(requestData);

@@ -98,7 +98,6 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 24px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
-  box-shadow: 0px 8px 16px 0px rgba(66, 53, 107, 0.1);
   padding: 0.46875rem 0.9375rem;
   color: rgb(66, 53, 107);
   font-weight: 500;
@@ -541,6 +540,11 @@ footer .footer-inner .font-awesome-icons-outer {
     justify-content: center;
   }
 }
+@media (max-width: 425px) {
+  footer .footer-inner .font-awesome-icons-outer {
+    justify-content: space-between;
+  }
+}
 footer .footer-inner .font-awesome-icons-outer .font-awesome-icons-inner {
   display: flex;
   align-items: center;
@@ -551,8 +555,13 @@ footer .footer-inner .font-awesome-icons-outer .font-awesome-icons-inner i {
 footer .footer-inner .font-awesome-icons-outer .font-awesome-icons-inner p {
   margin: 0;
 }
-footer .footer-inner .font-awesome-icons-outer .margin-left {
-  margin-left: 3.75rem;
+footer .footer-inner .font-awesome-icons-outer .margin-right {
+  margin-right: 3.75rem;
+}
+@media (max-width: 425px) {
+  footer .footer-inner .font-awesome-icons-outer .margin-right {
+    margin-right: 0;
+  }
 }
 footer .footer-inner .margin-top {
   margin-top: 16px;
@@ -753,6 +762,7 @@ footer .footer-inner .margin-top {
 }
 .content-page .content-filters {
   display: flex;
+  justify-content: center;
   padding-top: 2.8125rem;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
@@ -761,6 +771,7 @@ footer .footer-inner .margin-top {
   .content-page .content-filters {
     width: 100%;
     overflow-x: scroll;
+    justify-content: start;
   }
 }
 .content-page .content-filters::-webkit-scrollbar {
@@ -854,12 +865,17 @@ footer .footer-inner .margin-top {
 }
 @media (max-width: 768px) {
   .content-page .content-page-modal {
-    width: 99%;
+    width: 80%;
     height: 90vh;
     overflow-y: scroll;
     left: 50%;
     top: 1rem;
     transform: translate(-50%, 0%);
+  }
+}
+@media (max-width: 768px) {
+  .content-page .content-page-modal {
+    width: 99%;
   }
 }
 .content-page .content-page-modal::-webkit-scrollbar {

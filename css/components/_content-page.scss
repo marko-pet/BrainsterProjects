@@ -81,11 +81,13 @@
 
   .content-filters {
     display: flex;
+    justify-content: center;
     padding-top: var.$gutter-base * 1.5;
 
     @media (max-width: 768px) {
       width: 100%;
       overflow-x: scroll;
+      justify-content: start;
     }
 
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
@@ -201,12 +203,16 @@
     justify-content: space-between;
 
     @media (max-width: 768px) {
-      width: 99%;
+      width: 80%;
       height: 90vh;
       overflow-y: scroll;
       left: 50%;
       top: 1rem;
       transform: translate(-50%, 0%);
+    }
+
+    @media (max-width: 768px) {
+      width: 99%;
     }
 
     -ms-overflow-style: none;

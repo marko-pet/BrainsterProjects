@@ -81,14 +81,19 @@ function pillsFilter() {
   const pills = document.querySelectorAll(".content-filter");
   pills.forEach((pill) => {
     pill.addEventListener("click", () => {
-      pill.classList.toggle("active");
-      const activePills = document.querySelectorAll(".content-filter.active");
+      const isActive = pill.classList.contains("active");
 
-      if (activePills.length === 0) {
+      pills.forEach((p) => {
+        p.classList.remove("active");
+      });
+
+      if (!isActive) {
+        pill.classList.add("active");
+
+        filterCardsByTags(pill.innerText.toLowerCase());
+      } else {
         variables.contentCardsContainer.innerHTML = "";
         displayContentCards(variables.contentCardsArray);
-      } else {
-        filterCardsByTags(pill.innerText.toLowerCase());
       }
     });
   });
