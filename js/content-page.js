@@ -81,20 +81,9 @@ function pillsFilter() {
   const pills = document.querySelectorAll(".content-filter");
   pills.forEach((pill) => {
     pill.addEventListener("click", () => {
-      const isActive = pill.classList.contains("active");
+      pill.classList.toggle("active");
 
-      pills.forEach((p) => {
-        p.classList.remove("active");
-      });
-
-      if (!isActive) {
-        pill.classList.add("active");
-
-        filterCardsByTags(pill.innerText.toLowerCase());
-      } else {
-        variables.contentCardsContainer.innerHTML = "";
-        displayContentCards(variables.contentCardsArray);
-      }
+      filterCardsByTags(pill.innerText.toLowerCase());
     });
   });
 }
@@ -279,8 +268,18 @@ function filterCardsByType(type) {
 
 function filterCardsByTags(tag) {
   variables.contentCardsContainer.innerHTML = "";
+  const activePills = Array.from(
+    document.querySelectorAll(".content-filter.active")
+  ).map((pill) => pill.innerText.toLowerCase());
+
+  if (activePills.length === 0) {
+    displayContentCards(variables.contentCardsArray);
+    return;
+  }
+
   const filteredCardsByTags = variables.contentCardsArray.filter((card) => {
-    return card.tags.includes(tag);
+    return activePills.some((tag) => card.tags.includes(tag));
   });
+
   displayContentCards(filteredCardsByTags);
 }
