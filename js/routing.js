@@ -47,6 +47,7 @@ const handleUserLogout = () => {
   localStorage.removeItem("currentPassword");
   handleLoggedOutUserElements();
   location.hash = variables.HASH_ROUTES.logInPage;
+  location.reload();
 };
 
 const currentHashRoute = getHashRoute();
@@ -139,7 +140,7 @@ async function loginUser(username, password) {
     localStorage.setItem("currentPassword", password);
   } catch (error) {
     console.error("Fetch Error:", error);
-    alert(`Something went wrong`);
+    alert(`Could not log in: ${error.message}`);
   }
 }
 

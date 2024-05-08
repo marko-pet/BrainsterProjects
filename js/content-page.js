@@ -67,11 +67,21 @@ getPillFilters();
 
 function displayPills() {
   const pills = Array.from(pillFilters);
+  const userPills = localStorage.getItem(
+    `${helpers.getCurrentLoggedInUsername()}`
+  );
+
   pills.forEach((pill) => {
     const pillFilter = document.createElement("div");
     pillFilter.classList.add("content-filter");
     pillFilter.innerHTML = pill;
     variables.pillFiltersContainer.appendChild(pillFilter);
+
+    if (userPills) {
+      if (userPills.includes(pill)) {
+        pillFilter.classList.add("active");
+      }
+    }
   });
 }
 
@@ -83,7 +93,7 @@ function pillsFilter() {
     pill.addEventListener("click", () => {
       pill.classList.toggle("active");
 
-      filterCardsByTags(pill.innerText.toLowerCase());
+      filterCardsByTags();
     });
   });
 }
@@ -118,8 +128,8 @@ function displayContentCards(array) {
 }
 
 filterCardsByType("Видеа");
-let clickedCard = null;
 // MODAL
+let clickedCard = null;
 function openModal(card) {
   const modalDetails = variables.contentPageModal.querySelector(".details");
   const modalVideoPC = variables.contentPageModal.querySelector(
@@ -264,13 +274,21 @@ function filterCardsByType(type) {
     return card.type.toLowerCase() === type.toLowerCase();
   });
   displayContentCards(filteredCardsByType);
+  filterCardsByTags();
 }
 
-function filterCardsByTags(tag) {
+function filterCardsByTags() {
   variables.contentCardsContainer.innerHTML = "";
-  const activePills = Array.from(
+  let activePills = Array.from(
     document.querySelectorAll(".content-filter.active")
   ).map((pill) => pill.innerText.toLowerCase());
+
+  if (helpers.getCurrentLoggedInUsername()) {
+    localStorage.setItem(
+      `${helpers.getCurrentLoggedInUsername()}`,
+      JSON.stringify(activePills)
+    );
+  }
 
   if (activePills.length === 0) {
     displayContentCards(variables.contentCardsArray);
