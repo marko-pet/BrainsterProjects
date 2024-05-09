@@ -185,7 +185,6 @@ function openModal(card) {
 
   const modalVideos =
     variables.contentPageModal.querySelectorAll(".modal-video-inner");
-  console.log(modalVideos);
 
   modalVideos.forEach((video) => {
     video.addEventListener("play", () => {
@@ -274,7 +273,10 @@ function filterCardsByType(type) {
     return card.type.toLowerCase() === type.toLowerCase();
   });
   displayContentCards(filteredCardsByType);
-  filterCardsByTags();
+
+  if (type === "Видеа") {
+    filterCardsByTags();
+  }
 }
 
 function filterCardsByTags() {

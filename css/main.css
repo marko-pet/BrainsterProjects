@@ -873,7 +873,7 @@ footer .footer-inner .margin-top {
     transform: translate(-50%, 0%);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .content-page .content-page-modal {
     width: 99%;
   }
