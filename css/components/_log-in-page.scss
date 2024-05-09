@@ -93,16 +93,25 @@
   }
 
   .or {
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid #000;
-    line-height: 0.1em;
-    margin: 10px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: var.$gutter-base 0;
 
     span {
       background-color: transparent;
       padding: 0 10px;
+      color: var.$text-color-secondary;
+      font-weight: var.$font-weight-bold;
     }
+  }
+
+  .line {
+    width: 42%;
+    text-align: center;
+    border: 1px solid var.$text-color-tertiary;
+    border-radius: 16px;
+    line-height: 0.1em;
   }
 
   .button-form {
