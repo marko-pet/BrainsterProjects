@@ -259,7 +259,7 @@ function createModalComment(card) {
     `${currentUser.pfp}`
   );
 
-  card.comments.push(comment);
+  card.comments.unshift(comment);
   renderModalComments(card);
   newModalComment.value = "";
 
