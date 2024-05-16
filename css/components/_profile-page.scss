@@ -283,3 +283,7 @@
 .d-grid {
   display: grid;
 }
+
+.marr {
+  margin-right: var.$gutter-base * 0.25;
+}
