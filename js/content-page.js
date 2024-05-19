@@ -117,7 +117,7 @@ function displayContentCards(array) {
 
     contentCard.addEventListener("click", () => {
       if (!helpers.getCurrentLoggedInUsername()) {
-        alert("Морате да се логирате за да коментирате");
+        alert("Морате да се логирате за да погледнете повеќе детали");
         return;
       }
       openModal(card);

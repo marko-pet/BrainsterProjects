@@ -81,6 +81,7 @@
 
   .content-filters {
     display: flex;
+    text-wrap: nowrap;
     justify-content: center;
     padding-top: var.$gutter-base * 1.5;
 

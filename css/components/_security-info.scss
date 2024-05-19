@@ -45,6 +45,10 @@
       .details {
         padding: var.$gutter-base * 1 0;
         line-height: 32px;
+
+        @media (max-width: 1680px) {
+          padding: var.$gutter-base * 0.25 0;
+        }
       }
 
       a {

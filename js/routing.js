@@ -75,6 +75,11 @@ window.addEventListener("hashchange", () => {
   const hashRoute = getHashRoute();
   const currentSection = document.querySelector(`#${hashRoute}`);
 
+  if (variables.burger.classList.contains("active")) {
+    variables.burger.classList.remove("active");
+    variables.burgerMenu.classList.remove("active");
+  }
+
   hideAllSections();
 
   if (variables.ALLOWED_ROUTES.includes(hashRoute)) {

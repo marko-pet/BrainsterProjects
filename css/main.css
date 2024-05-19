@@ -462,6 +462,11 @@ nav .search {
   padding: 1.875rem 0;
   line-height: 32px;
 }
+@media (max-width: 1680px) {
+  .sec-info .sec-info-cards .sec-info-card .details {
+    padding: 0.46875rem 0;
+  }
+}
 .purple {
   background: rgba(153, 70, 243, 0.4);
 }
@@ -719,6 +724,11 @@ footer .footer-inner .margin-top {
   margin: 0;
   margin-bottom: 3.75rem;
 }
+@media (max-width: 768px) {
+  .sec-info-modal h4 {
+    margin-bottom: 1.875rem;
+  }
+}
 .content-page {
   position: relative;
 }
@@ -781,6 +791,7 @@ footer .footer-inner .margin-top {
 }
 .content-page .content-filters {
   display: flex;
+  text-wrap: nowrap;
   justify-content: center;
   padding-top: 2.8125rem;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
