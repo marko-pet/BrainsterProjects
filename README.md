@@ -18,7 +18,7 @@ Here is my 2nd Brainster project.
 
 - If any features that use local storage need to be tested multiple times, clear local storage and refresh the page.
 
-### List of changes/additions to the original figma design:
+## List of changes/additions to the original figma design:
 
 - Added a burger menu for navigation on mobile devices
 
