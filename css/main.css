@@ -385,7 +385,7 @@ nav .navigation-burger-container {
   width: 100%;
   border-radius: 16px;
   padding: 1.40625rem 0;
-  z-index: 998;
+  z-index: 997;
   display: none;
 }
 @media (max-width: 425px) {
@@ -729,9 +729,6 @@ footer .footer-inner .margin-top {
     margin-bottom: 1.875rem;
   }
 }
-.content-page {
-  position: relative;
-}
 .content-page .type-of-content-container {
   display: flex;
   font-size: 36px;
@@ -875,6 +872,16 @@ footer .footer-inner .margin-top {
 .content-page .content-cards .content-card .card-content .card-date {
   opacity: 0.5;
   margin-top: 0.75rem;
+}
+.content-page .modal-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  z-index: 998;
+  display: none;
 }
 .content-page .content-page-modal {
   height: 90vh;

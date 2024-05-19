@@ -178,9 +178,20 @@ function openModal(card) {
   renderModalComments(card);
 
   variables.contentPageModal.style.display = "flex";
+  variables.contentPageModalBackground.style.display = "flex";
+
+  variables.contentPageModal.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  variables.contentPageModalBackground.addEventListener("click", () => {
+    variables.contentPageModal.style.display = "none";
+    variables.contentPageModalBackground.style.display = "none";
+  });
 
   document.getElementById("modalClose").addEventListener("click", () => {
     variables.contentPageModal.style.display = "none";
+    variables.contentPageModalBackground.style.display = "none";
   });
 
   const modalVideos =

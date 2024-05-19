@@ -12,6 +12,8 @@ export const contentCardsContainer = document.querySelector(".content-cards");
 export const pcTypeFilters = document.querySelectorAll(".type-of-content");
 export const pillFiltersContainer = document.querySelector(".content-filters");
 export const contentPageModal = document.querySelector(".content-page-modal");
+export const contentPageModalBackground =
+  document.querySelector(".modal-background");
 
 export const contentCardsArray = [
   {
