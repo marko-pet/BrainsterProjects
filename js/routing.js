@@ -39,7 +39,8 @@ const handleLoggedOutUserElements = () => {
   document.getElementById("profileImageLink").classList.remove("visible");
   document.getElementById("profileLink").classList.remove("visible");
   document.getElementById("profileLinkBurger").style.display = "none";
-  document.getElementById("discUsername").textContent = "John Doe";
+  document.getElementById("discUsername").textContent =
+    "Log in to add a discussion";
 };
 
 const handleUserLogout = () => {

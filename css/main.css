@@ -818,8 +818,10 @@ footer .footer-inner .margin-top {
   text-wrap: nowrap;
   justify-content: center;
   padding-top: 2.8125rem;
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
 }
 @media (max-width: 768px) {
   .content-page .content-filters {
@@ -829,7 +831,8 @@ footer .footer-inner .margin-top {
   }
 }
 .content-page .content-filters::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
+  display: none;
+  /* for Chrome, Safari, and Opera */
 }
 .content-page .content-filters .content-filter.active {
   opacity: 1;
@@ -882,7 +885,7 @@ footer .footer-inner .margin-top {
   font-size: 36px;
   font-weight: 900;
   color: rgb(255, 255, 255);
-  background: gray;
+  background: rgba(0, 0, 0, 0.75);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   font-size: 7rem;
