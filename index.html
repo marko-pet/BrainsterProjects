@@ -1,866 +1,782 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SAFEBLINK</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./css/main.css" />
-  </head>
-  <body>
-    <nav>
-      <div>
-        <div class="logo">
-          <a href="#infoPage"><img src="./img/Logo.png" alt="Logo" /></a>
-        </div>
 
-        <div class="navigation-container tablet-mobile-hidden">
-          <ul class="navigation">
-            <li><a href="#contentPage">информирај се</a></li>
-            <li><a href="#discussionsPage">дискусии</a></li>
-            <li><a href="#contactPage">контакт</a></li>
-            <li class="nav-profile-link" id="profileLink">
-              <a href="#profilePage">профил</a>
-            </li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAFEBLINK</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+  <nav>
+    <div>
+      <div class="logo">
+        <a href="#infoPage"><img src="./img/Logo.png" alt="Logo" /></a>
+      </div>
+
+      <div class="navigation-container tablet-mobile-hidden">
+        <ul class="navigation">
+          <li><a href="#contentPage">информирај се</a></li>
+          <li><a href="#discussionsPage">дискусии</a></li>
+          <li><a href="#contactPage">контакт</a></li>
+          <li class="nav-profile-link" id="profileLink">
+            <a href="#profilePage">профил</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <a class="log-in-btn-a" href="#logInPage">
+        <div class="log-in-btn" id="loginLink">
+          <img src="./img/User-Placeholder.png" alt="User" />
+          <p>Најави се</p>
+        </div>
+      </a>
+
+      <a class="log-out-btn-a" href="#logInPage">
+        <div class="log-in-btn" id="loginLink">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <p>Одјави се</p>
+        </div>
+      </a>
+
+      <div class="profile-nav" id="profileImageLink">
+        <div class="profile-img">
+          <a href="#profilePage"><img src="" id="navUserImage" alt="Image" /></a>
         </div>
       </div>
 
-      <div>
-        <a class="log-in-btn-a" href="#logInPage"
-          ><div class="log-in-btn" id="loginLink">
-            <img src="./img/User-Placeholder.png" alt="User" />
-            <p>Најави се</p>
-          </div></a
-        >
-
-        <a class="log-out-btn-a" href="#logInPage"
-          ><div class="log-in-btn" id="loginLink">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            <p>Одјави се</p>
-          </div></a
-        >
-
-        <div class="profile-nav" id="profileImageLink">
-          <div class="profile-img">
-            <a href="#profilePage"
-              ><img src="" id="navUserImage" alt="Image"
-            /></a>
-          </div>
-        </div>
-
-        <div class="localization mobile-hidden">
-          <p>mk | al</p>
-        </div>
-
-        <div class="search-container mobile-hidden">
-          <div class="search">
-            <img src="./img/Search-icon.png" alt="Search" />
-          </div>
-        </div>
-
-        <burger class="container pc-hidden"
-          ><div class="burger">
-            <span></span>
-            <span></span>
-            <span></span></div
-        ></burger>
-
-        <div class="navigation-burger-container">
-          <ul class="navigation-burger">
-            <li><a href="#contentPage">информирај се</a></li>
-            <li><a href="#discussionsPage">дискусии</a></li>
-            <li><a href="#contactPage">контакт</a></li>
-            <li id="profileLinkBurger"><a href="#profilePage">Профил</a></li>
-          </ul>
-        </div>
+      <div class="localization mobile-hidden">
+        <p>mk | al</p>
       </div>
-    </nav>
 
-    <section id="infoPage">
-      <!-- VIDEO -->
-      <div class="video">
-        <iframe
-          width="100%"
-          height="480"
-          src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1"
-        >
-        </iframe>
-      </div>
-      <!-- SECURITY INFO -->
-      <div class="sec-info">
-        <h1>Информирај се и заштити се</h1>
-
-        <div class="sec-info-cards">
-          <div class="sec-info-card purple">
-            <div>
-              <div class="sec-info-title">Научи сè што треба да знаеш</div>
-              <img src="./img/eye-icon.png" alt="" />
-            </div>
-
-            <div class="details">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </div>
-
-            <a href="#contentPage">Дознај повеќе</a>
-          </div>
-          <div class="sec-info-card blue">
-            <div>
-              <div class="sec-info-title">Вклучи се во дискусија</div>
-              <img src="./img/lock-icon.png" alt="" />
-            </div>
-
-            <div class="details">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </div>
-
-            <a href="#discussionsPage">Дознај повеќе</a>
-          </div>
-          <div class="sec-info-card green">
-            <div>
-              <div class="sec-info-title">Следи го својот напредок</div>
-              <img src="./img/shield-icon.png" alt="" />
-            </div>
-
-            <div class="details">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </div>
-
-            <a href="#">Дознај повеќе</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="logInPage">
-      <div class="log-in-page">
-        <div class="log-in-form">
-          <h1>Придружи ни се</h1>
-          <a href="#"
-            ><div class="continue-with">
-              <i class="fa-brands fa-google fa-xl"></i>
-              <p>Продолжи со Google</p>
-            </div></a
-          >
-          <a href="#"
-            ><div class="continue-with">
-              <i class="fa-brands fa-apple fa-xl"></i>
-              <p>Продолжи со Apple</p>
-            </div></a
-          >
-          <a href="#"
-            ><div class="continue-with">
-              <i class="fa-brands fa-tiktok fa-xl"></i>
-              <p>Продолжи со TikTok</p>
-            </div></a
-          >
-
-          <div class="or">
-            <div class="line"></div>
-            <span>или</span>
-            <div class="line"></div>
-          </div>
-
-          <form id="logInForm">
-            <label for="usernameLogIn">Корисничко име</label>
-            <input
-              class="not-checkbox"
-              type="text"
-              id="usernameLogIn"
-              placeholder="Username"
-            />
-
-            <label for="passwordLogIn">Лозинка</label>
-            <input
-              class="not-checkbox"
-              type="password"
-              id="passwordLogIn"
-              placeholder="Password"
-            />
-
-            <div class="log-in-help">
-              <span
-                ><input type="checkbox" id="remember-me" /><label
-                  for="remember-me"
-                  >Запомни ме</label
-                ></span
-              ><span><a href="#">Ја заборави лозинката?</a></span>
-            </div>
-
-            <button type="submit" class="button-form">Најави се</button>
-          </form>
-        </div>
-        <div class="log-in-image">
-          <img src="./img/Log-in-page-image.png" alt="Image" />
+      <div class="search-container mobile-hidden">
+        <div class="search">
+          <img src="./img/Search-icon.png" alt="Search" />
         </div>
       </div>
 
-      <div class="sec-info-modal-background d-none" id="secInfoModal">
-        <div class="sec-info-modal">
-          <div class="sec-info-modal-content">
-            <h2>Добредојде!</h2>
-            <h4>Успешно пронајден профил</h4>
-            <button>Продолжи кон Safeblink</button>
+      <burger class="container pc-hidden">
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </burger>
+
+      <div class="navigation-burger-container">
+        <ul class="navigation-burger">
+          <li><a href="#contentPage">информирај се</a></li>
+          <li><a href="#discussionsPage">дискусии</a></li>
+          <li><a href="#contactPage">контакт</a></li>
+          <li id="profileLinkBurger"><a href="#profilePage">Профил</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="infoPage">
+    <!-- VIDEO -->
+    <div class="video">
+      <iframe width="100%" height="480" src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1">
+      </iframe>
+    </div>
+    <!-- SECURITY INFO -->
+    <div class="sec-info">
+      <h1>Информирај се и заштити се</h1>
+
+      <div class="sec-info-cards">
+        <div class="sec-info-card purple">
+          <div>
+            <div class="sec-info-title">Научи сè што треба да знаеш</div>
+            <img src="./img/eye-icon.png" alt="" />
           </div>
+
+          <div class="details">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book.
+          </div>
+
+          <a href="#contentPage">Дознај повеќе</a>
+        </div>
+        <div class="sec-info-card blue">
+          <div>
+            <div class="sec-info-title">Вклучи се во дискусија</div>
+            <img src="./img/lock-icon.png" alt="" />
+          </div>
+
+          <div class="details">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book.
+          </div>
+
+          <a href="#discussionsPage">Дознај повеќе</a>
+        </div>
+        <div class="sec-info-card green">
+          <div>
+            <div class="sec-info-title">Следи го својот напредок</div>
+            <img src="./img/shield-icon.png" alt="" />
+          </div>
+
+          <div class="details">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book.
+          </div>
+
+          <a href="#">Дознај повеќе</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contentPage">
-      <div class="content-page">
-        <h1>Сè што треба да знаеш</h1>
-
-        <div class="tablet-mobile-hidden">
-          <div class="type-of-content-container">
-            <div class="type-of-content active">Видеа</div>
-            <div class="type-of-content">Упатства</div>
-            <div class="type-of-content">Статии</div>
+  <section id="logInPage">
+    <div class="log-in-page">
+      <div class="log-in-form">
+        <h1>Придружи ни се</h1>
+        <a href="#">
+          <div class="continue-with">
+            <i class="fa-brands fa-google fa-xl"></i>
+            <p>Продолжи со Google</p>
           </div>
+        </a>
+        <a href="#">
+          <div class="continue-with">
+            <i class="fa-brands fa-apple fa-xl"></i>
+            <p>Продолжи со Apple</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="continue-with">
+            <i class="fa-brands fa-tiktok fa-xl"></i>
+            <p>Продолжи со TikTok</p>
+          </div>
+        </a>
+
+        <div class="or">
+          <div class="line"></div>
+          <span>или</span>
+          <div class="line"></div>
         </div>
 
-        <div class="type-of-content-carousel-container pc-hidden">
-          <div class="type-of-content-carousel">
-            <div class="carousel-cycle prev">
-              <i class="fa-solid fa-arrow-left fa-2xl"></i>
-            </div>
-            <div class="type-of-content-carousel-item active">Видеа</div>
-            <div class="type-of-content-carousel-item">Упатства</div>
-            <div class="type-of-content-carousel-item">Статии</div>
-            <div class="carousel-cycle next">
-              <i class="fa-solid fa-arrow-right fa-2xl"></i>
+        <form id="logInForm">
+          <label class="marb-3" for="usernameLogIn">Корисничко име*</label>
+          <input class="not-checkbox" type="text" id="usernameLogIn" placeholder="Username" />
+
+          <label class="mart-75 marb-3" for="passwordLogIn">Лозинка*</label>
+          <div class="pos-relative">
+            <input class="not-checkbox" type="password" id="passwordLogIn" placeholder="Password" />
+            <div class="eye" id="showPass">
+              <i class="fa-solid fa-eye-slash"></i>
             </div>
           </div>
-          <div class="carousel-btns">
-            <span class="carousel-btn active"></span>
-            <span class="carousel-btn"></span>
-            <span class="carousel-btn"></span>
+
+          <div class="log-in-help mart-75">
+            <span><input type="checkbox" id="remember-me" /><label for="remember-me" class="marl">Запомни
+                ме</label></span><span><a href="#">Ја заборави лозинката?</a></span>
           </div>
-        </div>
 
-        <div class="content-filters"></div>
-        <div class="content-cards"></div>
+          <button type="submit" class="button-form">Најави се</button>
+        </form>
+      </div>
+      <div class="log-in-image">
+        <img src="./img/Log-in-page-image.png" alt="Image" />
+      </div>
+    </div>
 
-        <!-- MODAL -->
-        <div class="modal-background" id="modalBackgorund">
-          <div class="content-page-modal">
-            <div class="details-and-comments">
-              <div class="details"></div>
-
-              <div class="modal-video pc-hidden"></div>
-
-              <div class="comments">
-                <div class="new-comment">
-                  <form id="modalComment">
-                    <input
-                      id="newModalComment"
-                      type="text"
-                      placeholder="Остави коментар..."
-                    />
-                    <span id="modalUser" class="d-flex aic"></span>
-                  </form>
-                </div>
-                <div class="all-comments"></div>
-              </div>
-            </div>
-
-            <div class="modal-video tablet-mobile-hidden"></div>
-          </div>
+    <div class="sec-info-modal-background d-none" id="secInfoModal">
+      <div class="sec-info-modal">
+        <div class="sec-info-modal-content">
+          <h2>Добредојде!</h2>
+          <h4>Успешно пронајден профил</h4>
+          <button>Продолжи кон Safeblink</button>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="discussionsPage">
-      <div class="discussion-page">
-        <h1>Табла за дискусии</h1>
-        <div class="discussions-container">
-          <div class="discussions">
-            <div class="new-discussion">
-              <form id="newDiscForm">
-                <input
-                  id="discDetails"
-                  type="text"
-                  placeholder="Сподели искуство..."
-                />
-                <span id="discUsername"></span>
-              </form>
-            </div>
+  <section id="contentPage">
+    <div class="content-page">
+      <h1>Сè што треба да знаеш</h1>
 
-            <div class="all-discussions">
-              <div class="discussion blue">
-                <div class="discussion-details">
-                  <p>
-                    Лорем ипсум е едноставен модел на текст кој се користел во
-                    печатарската индустрија. Лорем ипсум бил индустриски
-                    стандард кој се користел како модел уште пред 1500 години,
-                    кога непознат печатар зел кутија со букви и ги сложил на
-                    таков начин за да направи примерок на книга. И не само што
-                    овој модел опстанал пет векови туку почнал да се користи и
-                    во електронските медиуми, кој се уште не е променет. Се
-                    популаризирал во 60-тите години на дваесеттиот век со
-                    издавањето на збирка од страни во кои се наоѓале Lorem Ipsum
-                    пасуси, а денес во софтверскиот пакет како што е Aldus
-                    PageMaker во кој се наоѓа верзија на Lorem Ipsum.
-                  </p>
-                  <div class="space-between">
-                    <span class="d-flex aic"
-                      ><div class="profile-img">
-                        <a href="#"
-                          ><img src="./img/Rectangle 562.png" alt="Image"
-                        /></a>
-                      </div>
-                      Име Презиме</span
-                    ><span class="d-flex aic">00/00/00, 00:00</span>
-                  </div>
-                  <form>
-                    <input type="text" placeholder="Напиши коментар..." />
-                  </form>
-                  <div class="disc-extra">
-                    <i class="fa-solid fa-plus"></i><span>5 Коментари</span
-                    ><span>84 Реакции</span>
-                  </div>
-                </div>
-              </div>
-              <div class="discussion purple">
-                <div class="discussion-details">
-                  <p>
-                    Лорем ипсум е едноставен модел на текст кој се користел во
-                    печатарската индустрија. Лорем ипсум бил индустриски
-                    стандард кој се користел како модел уште пред 1500 години,
-                    кога непознат печатар зел кутија со букви и ги сложил на
-                    таков начин за да направи примерок на книга.
-                  </p>
-                  <div class="space-between">
-                    <span class="d-flex aic"
-                      ><div class="profile-img">
-                        <a href="#"
-                          ><img src="./img/Rectangle 562.png" alt="Image"
-                        /></a>
-                      </div>
-                      Име Презиме</span
-                    ><span class="d-flex aic">00/00/00, 00:00</span>
-                  </div>
-                  <form>
-                    <input type="text" placeholder="Напиши коментар..." />
-                  </form>
-                  <div class="disc-extra">
-                    <i class="fa-solid fa-plus"></i><span>5 Коментари</span
-                    ><span>84 Реакции</span>
-                  </div>
-                </div>
-              </div>
-              <div class="discussion green">
-                <div class="discussion-details">
-                  <p>
-                    Лорем ипсум е едноставен модел на текст кој се користел во
-                    печатарската индустрија. Лорем ипсум бил индустриски
-                    стандард кој се користел како модел уште пред 1500 години,
-                    кога непознат печатар зел кутија со букви и ги сложил на
-                    таков начин за да направи примерок на книга. И не само што
-                    овој модел опстанал пет векови туку почнал да се користи и
-                    во електронските медиуми, кој се уште не е променет.
-                  </p>
-                  <div class="space-between">
-                    <span class="d-flex aic"
-                      ><div class="profile-img">
-                        <a href="#"
-                          ><img src="./img/Rectangle 562.png" alt="Image"
-                        /></a>
-                      </div>
-                      Име Презиме</span
-                    ><span class="d-flex aic">00/00/00, 00:00</span>
-                  </div>
-                  <form>
-                    <input type="text" placeholder="Напиши коментар..." />
-                  </form>
-                  <div class="disc-extra">
-                    <i class="fa-solid fa-plus"></i><span>5 Коментари</span
-                    ><span>84 Реакции</span>
-                  </div>
-                </div>
-              </div>
-              <div class="discussion green">
-                <div class="discussion-details">
-                  <p>
-                    Лорем ипсум е едноставен модел на текст кој се користел во
-                    печатарската индустрија. Лорем ипсум бил индустриски
-                    стандард кој се користел како модел уште пред 1500 години,
-                    кога непознат печатар зел кутија со букви и ги сложил на
-                    таков начин за да направи примерок на книга. И не само што
-                    овој модел опстанал пет векови туку почнал да се користи и
-                    во електронските медиуми, кој се уште не е променет.
-                  </p>
-                  <div class="space-between">
-                    <span class="d-flex aic"
-                      ><div class="profile-img">
-                        <a href="#"
-                          ><img src="./img/Rectangle 562.png" alt="Image"
-                        /></a>
-                      </div>
-                      Име Презиме</span
-                    ><span class="d-flex aic">00/00/00, 00:00</span>
-                  </div>
-                  <form>
-                    <input type="text" placeholder="Напиши коментар..." />
-                  </form>
-                  <div class="disc-extra">
-                    <i class="fa-solid fa-plus"></i><span>5 Коментари</span
-                    ><span>84 Реакции</span>
-                  </div>
-                </div>
-              </div>
-              <div class="discussion purple">
-                <div class="discussion-details">
-                  <p>
-                    Лорем ипсум е едноставен модел на текст кој се користел во
-                    печатарската индустрија. Лорем ипсум бил индустриски
-                    стандард кој се користел како модел уште пред 1500 години,
-                    кога непознат печатар зел кутија со букви и ги сложил на
-                    таков начин за да направи примерок на книга. И не само што
-                    овој модел опстанал пет векови туку почнал да се користи и
-                    во електронските медиуми, кој се уште не е променет.
-                  </p>
-                  <div class="space-between">
-                    <span class="d-flex aic"
-                      ><div class="profile-img">
-                        <a href="#"
-                          ><img src="./img/Rectangle 562.png" alt="Image"
-                        /></a>
-                      </div>
-                      Име Презиме</span
-                    ><span class="d-flex aic">00/00/00, 00:00</span>
-                  </div>
-                  <form>
-                    <input type="text" placeholder="Напиши коментар..." />
-                  </form>
-                  <div class="disc-extra">
-                    <i class="fa-solid fa-plus"></i><span>5 Коментари</span
-                    ><span>84 Реакции</span>
-                  </div>
-                </div>
-              </div>
-              <div class="discussion blue">
-                <div class="discussion-details">
-                  <p>
-                    Лорем ипсум е едноставен модел на текст кој се користел во
-                    печатарската индустрија. Лорем ипсум бил индустриски
-                    стандард кој се користел како модел уште пред 1500 години,
-                    кога непознат печатар зел кутија со букви и ги сложил на
-                    таков начин за да направи примерок на книга. И не само што
-                    овој модел опстанал пет векови туку почнал да се користи и
-                    во електронските медиуми, кој се уште не е променет. Се
-                    популаризирал во 60-тите години на дваесеттиот век со
-                    издавањето на збирка од страни во кои се наоѓале Lorem Ipsum
-                    пасуси, а денес во софтверскиот пакет како што е Aldus
-                    PageMaker во кој се наоѓа верзија на Lorem Ipsum.
-                  </p>
-                  <div class="space-between">
-                    <span class="d-flex aic"
-                      ><div class="profile-img">
-                        <a href="#"
-                          ><img src="./img/Rectangle 562.png" alt="Image"
-                        /></a>
-                      </div>
-                      Име Презиме</span
-                    ><span class="d-flex aic">00/00/00, 00:00</span>
-                  </div>
-                  <form>
-                    <input type="text" placeholder="Напиши коментар..." />
-                  </form>
-                  <div class="disc-extra">
-                    <i class="fa-solid fa-plus"></i><span>5 Коментари</span
-                    ><span>84 Реакции</span>
-                  </div>
-                </div>
-              </div>
-              <div class="discussion purple">
-                <div class="discussion-details">
-                  <p>
-                    Лорем ипсум е едноставен модел на текст кој се користел во
-                    печатарската индустрија. Лорем ипсум бил индустриски
-                    стандард кој се користел како модел уште пред 1500 години,
-                    кога непознат печатар зел кутија со букви и ги сложил на
-                    таков начин за да направи примерок на книга. И не само што
-                    овој модел опстанал пет векови туку почнал да се користи и
-                    во електронските медиуми, кој се уште не е променет. Се
-                    популаризирал во 60-тите години на дваесеттиот век со
-                    издавањето на збирка од страни во кои се наоѓале Lorem Ipsum
-                    пасуси, а денес во софтверскиот пакет како што е Aldus
-                    PageMaker во кој се наоѓа верзија на Lorem Ipsum.
-                  </p>
-                  <div class="space-between">
-                    <span class="d-flex aic"
-                      ><div class="profile-img">
-                        <a href="#"
-                          ><img src="./img/Rectangle 562.png" alt="Image"
-                        /></a>
-                      </div>
-                      Име Презиме</span
-                    ><span class="d-flex aic">00/00/00, 00:00</span>
-                  </div>
-                  <form>
-                    <input type="text" placeholder="Напиши коментар..." />
-                  </form>
-                  <div class="disc-extra">
-                    <i class="fa-solid fa-plus"></i><span>5 Коментари</span
-                    ><span>84 Реакции</span>
-                  </div>
-                </div>
-              </div>
-              <div class="discussion green">
-                <div class="discussion-details">
-                  <p>
-                    Лорем ипсум е едноставен модел на текст кој се користел во
-                    печатарската индустрија. Лорем ипсум бил индустриски
-                    стандард кој се користел како модел уште пред 1500 години,
-                    кога непознат печатар зел кутија со букви и ги сложил на
-                    таков начин за да направи примерок на книга.
-                  </p>
-                  <div class="space-between">
-                    <span class="d-flex aic"
-                      ><div class="profile-img">
-                        <a href="#"
-                          ><img src="./img/Rectangle 562.png" alt="Image"
-                        /></a>
-                      </div>
-                      Име Презиме</span
-                    ><span class="d-flex aic">00/00/00, 00:00</span>
-                  </div>
-                  <form>
-                    <input type="text" placeholder="Напиши коментар..." />
-                  </form>
-                  <div class="disc-extra">
-                    <i class="fa-solid fa-plus"></i><span>5 Коментари</span
-                    ><span>84 Реакции</span>
-                  </div>
-                </div>
-              </div>
-              <div class="discussion blue">
-                <div class="discussion-details">
-                  <p>
-                    Лорем ипсум е едноставен модел на текст кој се користел во
-                    печатарската индустрија. Лорем ипсум бил индустриски
-                    стандард кој се користел како модел уште пред 1500 години,
-                    кога непознат печатар зел кутија со букви и ги сложил на
-                    таков начин за да направи примерок на книга. И не само што
-                    овој модел опстанал пет векови туку почнал да се користи и
-                    во електронските медиуми, кој се уште не е променет. Се
-                    популаризирал во 60-тите години на дваесеттиот век со
-                    издавањето на збирка од страни во кои се наоѓале Lorem Ipsum
-                    пасуси, а денес во софтверскиот пакет како што е Aldus
-                    PageMaker во кој се наоѓа верзија на Lorem Ipsum.
-                  </p>
-                  <div class="space-between">
-                    <span class="d-flex aic"
-                      ><div class="profile-img">
-                        <a href="#"
-                          ><img src="./img/Rectangle 562.png" alt="Image"
-                        /></a>
-                      </div>
-                      Име Презиме</span
-                    ><span class="d-flex aic">00/00/00, 00:00</span>
-                  </div>
-                  <form>
-                    <input type="text" placeholder="Напиши коментар..." />
-                  </form>
-                  <div class="disc-extra">
-                    <i class="fa-solid fa-plus"></i><span>5 Коментари</span
-                    ><span>84 Реакции</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="blur">
-          <div class="blur-inner">
-            <i class="fa-solid fa-plus"></i>View More
-          </div>
+      <div class="tablet-mobile-hidden">
+        <div class="type-of-content-container">
+          <div class="type-of-content active">Видеа</div>
+          <div class="type-of-content">Упатства</div>
+          <div class="type-of-content">Статии</div>
         </div>
       </div>
-    </section>
 
-    <section id="contactPage">
-      <div class="contact-page" id="">
-        <h1>Контакт</h1>
-        <h3>Побарај стручна помош</h3>
-        <div class="contact-container marb-gutter-base-3">
-          <div class="contact-details">
-            <h4>Агенција за заштита на личните податоци</h4>
-            <p>
-              Лорем ипсум е едноставен модел на текст кој се користел во
-              печатарската индустрија. Лорем ипсум бил индустриски стандард кој
-              се користел како модел уште пред 1500 години, кога непознат
-              печатар зел кутија со букви и ги сложил на таков начин за да
-              направи примерок на книга.
-            </p>
+      <div class="type-of-content-carousel-container pc-hidden">
+        <div class="type-of-content-carousel">
+          <div class="carousel-cycle prev">
+            <i class="fa-solid fa-arrow-left fa-2xl"></i>
           </div>
-          <div class="contact-link">
-            <a href="#">Линк</a>
+          <div class="type-of-content-carousel-item active">Видеа</div>
+          <div class="type-of-content-carousel-item">Упатства</div>
+          <div class="type-of-content-carousel-item">Статии</div>
+          <div class="carousel-cycle next">
+            <i class="fa-solid fa-arrow-right fa-2xl"></i>
           </div>
         </div>
-        <h3>Невладини организации</h3>
-        <div class="contact-container marb-gutter-base">
-          <div class="contact-details">
-            <h4>NGO 1</h4>
-            <p>
-              Лорем ипсум е едноставен модел на текст кој се користел во
-              печатарската индустрија. Лорем ипсум бил индустриски стандард кој
-              се користел како модел уште пред 1500 години, кога непознат
-              печатар зел кутија со букви и ги сложил на таков начин за да
-              направи примерок на книга.
-            </p>
-          </div>
-          <div class="contact-link">
-            <a href="#">Линк</a>
-          </div>
-        </div>
-        <div class="contact-container marb-gutter-base">
-          <div class="contact-details">
-            <h4>NGO 2</h4>
-            <p>
-              Лорем ипсум е едноставен модел на текст кој се користел во
-              печатарската индустрија. Лорем ипсум бил индустриски стандард кој
-              се користел како модел уште пред 1500 години, кога непознат
-              печатар зел кутија со букви и ги сложил на таков начин за да
-              направи примерок на книга.
-            </p>
-          </div>
-          <div class="contact-link">
-            <a href="#">Линк</a>
-          </div>
-        </div>
-        <div class="contact-container">
-          <div class="contact-details">
-            <h4>NGO 3</h4>
-            <p>
-              Лорем ипсум е едноставен модел на текст кој се користел во
-              печатарската индустрија. Лорем ипсум бил индустриски стандард кој
-              се користел како модел уште пред 1500 години, кога непознат
-              печатар зел кутија со букви и ги сложил на таков начин за да
-              направи примерок на книга.
-            </p>
-          </div>
-          <div class="contact-link">
-            <a href="#">Линк</a>
-          </div>
+        <div class="carousel-btns">
+          <span class="carousel-btn active"></span>
+          <span class="carousel-btn"></span>
+          <span class="carousel-btn"></span>
         </div>
       </div>
-    </section>
 
-    <section id="profilePage">
-      <div class="profile-page">
-        <h1>Профил</h1>
-        <div class="profile-main">
-          <div class="profile-image-container">
-            <div class="profile-image">
-              <img id="profilePicture" src="" alt="Pfp" />
-              <button class="profile-edit hover">Промени</button>
+      <div class="content-filters"></div>
+      <div class="content-cards"></div>
+
+      <!-- MODAL -->
+      <div class="modal-background" id="modalBackgorund">
+        <div class="content-page-modal">
+          <div class="details-and-comments">
+            <div class="details"></div>
+
+            <div class="modal-video pc-hidden"></div>
+
+            <div class="comments">
+              <div class="new-comment">
+                <form id="modalComment">
+                  <input id="newModalComment" type="text" placeholder="Остави коментар..." />
+                  <span id="modalUser" class="d-flex aic"></span>
+                </form>
+              </div>
+              <div class="all-comments"></div>
             </div>
           </div>
 
-          <div class="profile-settings">
-            <form id="profileSettings">
-              <div class="settings-section">
-                <div class="settings-section-inner">
-                  <label for="username-profile"
-                    >Име и презиме / Корисничко име</label
-                  >
-                  <div class="relative">
-                    <input
-                      class="input-profile hover"
-                      type="text"
-                      id="username-profile"
-                      disabled
-                    />
-                    <button class="profile-edit hover">Промени</button>
-                  </div>
-                </div>
+          <div class="modal-video tablet-mobile-hidden"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <div class="settings-section-inner">
-                  <label for="email-profile">Email адреса</label>
-                  <div class="relative">
-                    <input
-                      class="input-profile hover"
-                      type="email"
-                      id="email-profile"
-                      disabled
-                    />
-                    <button class="profile-edit hover" id="editEmail">
-                      Промени
-                    </button>
-                    <div class="editing">
-                      <button class="profile-editing" id="editEmailConfirm">
-                        <i class="fa-solid fa-check fa-xl lime-green"></i>
-                      </button>
-                      <button class="profile-editing marr" id="editEmailCancel">
-                        <i class="fa-solid fa-xmark fa-xl red"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="settings-section-inner">
-                  <label for="password-profile">Лозинка</label>
-                  <div class="relative">
-                    <input
-                      class="input-profile hover"
-                      type="password"
-                      id="password-profile"
-                      disabled
-                    />
-                    <button class="profile-edit hover">Промени</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="settings-section">
-                <div class="settings-section-inner">
-                  <label for="birth-date">Година на раѓање</label>
-                  <div class="relative">
-                    <input
-                      class="input-profile hover"
-                      type="number"
-                      id="birth-date"
-                      min="1900"
-                      max="2024"
-                      step="1"
-                      disabled
-                    />
-                    <button class="profile-edit hover" id="editBirthDate">
-                      Промени
-                    </button>
-                    <div class="editing">
-                      <button class="profile-editing" id="editBirthDateConfirm">
-                        <i class="fa-solid fa-check fa-xl lime-green"></i>
-                      </button>
-                      <button
-                        class="profile-editing marr"
-                        id="editBirthDateCancel"
-                      >
-                        <i class="fa-solid fa-xmark fa-xl red"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="settings-section-inner">
-                  <label for="gender">Пол</label>
-                  <div class="relative">
-                    <input
-                      class="input-profile hover"
-                      type="text"
-                      id="gender"
-                      disabled
-                    />
-                    <button class="profile-edit hover">Промени</button>
-                  </div>
-                </div>
-              </div>
+  <section id="discussionsPage">
+    <div class="discussion-page">
+      <h1>Табла за дискусии</h1>
+      <div class="discussions-container">
+        <div class="discussions">
+          <div class="new-discussion">
+            <form id="newDiscForm">
+              <input id="discDetails" type="text" placeholder="Сподели искуство..." />
+              <span id="discUsername"></span>
             </form>
           </div>
-        </div>
 
-        <div class="profile-progress">
-          <div class="progress-extra">
-            <p>Следи го својот Safeblink напредок!</p>
-            <p class="progress-extra-p">Моментално ниво: Лорем ипсум</p>
-          </div>
-          <div class="profile-progress-bar">
-            <div class="profile-progress-bar-inner"></div>
-          </div>
-        </div>
-
-        <div class="profile-achievements">
-          <div class="achievement d-grid">
-            <div class="achievement-img">
-              <i class="fa-solid fa-hand-fist"></i>
+          <div class="all-discussions">
+            <div class="discussion blue">
+              <div class="discussion-details">
+                <p>
+                  Лорем ипсум е едноставен модел на текст кој се користел во
+                  печатарската индустрија. Лорем ипсум бил индустриски
+                  стандард кој се користел како модел уште пред 1500 години,
+                  кога непознат печатар зел кутија со букви и ги сложил на
+                  таков начин за да направи примерок на книга. И не само што
+                  овој модел опстанал пет векови туку почнал да се користи и
+                  во електронските медиуми, кој се уште не е променет. Се
+                  популаризирал во 60-тите години на дваесеттиот век со
+                  издавањето на збирка од страни во кои се наоѓале Lorem Ipsum
+                  пасуси, а денес во софтверскиот пакет како што е Aldus
+                  PageMaker во кој се наоѓа верзија на Lorem Ipsum.
+                </p>
+                <div class="space-between">
+                  <span class="d-flex aic">
+                    <div class="profile-img">
+                      <a href="#"><img src="./img/Rectangle 562.png" alt="Image" /></a>
+                    </div>
+                    Име Презиме
+                  </span><span class="d-flex aic">00/00/00, 00:00</span>
+                </div>
+                <form>
+                  <input type="text" placeholder="Напиши коментар..." />
+                </form>
+                <div class="disc-extra">
+                  <i class="fa-solid fa-plus"></i><span>5 Коментари</span><span>84 Реакции</span>
+                </div>
+              </div>
             </div>
-            <span>Се придружи!</span>
-          </div>
-          <div class="achievement d-none" id="videosAchievement">
-            <div class="achievement-img">
-              <i class="fa-solid fa-video"></i>
+            <div class="discussion purple">
+              <div class="discussion-details">
+                <p>
+                  Лорем ипсум е едноставен модел на текст кој се користел во
+                  печатарската индустрија. Лорем ипсум бил индустриски
+                  стандард кој се користел како модел уште пред 1500 години,
+                  кога непознат печатар зел кутија со букви и ги сложил на
+                  таков начин за да направи примерок на книга.
+                </p>
+                <div class="space-between">
+                  <span class="d-flex aic">
+                    <div class="profile-img">
+                      <a href="#"><img src="./img/Rectangle 562.png" alt="Image" /></a>
+                    </div>
+                    Име Презиме
+                  </span><span class="d-flex aic">00/00/00, 00:00</span>
+                </div>
+                <form>
+                  <input type="text" placeholder="Напиши коментар..." />
+                </form>
+                <div class="disc-extra">
+                  <i class="fa-solid fa-plus"></i><span>5 Коментари</span><span>84 Реакции</span>
+                </div>
+              </div>
             </div>
-            <span>Изгледани 5 видеа</span>
-          </div>
-          <div class="achievement d-none" id="discussionAchievement">
-            <div class="achievement-img">
-              <i class="fa-solid fa-shield-halved"></i>
+            <div class="discussion green">
+              <div class="discussion-details">
+                <p>
+                  Лорем ипсум е едноставен модел на текст кој се користел во
+                  печатарската индустрија. Лорем ипсум бил индустриски
+                  стандард кој се користел како модел уште пред 1500 години,
+                  кога непознат печатар зел кутија со букви и ги сложил на
+                  таков начин за да направи примерок на книга. И не само што
+                  овој модел опстанал пет векови туку почнал да се користи и
+                  во електронските медиуми, кој се уште не е променет.
+                </p>
+                <div class="space-between">
+                  <span class="d-flex aic">
+                    <div class="profile-img">
+                      <a href="#"><img src="./img/Rectangle 562.png" alt="Image" /></a>
+                    </div>
+                    Име Презиме
+                  </span><span class="d-flex aic">00/00/00, 00:00</span>
+                </div>
+                <form>
+                  <input type="text" placeholder="Напиши коментар..." />
+                </form>
+                <div class="disc-extra">
+                  <i class="fa-solid fa-plus"></i><span>5 Коментари</span><span>84 Реакции</span>
+                </div>
+              </div>
             </div>
-            <span>Активност во дискусија</span>
+            <div class="discussion green">
+              <div class="discussion-details">
+                <p>
+                  Лорем ипсум е едноставен модел на текст кој се користел во
+                  печатарската индустрија. Лорем ипсум бил индустриски
+                  стандард кој се користел како модел уште пред 1500 години,
+                  кога непознат печатар зел кутија со букви и ги сложил на
+                  таков начин за да направи примерок на книга. И не само што
+                  овој модел опстанал пет векови туку почнал да се користи и
+                  во електронските медиуми, кој се уште не е променет.
+                </p>
+                <div class="space-between">
+                  <span class="d-flex aic">
+                    <div class="profile-img">
+                      <a href="#"><img src="./img/Rectangle 562.png" alt="Image" /></a>
+                    </div>
+                    Име Презиме
+                  </span><span class="d-flex aic">00/00/00, 00:00</span>
+                </div>
+                <form>
+                  <input type="text" placeholder="Напиши коментар..." />
+                </form>
+                <div class="disc-extra">
+                  <i class="fa-solid fa-plus"></i><span>5 Коментари</span><span>84 Реакции</span>
+                </div>
+              </div>
+            </div>
+            <div class="discussion purple">
+              <div class="discussion-details">
+                <p>
+                  Лорем ипсум е едноставен модел на текст кој се користел во
+                  печатарската индустрија. Лорем ипсум бил индустриски
+                  стандард кој се користел како модел уште пред 1500 години,
+                  кога непознат печатар зел кутија со букви и ги сложил на
+                  таков начин за да направи примерок на книга. И не само што
+                  овој модел опстанал пет векови туку почнал да се користи и
+                  во електронските медиуми, кој се уште не е променет.
+                </p>
+                <div class="space-between">
+                  <span class="d-flex aic">
+                    <div class="profile-img">
+                      <a href="#"><img src="./img/Rectangle 562.png" alt="Image" /></a>
+                    </div>
+                    Име Презиме
+                  </span><span class="d-flex aic">00/00/00, 00:00</span>
+                </div>
+                <form>
+                  <input type="text" placeholder="Напиши коментар..." />
+                </form>
+                <div class="disc-extra">
+                  <i class="fa-solid fa-plus"></i><span>5 Коментари</span><span>84 Реакции</span>
+                </div>
+              </div>
+            </div>
+            <div class="discussion blue">
+              <div class="discussion-details">
+                <p>
+                  Лорем ипсум е едноставен модел на текст кој се користел во
+                  печатарската индустрија. Лорем ипсум бил индустриски
+                  стандард кој се користел како модел уште пред 1500 години,
+                  кога непознат печатар зел кутија со букви и ги сложил на
+                  таков начин за да направи примерок на книга. И не само што
+                  овој модел опстанал пет векови туку почнал да се користи и
+                  во електронските медиуми, кој се уште не е променет. Се
+                  популаризирал во 60-тите години на дваесеттиот век со
+                  издавањето на збирка од страни во кои се наоѓале Lorem Ipsum
+                  пасуси, а денес во софтверскиот пакет како што е Aldus
+                  PageMaker во кој се наоѓа верзија на Lorem Ipsum.
+                </p>
+                <div class="space-between">
+                  <span class="d-flex aic">
+                    <div class="profile-img">
+                      <a href="#"><img src="./img/Rectangle 562.png" alt="Image" /></a>
+                    </div>
+                    Име Презиме
+                  </span><span class="d-flex aic">00/00/00, 00:00</span>
+                </div>
+                <form>
+                  <input type="text" placeholder="Напиши коментар..." />
+                </form>
+                <div class="disc-extra">
+                  <i class="fa-solid fa-plus"></i><span>5 Коментари</span><span>84 Реакции</span>
+                </div>
+              </div>
+            </div>
+            <div class="discussion purple">
+              <div class="discussion-details">
+                <p>
+                  Лорем ипсум е едноставен модел на текст кој се користел во
+                  печатарската индустрија. Лорем ипсум бил индустриски
+                  стандард кој се користел како модел уште пред 1500 години,
+                  кога непознат печатар зел кутија со букви и ги сложил на
+                  таков начин за да направи примерок на книга. И не само што
+                  овој модел опстанал пет векови туку почнал да се користи и
+                  во електронските медиуми, кој се уште не е променет. Се
+                  популаризирал во 60-тите години на дваесеттиот век со
+                  издавањето на збирка од страни во кои се наоѓале Lorem Ipsum
+                  пасуси, а денес во софтверскиот пакет како што е Aldus
+                  PageMaker во кој се наоѓа верзија на Lorem Ipsum.
+                </p>
+                <div class="space-between">
+                  <span class="d-flex aic">
+                    <div class="profile-img">
+                      <a href="#"><img src="./img/Rectangle 562.png" alt="Image" /></a>
+                    </div>
+                    Име Презиме
+                  </span><span class="d-flex aic">00/00/00, 00:00</span>
+                </div>
+                <form>
+                  <input type="text" placeholder="Напиши коментар..." />
+                </form>
+                <div class="disc-extra">
+                  <i class="fa-solid fa-plus"></i><span>5 Коментари</span><span>84 Реакции</span>
+                </div>
+              </div>
+            </div>
+            <div class="discussion green">
+              <div class="discussion-details">
+                <p>
+                  Лорем ипсум е едноставен модел на текст кој се користел во
+                  печатарската индустрија. Лорем ипсум бил индустриски
+                  стандард кој се користел како модел уште пред 1500 години,
+                  кога непознат печатар зел кутија со букви и ги сложил на
+                  таков начин за да направи примерок на книга.
+                </p>
+                <div class="space-between">
+                  <span class="d-flex aic">
+                    <div class="profile-img">
+                      <a href="#"><img src="./img/Rectangle 562.png" alt="Image" /></a>
+                    </div>
+                    Име Презиме
+                  </span><span class="d-flex aic">00/00/00, 00:00</span>
+                </div>
+                <form>
+                  <input type="text" placeholder="Напиши коментар..." />
+                </form>
+                <div class="disc-extra">
+                  <i class="fa-solid fa-plus"></i><span>5 Коментари</span><span>84 Реакции</span>
+                </div>
+              </div>
+            </div>
+            <div class="discussion blue">
+              <div class="discussion-details">
+                <p>
+                  Лорем ипсум е едноставен модел на текст кој се користел во
+                  печатарската индустрија. Лорем ипсум бил индустриски
+                  стандард кој се користел како модел уште пред 1500 години,
+                  кога непознат печатар зел кутија со букви и ги сложил на
+                  таков начин за да направи примерок на книга. И не само што
+                  овој модел опстанал пет векови туку почнал да се користи и
+                  во електронските медиуми, кој се уште не е променет. Се
+                  популаризирал во 60-тите години на дваесеттиот век со
+                  издавањето на збирка од страни во кои се наоѓале Lorem Ipsum
+                  пасуси, а денес во софтверскиот пакет како што е Aldus
+                  PageMaker во кој се наоѓа верзија на Lorem Ipsum.
+                </p>
+                <div class="space-between">
+                  <span class="d-flex aic">
+                    <div class="profile-img">
+                      <a href="#"><img src="./img/Rectangle 562.png" alt="Image" /></a>
+                    </div>
+                    Име Презиме
+                  </span><span class="d-flex aic">00/00/00, 00:00</span>
+                </div>
+                <form>
+                  <input type="text" placeholder="Напиши коментар..." />
+                </form>
+                <div class="disc-extra">
+                  <i class="fa-solid fa-plus"></i><span>5 Коментари</span><span>84 Реакции</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <footer>
-      <div class="footer-inner">
-        <div class="outer">
-          <div class="inner logo-footer">
-            <a href="#infoPage"
-              ><img src="./img/Logo-white.png" alt="Logo"
-            /></a>
-          </div>
-          <div class="inner">
-            <p class="margin-top">
-              International Foundation for Electoral Systems (IFES)
-            </p>
-          </div>
-          <div class="inner font-awesome-icons-outer">
-            <div class="font-awesome-icons-inner margin-right">
-              <i class="fa-solid fa-phone"></i>
-              <p>+389-2-312-2288</p>
-            </div>
-            <div class="font-awesome-icons-inner">
-              <i class="fa-regular fa-envelope margin-left"></i>
-              <p>ifes.nmk@ifes.org</p>
-            </div>
-          </div>
-        </div>
-        <div class="outer">
-          <div class="extra-links">
-            <div><a href="#contentPage">Информирај се</a></div>
-            <div><a href="#discussionsPage">Дискусии</a></div>
-            <div><a href="#contactPage">Контакт - корисни линкови</a></div>
-            <div><a href="#">Закон за заштита на личните податоци</a></div>
-          </div>
-        </div>
-        <div class="outer last">
-          <div class="localization marb-1-5rem">
-            <div>mk | al</div>
-          </div>
-          <div class="inner marb-1-5rem">
-            <a href="#"><img src="./img/facebook.png" alt="facebook" /></a>
-            <a href="#"><img src="./img/Instagram.png" alt="instagram" /></a>
-            <a href="#"><img src="./img/Youtube.png" alt="youtube" /></a>
-            <a href="#"><img src="./img/TikTok.png" alt="tiktok" /></a>
-          </div>
-          <div class="inner">© All Rights Reserved. | safeblink.mk</div>
+      <div class="blur">
+        <div class="blur-inner">
+          <i class="fa-solid fa-plus"></i>View More
         </div>
       </div>
-    </footer>
-    <!-- JAVASCRIPT -->
-    <script type="module" src="./js/variables.js"></script>
-    <script type="module" src="./js/helpers.js"></script>
-    <script type="module" src="./js/misc.js"></script>
-    <script type="module" src="./js/content-page.js"></script>
-    <script type="module" src="./js/discussion-page.js"></script>
-    <script type="module" src="./js/profile-page.js"></script>
-    <script type="module" src="./js/routing.js"></script>
-  </body>
+    </div>
+  </section>
+
+  <section id="contactPage">
+    <div class="contact-page" id="">
+      <h1>Контакт</h1>
+      <h3>Побарај стручна помош</h3>
+      <div class="contact-container marb-gutter-base-3">
+        <div class="contact-details">
+          <h4>Агенција за заштита на личните податоци</h4>
+          <p>
+            Лорем ипсум е едноставен модел на текст кој се користел во
+            печатарската индустрија. Лорем ипсум бил индустриски стандард кој
+            се користел како модел уште пред 1500 години, кога непознат
+            печатар зел кутија со букви и ги сложил на таков начин за да
+            направи примерок на книга.
+          </p>
+        </div>
+        <div class="contact-link">
+          <a href="#">Линк</a>
+        </div>
+      </div>
+      <h3>Невладини организации</h3>
+      <div class="contact-container marb-gutter-base">
+        <div class="contact-details">
+          <h4>NGO 1</h4>
+          <p>
+            Лорем ипсум е едноставен модел на текст кој се користел во
+            печатарската индустрија. Лорем ипсум бил индустриски стандард кој
+            се користел како модел уште пред 1500 години, кога непознат
+            печатар зел кутија со букви и ги сложил на таков начин за да
+            направи примерок на книга.
+          </p>
+        </div>
+        <div class="contact-link">
+          <a href="#">Линк</a>
+        </div>
+      </div>
+      <div class="contact-container marb-gutter-base">
+        <div class="contact-details">
+          <h4>NGO 2</h4>
+          <p>
+            Лорем ипсум е едноставен модел на текст кој се користел во
+            печатарската индустрија. Лорем ипсум бил индустриски стандард кој
+            се користел како модел уште пред 1500 години, кога непознат
+            печатар зел кутија со букви и ги сложил на таков начин за да
+            направи примерок на книга.
+          </p>
+        </div>
+        <div class="contact-link">
+          <a href="#">Линк</a>
+        </div>
+      </div>
+      <div class="contact-container">
+        <div class="contact-details">
+          <h4>NGO 3</h4>
+          <p>
+            Лорем ипсум е едноставен модел на текст кој се користел во
+            печатарската индустрија. Лорем ипсум бил индустриски стандард кој
+            се користел како модел уште пред 1500 години, кога непознат
+            печатар зел кутија со букви и ги сложил на таков начин за да
+            направи примерок на книга.
+          </p>
+        </div>
+        <div class="contact-link">
+          <a href="#">Линк</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="profilePage">
+    <div class="profile-page">
+      <h1>Профил</h1>
+      <div class="profile-main">
+        <div class="profile-image-container">
+          <div class="profile-image">
+            <img id="profilePicture" src="" alt="Pfp" />
+            <button class="profile-edit hover">Промени</button>
+          </div>
+        </div>
+
+        <div class="profile-settings">
+          <form id="profileSettings">
+            <div class="settings-section">
+              <div class="settings-section-inner">
+                <label for="username-profile">Име и презиме / Корисничко име</label>
+                <div class="relative">
+                  <input class="input-profile hover" type="text" id="username-profile" disabled />
+                  <button class="profile-edit hover">Промени</button>
+                </div>
+              </div>
+
+              <div class="settings-section-inner">
+                <label for="email-profile">Email адреса</label>
+                <div class="relative">
+                  <input class="input-profile hover" type="email" id="email-profile" disabled />
+                  <button class="profile-edit hover" id="editEmail">
+                    Промени
+                  </button>
+                  <div class="editing">
+                    <button class="profile-editing" id="editEmailConfirm">
+                      <i class="fa-solid fa-check fa-xl lime-green"></i>
+                    </button>
+                    <button class="profile-editing marr" id="editEmailCancel">
+                      <i class="fa-solid fa-xmark fa-xl red"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="settings-section-inner">
+                <label for="password-profile">Лозинка</label>
+                <div class="relative">
+                  <input class="input-profile hover" type="password" id="password-profile" disabled />
+                  <button class="profile-edit hover">Промени</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="settings-section">
+              <div class="settings-section-inner">
+                <label for="birth-date">Година на раѓање</label>
+                <div class="relative">
+                  <input class="input-profile hover" type="number" id="birth-date" min="1900" max="2024" step="1"
+                    disabled />
+                  <button class="profile-edit hover" id="editBirthDate">
+                    Промени
+                  </button>
+                  <div class="editing">
+                    <button class="profile-editing" id="editBirthDateConfirm">
+                      <i class="fa-solid fa-check fa-xl lime-green"></i>
+                    </button>
+                    <button class="profile-editing marr" id="editBirthDateCancel">
+                      <i class="fa-solid fa-xmark fa-xl red"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="settings-section-inner">
+                <label for="gender">Пол</label>
+                <div class="relative">
+                  <input class="input-profile hover" type="text" id="gender" disabled />
+                  <button class="profile-edit hover">Промени</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="profile-progress">
+        <div class="progress-extra">
+          <p>Следи го својот Safeblink напредок!</p>
+          <p class="progress-extra-p">Моментално ниво: Лорем ипсум</p>
+        </div>
+        <div class="profile-progress-bar">
+          <div class="profile-progress-bar-inner"></div>
+        </div>
+      </div>
+
+      <div class="profile-achievements">
+        <div class="achievement d-grid">
+          <div class="achievement-img">
+            <i class="fa-solid fa-hand-fist"></i>
+          </div>
+          <span>Се придружи!</span>
+        </div>
+        <div class="achievement d-none" id="videosAchievement">
+          <div class="achievement-img">
+            <i class="fa-solid fa-video"></i>
+          </div>
+          <span>Изгледани 5 видеа</span>
+        </div>
+        <div class="achievement d-none" id="discussionAchievement">
+          <div class="achievement-img">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <span>Активност во дискусија</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="outer">
+        <div class="inner logo-footer">
+          <a href="#infoPage"><img src="./img/Logo-white.png" alt="Logo" /></a>
+        </div>
+        <div class="inner">
+          <p class="margin-top">
+            International Foundation for Electoral Systems (IFES)
+          </p>
+        </div>
+        <div class="inner font-awesome-icons-outer">
+          <div class="font-awesome-icons-inner margin-right">
+            <i class="fa-solid fa-phone"></i>
+            <p>+389-2-312-2288</p>
+          </div>
+          <div class="font-awesome-icons-inner">
+            <i class="fa-regular fa-envelope margin-left"></i>
+            <p>ifes.nmk@ifes.org</p>
+          </div>
+        </div>
+      </div>
+      <div class="outer">
+        <div class="extra-links">
+          <div><a href="#contentPage">Информирај се</a></div>
+          <div><a href="#discussionsPage">Дискусии</a></div>
+          <div><a href="#contactPage">Контакт - корисни линкови</a></div>
+          <div><a href="#">Закон за заштита на личните податоци</a></div>
+        </div>
+      </div>
+      <div class="outer last">
+        <div class="localization marb-1-5rem">
+          <div>mk | al</div>
+        </div>
+        <div class="inner marb-1-5rem">
+          <a href="#"><img src="./img/facebook.png" alt="facebook" /></a>
+          <a href="#"><img src="./img/Instagram.png" alt="instagram" /></a>
+          <a href="#"><img src="./img/Youtube.png" alt="youtube" /></a>
+          <a href="#"><img src="./img/TikTok.png" alt="tiktok" /></a>
+        </div>
+        <div class="inner">© All Rights Reserved. | safeblink.mk</div>
+      </div>
+    </div>
+  </footer>
+  <!-- JAVASCRIPT -->
+  <script type="module" src="./js/variables.js"></script>
+  <script type="module" src="./js/helpers.js"></script>
+  <script type="module" src="./js/misc.js"></script>
+  <script type="module" src="./js/content-page.js"></script>
+  <script type="module" src="./js/discussion-page.js"></script>
+  <script type="module" src="./js/profile-page.js"></script>
+  <script type="module" src="./js/routing.js"></script>
+</body>
+
 </html>

@@ -54,7 +54,11 @@ editBirthDate.addEventListener("click", () => {
 });
 
 confirmDate.addEventListener("click", () => {
-  if (!inputBirthDate.value) {
+  if (
+    !inputBirthDate.value ||
+    Number(inputBirthDate.value) < 1900 ||
+    Number(inputBirthDate.value) > 2024
+  ) {
     alert("Please enter a valid birth date");
     return;
   }

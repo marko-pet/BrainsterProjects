@@ -53,6 +53,7 @@
     justify-content: center;
     align-items: center;
     flex-basis: 47.5%;
+
     img {
       width: 100%;
     }
@@ -60,6 +61,7 @@
 
   label {
     color: var.$text-color-secondary;
+    display: inline-block;
 
     &:not(:last-child) {
       font-weight: var.$font-weight-bold;
@@ -72,14 +74,24 @@
     }
   }
 
+  .mart-75 {
+    margin-top: var.$gutter-base * 0.75;
+  }
+
+  .marb-3 {
+    margin-bottom: var.$gutter-base * 0.3;
+  }
+
+  .marl {
+    margin-left: var.$gutter-base * 0.5;
+  }
+
   input.not-checkbox {
     width: 100%;
     padding: 0 var.$gutter-base * 0.75;
     border: 1.58px solid rgba(153, 70, 243, 1);
     border-radius: 3.95px;
     height: 56.9px;
-    margin-bottom: var.$gutter-base * 0.5;
-    margin-top: var.$gutter-base * 0.2;
     font-size: var.$font-size-base;
   }
 
@@ -118,6 +130,23 @@
     @extend %button-log-in-page;
     margin-top: var.$gutter-base;
   }
+
+  .eye {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: grid;
+    align-content: center;
+    margin-right: 1rem;
+    color: gray;
+    transition: all 0.25s ease;
+
+    &:hover {
+      cursor: pointer;
+      color: rgb(70, 70, 70);
+    }
+  }
 }
 
 .sec-info-modal-background {
@@ -133,11 +162,9 @@
   padding: var.$gutter-base * 8 0;
   display: grid;
   align-content: center;
-  background: linear-gradient(
-    180deg,
-    rgba(153, 70, 243, 0.8) 0%,
-    rgba(66, 53, 107, 0.8) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(153, 70, 243, 0.8) 0%,
+      rgba(66, 53, 107, 0.8) 100%);
   box-shadow: 0px 8px 16px 0px rgba(66, 53, 107, 0.1);
   border-radius: 32px;
   height: 25%;
