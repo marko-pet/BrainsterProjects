@@ -5,7 +5,6 @@
   @extend %wrap;
   @extend %section;
   position: relative;
-  // display: none;
 
   h1 {
     @extend %h1-main;
@@ -78,6 +77,7 @@
 
     .disc-extra {
       margin-top: 1rem;
+
       i {
         margin-right: 1rem;
       }
@@ -95,11 +95,9 @@
     text-align: center;
     color: var.$text-color-secondary;
     padding: var.$gutter-base * 2 0;
-    background: linear-gradient(
-      0deg,
-      rgba(135, 176, 239, 1) 60%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(0deg,
+        rgba(135, 176, 239, 1) 60%,
+        rgba(255, 255, 255, 0) 100%);
 
     @media (max-width: 768px) {
       right: 0;

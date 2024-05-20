@@ -4,7 +4,6 @@
 .contact-page {
   @extend %wrap;
   @extend %section;
-  // display: none;
 
   h1 {
     @extend %h1-main;
@@ -29,11 +28,9 @@
     display: flex;
     background: rgba(255, 255, 255, 0.4);
     border: 2px solid;
-    border-image-source: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.4) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    border-image-source: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 255, 255, 0) 100%);
     border-radius: 16px;
 
     @media (max-width: 768px) {
@@ -59,11 +56,9 @@
       padding: var.$gutter-base * 0.25 var.$gutter-base * 2;
       border-radius: 8px;
       border: 2px solid;
-      border-image-source: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.4) 0%,
-        rgba(255, 255, 255, 0) 29.17%
-      );
+      border-image-source: linear-gradient(180deg,
+          rgba(255, 255, 255, 0.4) 0%,
+          rgba(255, 255, 255, 0) 29.17%);
     }
   }
 }
