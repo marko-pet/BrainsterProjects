@@ -97,8 +97,8 @@ a {
 .content-page .content-filters .content-filter.active, .content-page .content-filters .content-filter {
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 24px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
-  padding: 0.46875rem 0.9375rem;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 0.28125rem 1.40625rem;
   color: rgb(66, 53, 107);
   font-weight: 500;
   display: grid;
@@ -186,7 +186,14 @@ body {
 }
 
 nav {
-  background: linear-gradient(rgba(118, 79, 240, 0.4), rgba(118, 79, 240, 0));
+  z-index: 997;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -838,7 +845,7 @@ footer .footer-inner .margin-top {
   opacity: 1;
 }
 .content-page .content-filters .content-filter {
-  opacity: 0.5;
+  opacity: 0.4;
   text-transform: capitalize;
 }
 .content-page .content-cards {
