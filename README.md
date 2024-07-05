@@ -16,10 +16,6 @@ This repository contains all the projects I have developed while enrolled at Bra
 
 ## Projects
 
-Here is a list of all the projects I have completed:
-
-## Projects
-
 - **Please note:** The projects currently include mock data.
 
 1. **Brainster Labs**
