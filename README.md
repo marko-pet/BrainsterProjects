@@ -26,9 +26,6 @@ This repository contains all the projects I have developed while enrolled at Bra
 
    - SafeBlink is a web application dedicated to internet safety education. It features educational videos covering various online safety topics and a discussion forum for users to engage in conversations about internet safety. The app is designed with a user-friendly interface and responsive layout.
 
-3. **Yet to be made**
-   - Description: None yet.
-
 ## Technologies Used
 
 The projects are built using the following technologies:
